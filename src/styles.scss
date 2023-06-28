@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../src/assets/font/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../src/assets/font/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../src/assets/font/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Snippet';
+    src: url('../src/assets/font/Snippet/Snippet-Regular.ttf') format('truetype');
+}
+:root{
+    --blue-1:#3C429E;
+    --blue-2:#4C52AD;
+    --yellow-1:#FAC742;
+    --white:#FFF;
+    --grey-1:#636363;
+    --black:#2C2C2C;
+    --shadow-light:rgba(255,255,255,0.1);
+    --green-font:#163E33;
+    --green-bg:#3A8471;
+
+}
+
+body{
+    font-family: 'Roboto-Reguler';
+}
