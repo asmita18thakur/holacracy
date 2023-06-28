@@ -15,8 +15,8 @@
         <div class="upperdiv d-flex">
             <div class="leftdiv">
                 <div class="header">
-                        <h1>Broadcast Internet Annual Outlook 2023</h1>
-                        <div class="map-img">
+                        <h1>Broadcast Internet Annual Outlook <br/>2023</h1>
+                        <div class="map_img">
                             <img src="../../../assets/images/Appearance_settings/BroadcastInternetAnnualOutlook.png"/>
                         </div>
                 </div>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="rightdiv">
-                <div class="card1">
+                <div class="card1" >
                     <app-card1/>
                 </div>
                 <div class="card2">
@@ -39,15 +39,16 @@
                 <h1 class="heading">
                     Blogpost
                 </h1>
-                <div class="carddiv">
-                    <app-card2/>
+                <div class="carddiv"  *ngFor="let card of cards" >
+                    <app-card2 [cards]="card"/>
+
                 </div>
             </div>
             <div class="resources">
                 <h1 class="heading">
                     Resources
                 </h1>
-                <div class="carddiv">
+                <div class="carddiv"  *ngFor="let card of cards">
                     <app-card2/>
                 </div>
             </div>

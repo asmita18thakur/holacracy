@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { card } from 'src/app/contants/temp';
 
 @Component({
   selector: 'app-apperance-setting',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./apperance-setting.component.scss']
 })
 export class ApperanceSettingComponent {
-  
+  cards: any[] = card;
+
+  constructor(){
+
+  }
+   
 }
