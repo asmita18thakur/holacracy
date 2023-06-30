@@ -12,9 +12,14 @@
     src: url('../src/assets/font/Roboto/Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
+    font-family: 'Roboto-light';
+    src: url('../src/assets/font/Roboto/Roboto-Light.ttf') format('truetype');
+}
+@font-face {
     font-family: 'Snippet';
     src: url('../src/assets/font/Snippet/Snippet-Regular.ttf') format('truetype');
 }
+
 :root{
     --blue-1:#3C429E;
     --blue-2:#4C52AD;
@@ -30,8 +35,12 @@
 }
 
 body{
-    font-family: 'Roboto-Reguler';
+    font-family: 'Roboto-light';
+    font-style:  normal;
 }
 .d-flex{
     display: flex;
+}
+.box-shadow{
+    box-shadow: 0rem 1rem 1rem 1rem var(--grey-2);
 }

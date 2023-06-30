@@ -13,9 +13,16 @@
     </div>
     <div class="appearence_content">
         <div class="upperdiv d-flex">
-            <div class="leftdiv">
+            <div class="leftdiv box-shadow" >
                 <div class="header">
-                        <h1>Broadcast Internet Annual Outlook <br/>2023</h1>
+
+                        <div class="header_left_div">
+                        <img src="../../../../assets/images/Appearance_settings/featured.png" />
+                            Featured
+                        </div>
+                        <h1>Broadcast Internet</h1>
+                        <h1>Annual Outlook</h1>
+                        <h1>2023</h1>
                         <div class="map_img">
                             <img src="../../../assets/images/Appearance_settings/BroadcastInternetAnnualOutlook.png"/>
                         </div>
@@ -26,32 +33,35 @@
                 </div>
             </div>
             <div class="rightdiv">
-                <div class="card1" >
+                <div class="card box-shadow" >
                     <app-card1/>
                 </div>
-                <div class="card2">
-                    <app-card2/>
+                <div class="card box-shadow " *ngFor="let cards of cards_2">
+                    <app-card2 [cards]="cards"/>
                 </div>
             </div>
         </div>
-        <div class="lowerdiv">
-            <div class="blogpost">
-                <h1 class="heading">
-                    Blogpost
-                </h1>
-                <div class="carddiv"  *ngFor="let card of cards" >
+        <div class="lowerdiv mb_4">
+            <h1 class="heading mt_4 mb_4">
+                Blog Posts
+            </h1>
+            <div class="blogpost d-flex">
+               
+                <div class="card box-shadow"  *ngFor="let card of cards" >
                     <app-card2 [cards]="card"/>
 
                 </div>
             </div>
-            <div class="resources">
-                <h1 class="heading">
-                    Resources
-                </h1>
-                <div class="carddiv"  *ngFor="let card of cards">
-                    <app-card2/>
+            <h1 class="heading mt_4 mb_4">
+                Resources
+            </h1>
+            <div class="resources d-flex">
+               
+                <div class="card box-shadow"  *ngFor="let card of cards">
+                    <app-card2 [cards]="card"/>
                 </div>
             </div>
+            
         
             
         </div>
