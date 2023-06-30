@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto-Bold';/*700*/
     src: url('../src/assets/font/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Roboto-Medium';
+    font-family: 'Roboto-Medium';/*500*/
     src: url('../src/assets/font/Roboto/Roboto-Medium.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Roboto-Regular';
+    font-family: 'Roboto-Regular';/*400*/
     src: url('../src/assets/font/Roboto/Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
@@ -21,6 +21,8 @@
     --yellow-1:#FAC742;
     --white:#FFF;
     --grey-1:#636363;
+    --grey-2:#F4F8FB;
+    --grey-3:#919DAB;
     --black:#2C2C2C;
     --shadow-light:rgba(255,255,255,0.1);
     --green-font:#163E33;
@@ -30,7 +32,13 @@
 
 body{
     font-family: 'Roboto-Reguler';
+   
 }
-.d-flex{
-    display: flex;
-}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+
