@@ -1,0 +1,23 @@
+.plan-card{
+width: 22%;
+height: 80%;
+padding: 7% 8%;
+border: 1px solid black;
+border-radius: 8px;
+background: var(--grey-2)
+}
+
+.plan-card .plan-type{
+font-family: 'Roboto-Medium';
+font-size: 1rem;
+line-height: 1.5rem;
+color: var(--black);
+padding: 0.5rem 0rem;
+}
+
+.plan-card .plan-type-desc{
+color: var(--grey-3);
+font-size: 0.875rem;
+font-family: 'Roboto-Regular';
+line-height: 1.32rem;
+}
