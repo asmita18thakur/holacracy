@@ -19,10 +19,15 @@
     font-family: 'Snippet';
     src: url('../src/assets/font/Snippet/Snippet-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Roboto-Black';/*700*/
+    src: url('../src/assets/font/Roboto/Roboto-Bold.ttf') format('truetype');
+}
 
 :root{
     --blue-1:#3C429E;
     --blue-2:#4C52AD;
+    --blue-3:#1575E1;
     --yellow-1:#FAC742;
     --white:#FFF;
     --grey-1:#636363;
@@ -30,6 +35,8 @@
     --grey-3:#919DAB;
     --grey-2:#E0E0E0;
     --black:#2C2C2C;
+    --black-1:#525252;
+    --black-2:#e6e6e6;
     --shadow-light:rgba(255,255,255,0.1);
     --green-font:#163E33;
     --green-bg:#e7f8f5;
@@ -51,5 +58,7 @@ body{
 }
 
 .box-shadow{
-    box-shadow: 0rem 1rem 1rem 1rem var(--grey-2);
+    border: none !important;
+    box-shadow: 0rem .8rem .8rem .8rem var(--black-2);
+    // filter: drop-shadow(0rem .8rem .8rem .8rem var(--black-2));
 }

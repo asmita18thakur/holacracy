@@ -5,19 +5,19 @@
 .card1_heading{
     width: 90%;
     color: var(--black);
-    font-family: 'Roboto-bold';
+    font-family: 'Roboto-Medium';
     font-size: 1.6rem;
-  
     line-height: 150%;
-    font-weight: 500;
+    font-weight: 400;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
     padding: .5rem;
+    letter-spacing: 0.019em;
 }
 .card1_desc{
     font-family: 'Roboto-medium';
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 150%;
     font-weight: 400;
     width: 90%;
@@ -25,7 +25,7 @@
     margin-left: auto;
     margin-right: auto;
     color: var(--grey-1);
-    padding: 1rem;
+    padding: .5rem;
 }
 .lowerdiv{
     margin-top: 1rem;
