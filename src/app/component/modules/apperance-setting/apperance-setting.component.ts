@@ -10,12 +10,15 @@ export class ApperanceSettingComponent {
   cards: any[] =card2;
   cards_2:any[]=card2_01
 
-  activeSection: string="section1";
+  activeSection: string="";
   @ViewChild('containerElement', { static: true })  containerRef:any= ElementRef;
 
   constructor(private elementRef: ElementRef) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.activeSection='section1';
+    
+  }
 
   ngAfterViewInit() {
     this.scrollToStart();
@@ -26,13 +29,7 @@ export class ApperanceSettingComponent {
     container.scrollLeft = 0;
   }
 
-  scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    this.activeSection=sectionId
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+ 
 
   //sidebar text highlight when scroll 
   @HostListener('window:scroll', ['$event'])

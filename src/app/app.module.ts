@@ -8,6 +8,8 @@ import { ApperanceSettingComponent } from './component/modules/apperance-setting
 import { Card1Component } from './component/shared/supportive_component/card1/card1.component';
 import { Card2Component } from './component/shared/supportive_component/card2/card2.component';
 import { PlanCardComponent } from './component/shared/supportive_component/plan-card/plan-card.component';
+import { ConfigureSideBarComponent } from './component/shared/supportive_component/configure-side-bar/configure-side-bar.component';
+import { GeneralBussinessComponent } from './component/modules/Configure/general-bussiness/general-bussiness.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PlanCardComponent } from './component/shared/supportive_component/plan-
     ApperanceSettingComponent,
     Card1Component,
     Card2Component,
-    PlanCardComponent
+    PlanCardComponent,
+    ConfigureSideBarComponent,
+    GeneralBussinessComponent
   ],
   imports: [
     BrowserModule,

@@ -25,11 +25,13 @@
 }
 
 :root{
+    --purple-1:#4D45A9;
     --blue-1:#3C429E;
     --blue-2:#4C52AD;
     --blue-3:#1575E1;
     --yellow-1:#FAC742;
     --white:#FFF;
+    --white-1:#F9F9F9;
     --grey-1:#636363;
     --grey-2:#F4F8FB;
     --grey-3:#919DAB;
@@ -40,6 +42,7 @@
     --shadow-light:rgba(255,255,255,0.1);
     --green-font:#163E33;
     --green-bg:#e7f8f5;
+
 
 }
 
@@ -61,4 +64,36 @@ body{
     border: none !important;
     box-shadow: 0rem .8rem .8rem .8rem var(--black-2);
     // filter: drop-shadow(0rem .8rem .8rem .8rem var(--black-2));
+}
+
+.input,.input-textarea{
+    display: flex;
+    background-color:var(--white-1);
+    border: 3px solid var(--white-1);
+    border-right:3.33px solid var(--purple-1);
+    border-radius: .4rem;
+    padding:0 5px;
+}
+.input{
+    align-items: center;
+    justify-content: center;
+}
+.input-textarea textarea{
+    height: 15vh;
+}
+.input input,.input-textarea textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--white-1);
+}
+
+.input .star,.input-textarea  .star {
+    font-size:3rem;
+    font-family: 'Roboto-Medium';
+    padding-top: .8rem;
+    line-height: 2.1rem;
+    //Do not chnage px to rem it should be fixed everyplace that is why it need px
+    width:35px;
+    opacity: .15;
 }

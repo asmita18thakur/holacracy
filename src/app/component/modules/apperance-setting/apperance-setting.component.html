@@ -2,19 +2,19 @@
     <div class="appearence_sidebar">
         <div class="upper_div">
             <ul class="appearence_sidebar_ul">
-                <li [ngClass]="isSectionActive('section1')?'active': 'inactive' ">
-                    <a (click)="scrollToSection('section1')">
+                <li  [ngClass]="isSectionActive('section1')?'active': 'inactive' " >
+                    <a >
                         <span>01</span><span>Featured</span>
                     </a>
                 </li>
-                <li [ngClass]="isSectionActive('section2')?'active': 'inactive' ">
-                    <a (click)="scrollToSection('section2')">
+                <li [ngClass]="isSectionActive('section2')?'active': 'inactive' " >
+                    <a >
                         <span>02</span><span>Blog Posts</span>
                     </a>
 
                 </li>
-                <li  [ngClass]="isSectionActive('section3')?'active': 'inactive' ">
-                    <a (click)="scrollToSection('section3')">
+                <li   [ngClass]="isSectionActive('section3')?'active': 'inactive' " >
+                    <a >
                         <span>03</span><span>Resources</span>
                     </a>
                 </li>
@@ -83,10 +83,12 @@
                         <app-card2 [cards]="card" />
                     </div>
                 </div>
+                <div>
+                </div>
                 
             </section>
 
-
+            
 
         </div>
     </div>
