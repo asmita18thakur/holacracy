@@ -12,6 +12,7 @@ import { ConfigureSideBarComponent } from './component/shared/supportive_compone
 import { GeneralBussinessComponent } from './component/modules/Configure/general-bussiness/general-bussiness.component';
 
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
+import { TenantBehaviourComponent } from './component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GovernanceComponent } from './component/modules/Configure/governance/go
     PlanCardComponent,
     ConfigureSideBarComponent,
     GeneralBussinessComponent,
-    GovernanceComponent
+    GovernanceComponent,
+    TenantBehaviourComponent
   ],
   imports: [
     BrowserModule,

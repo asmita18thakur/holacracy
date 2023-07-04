@@ -154,3 +154,55 @@ input:checked+.slider:before {
     border-radius: 4px;
 }
 //----------------------------------------
+
+//-------------------------------
+//Slider Toggle
+.radio-button input[type="radio"] {
+    display: none;
+  }      
+  .radio-button label {
+    display: inline-block;
+    color:var(--white);
+    border-radius: 14px;
+    background: var(--grey-4);
+    cursor: pointer;
+    line-height: 1.25rem;
+    letter-spacing: -0.176px;
+    padding: 0.25rem 0.9rem;
+    margin-right: 0.5rem ;
+    font-family: 'Roboto-Regular';
+  }      
+  .radio-button input[type="radio"]:checked+label {
+    background-color: var(--blue-3);
+  }
+
+  //-------------------------------
+  #governance-currency{
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+    opacity: 0.699999988079071;
+    color: var(--black);
+    
+  }
+  //-----------------------------------
+
+  //-------------------
+//checkbox selection 
+.check-button input[type="checkbox"] {
+    display: none;
+  }      
+  .check-button label {
+    display: inline-block;
+    color:var(--white);
+    border-radius: 14px;
+    background: var(--grey-4);
+    cursor: pointer;
+    line-height: 1.25rem;
+    letter-spacing: -0.176px;
+    padding: 0.25rem 0.9rem;
+    margin-right: 0.5rem ;
+    font-family: 'Roboto-Regular';
+  }      
+  .check-button input[type="checkbox"]:checked+label {
+    background-color: var(--blue-3);
+  }
