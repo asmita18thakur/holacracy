@@ -13,12 +13,13 @@ export class ConfigureSideBarComponent {
 
   changeContent(content: string): void {
     this.selectedContent = content;
+    console.log(content,this.selectedContent)
   }
 
   getContentComponent(content: string): any {
     switch (content) {
       case 'general-bussiness':
-        return GeneralBussinessComponent;
+        return ConfigureLoginComponent;
       case 'about':
         return "";
       case 'login':

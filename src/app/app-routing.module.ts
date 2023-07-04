@@ -4,6 +4,7 @@ import { ApperanceSettingComponent } from './component/modules/apperance-setting
 import { RatecardMessagecenterComponent } from './component/modules/ratecard-messagecenter/ratecard-messagecenter.component';
 import { PlanCardComponent } from './component/shared/supportive_component/plan-card/plan-card.component';
 import { ConfigureSideBarComponent } from './component/shared/supportive_component/configure-side-bar/configure-side-bar.component';
+import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
 
 const routes: Routes = [
   {
