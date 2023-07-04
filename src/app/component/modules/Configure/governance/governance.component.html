@@ -1,0 +1,140 @@
+<section id="governance">
+    <div class="governance-header">Governance</div>
+    <div class="governance-body">
+        <div class="d-flex flex-column justify-content-start">
+
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">What is the nature of the Marketplace ?</div>
+            </div>
+            <div class="governance-opt_container">
+                <div class="mb-1">
+                    <input type="radio" id="traditional" name="marketplaceNature" value="traditional" />  
+                    <label for="traditional" class="opt_txt">Traditional</label>
+                </div>
+                <div class="mb-1">
+                    <input type="radio" id="holacratic" name="marketplaceNature" value="holacratic" />  
+                    <label for="holacratic" class="opt_txt">Holacratic</label>
+
+                </div>
+                <div class="mb-3">
+                    <input type="radio" id="Web3" name="marketplaceNature" value="Web3" />
+                      <label for="Web3" class="opt_txt">Web 3.0 DAO</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-start">
+
+            <div class="d-flex ">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Is marketplace private ?</div>
+            </div>
+            <div class="governance-opt_container">
+                <div  class="mb-1">
+                    <input type="radio" id="orgPublic" name="marketplaceAccessType" value="orgPublic" />  
+                    <label for="orgPublic" class="opt_txt">Org Public</label>
+                </div>
+                <div class="mb-1">
+                    <input type="radio" id="holacratic" name="public" value="public" />  
+                    <label for="public" class="opt_txt">Public</label>
+
+                </div>
+                <div class="mb-1">
+                    <input type="radio" id="invite" name="marketplaceAccessType" value="invite" />
+                      <label for="invite" class="opt_txt">Invite only (private)</label>
+                </div>
+                <div class="mb-3">
+                    <input type="radio" id="inherited" name="marketplaceAccessType" value="inherited" />
+                      <label for="inherited" class="opt_txt">Inherited</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Do invite expires ?</div>
+            </div>
+            <div class="governance-opt_container radio-button d-flex mb-3">
+
+                    <div>
+                        <input type="radio" id="expiry1" name="expiryDuration" value="30Days" checked>
+                    <label for="expiry1">30 Days</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="expiry2" name="expiryDuration" value="7Days">
+                    <label for="expiry2">7 Days</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="expiry3" name="expiryDuration" value="24Hours">
+                    <label for="expiry3">24 Hours</label>
+                    </div>
+                    <div >
+                    <input type="radio" id="expiry4" name="expiryDuration" value="onUsage">
+                    <label for="expiry4">On Usage</label>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <div id="governance-currency">Currency</div>
+            <div class="d-flex">
+                <div class="currency_radio_button">
+                    <div>
+                        <input type="radio" id="currency1" name="currency" value="USD" checked>
+                        <label for="currency1"><img src="../../../../../assets/images/goverancePage/usFlag.png" alt="usFlag"></label>
+                    </div>
+                    <div>USD</div>
+                </div>
+                <div class="currency_radio_button">
+                    <div>
+                        <input type="radio" id="currency2" name="currency" value="USD" checked>
+                        <label for="currency2"><img src="../../../../../assets/images/goverancePage/cad.png" alt="canadaFlag"></label>
+                    </div>
+                    <div>CAD</div>
+                </div>
+                <div class="currency_radio_button">
+                    <div>
+                        <input type="radio" id="currency3" name="currency" value="USD" checked>
+                        <label for="currency3"><img src="../../../../../assets/images/goverancePage/peso.png" alt="brazilFlag"></label>
+                    </div>
+                    <div>PESO</div>
+                </div>
+                <div class="currency_radio_button" id="currency_show_more" >
+                    <div>
+                        Show 
+                    </div>
+                    <div>More</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex flex-column justify-content-start">
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Do invite expires ?</div>
+            </div>
+            <div class="governance-opt_container check-button d-flex flex-column">
+                    <div class="mb-1" style="font-size: 0.75rem;line-height: 1.125rem;color: var(--black);">Engagements</div>
+                    <div class="d-flex">
+                        <div>
+                            <input type="checkbox" id="invite_check_1" name="inviteAlreadyUsed" value="true" checked>
+                        <label for="invite_check_1">Invite already used</label>
+                        </div>
+                        <div >
+                            <input type="checkbox" id="invite_check_2" name="inviteMisuseAlert" value="true">
+                        <label for="invite_check_2">Invite misuse alert</label>
+                        </div>
+                    </div>
+                   
+                    
+            </div>
+
+        </div>
+
+    </div>  
+</section>

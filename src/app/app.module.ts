@@ -11,6 +11,8 @@ import { PlanCardComponent } from './component/shared/supportive_component/plan-
 import { ConfigureSideBarComponent } from './component/shared/supportive_component/configure-side-bar/configure-side-bar.component';
 import { GeneralBussinessComponent } from './component/modules/Configure/general-bussiness/general-bussiness.component';
 
+import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { GeneralBussinessComponent } from './component/modules/Configure/general
     Card2Component,
     PlanCardComponent,
     ConfigureSideBarComponent,
-    GeneralBussinessComponent
+    GeneralBussinessComponent,
+    GovernanceComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,6 @@ import { GeneralBussinessComponent } from './component/modules/Configure/general
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }
