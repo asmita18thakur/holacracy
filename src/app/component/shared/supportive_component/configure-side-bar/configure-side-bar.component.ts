@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigureLoginComponent } from 'src/app/component/modules/Configure/configure-login/configure-login.component';
 import { GeneralBussinessComponent } from 'src/app/component/modules/Configure/general-bussiness/general-bussiness.component';
 import { GovernanceComponent } from 'src/app/component/modules/Configure/governance/governance.component';
 import { GenerealBussinessInfoComponent } from 'src/app/component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
@@ -9,25 +10,26 @@ import { GenerealBussinessInfoComponent } from 'src/app/component/modules/Config
   styleUrls: ['./configure-side-bar.component.scss']
 })
 export class ConfigureSideBarComponent {
-  contents: string[] = ['general-bussiness','general-bussiness', 'about', 'contact','governance'];
+
+  contents: string[] = ['general-bussiness','general-bussiness','login','about', 'contact','governance'];
+
   selectedContent: string = this.contents[0];
 
   changeContent(content: string): void {
     this.selectedContent = content;
+    console.log(content,this.selectedContent)
   }
 
   getContentComponent(content: string): any {
     switch (content) {
       case 'general-bussiness':
         return GeneralBussinessComponent;
-      case 'general-bussiness-info':
-        return GenerealBussinessInfoComponent;
       case 'about':
         return "";
-      case 'contact':
-        return "";
+      case 'login':
+        return ConfigureLoginComponent;
       case 'governance':
-        return GovernanceComponent;  
+        return GovernanceComponent;
       default:
         return null;
     }

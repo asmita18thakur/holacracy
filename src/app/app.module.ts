@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { GenerealBussinessInfoComponent } from './component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
 
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
+import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GovernanceComponent } from './component/modules/Configure/governance/go
     ConfigureSideBarComponent,
     GeneralBussinessComponent,
     GovernanceComponent,
-    GenerealBussinessInfoComponent
+    GenerealBussinessInfoComponent,
+    ConfigureLoginComponent
   ],
   imports: [
     BrowserModule,
