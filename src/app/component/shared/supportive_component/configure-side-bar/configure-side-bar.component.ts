@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigureLoginComponent } from 'src/app/component/modules/Configure/configure-login/configure-login.component';
 import { GeneralBussinessComponent } from 'src/app/component/modules/Configure/general-bussiness/general-bussiness.component';
 import { GovernanceComponent } from 'src/app/component/modules/Configure/governance/governance.component';
 @Component({
@@ -7,7 +8,7 @@ import { GovernanceComponent } from 'src/app/component/modules/Configure/governa
   styleUrls: ['./configure-side-bar.component.scss']
 })
 export class ConfigureSideBarComponent {
-  contents: string[] = ['general-bussiness', 'about', 'contact','governance'];
+  contents: string[] = ['general-bussiness', 'about', 'login','governance'];
   selectedContent: string = this.contents[0];
 
   changeContent(content: string): void {
@@ -20,10 +21,10 @@ export class ConfigureSideBarComponent {
         return GeneralBussinessComponent;
       case 'about':
         return "";
-      case 'contact':
-        return "";
+      case 'login':
+        return ConfigureLoginComponent;
       case 'governance':
-        return GovernanceComponent;  
+        return GovernanceComponent;
       default:
         return null;
     }
