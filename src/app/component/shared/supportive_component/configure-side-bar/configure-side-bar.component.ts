@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigureLoginComponent } from 'src/app/component/modules/Configure/configure-login/configure-login.component';
 import { GeneralBussinessComponent } from 'src/app/component/modules/Configure/general-bussiness/general-bussiness.component';
 import { GovernanceComponent } from 'src/app/component/modules/Configure/governance/governance.component';
 import { TenantBehaviourComponent } from 'src/app/component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
@@ -18,20 +19,21 @@ export class ConfigureSideBarComponent {
 
   changeContent(content: string): void {
     this.selectedContent = content;
+    console.log(content,this.selectedContent)
   }
 
   getContentComponent(content: string): any {
     switch (content) {
       case 'general-bussiness':
         return GeneralBussinessComponent;
-      case 'general-bussiness-info':
-        return GenerealBussinessInfoComponent;
       case 'about':
         return "";
-      case 'contact':
-        return "";
+      case 'login':
+        return ConfigureLoginComponent;
       case 'governance':
         return GovernanceComponent; 
+      case 'general-bussiness-info':
+        return GenerealBussinessInfoComponent; 
       case 'tenant-behaviour':
         return TenantBehaviourComponent;
       case 'alliance-behaviour':

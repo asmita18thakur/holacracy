@@ -18,31 +18,33 @@
                        <span>My Organisation</span>
                     </a>
                 </li>
-                <li (click)="changeContent('governance')">
+                <li (click)="changeContent('governance')" [ngClass]="{'active': selectedContent == 'governance'}">
                     <a>
                         <span>02</span><span>Governance</span>
                     </a>
+
                 </li>   
-                <li class="custom-bullet" (click)="changeContent('tenant-behaviour')">
+                <li class="custom-bullet" (click)="changeContent('tenant-behaviour')" [ngClass]="{'active': selectedContent == 'tenant-behaviour'}">
                     <a>
                        <span>Tenant Behaviour</span>
                     </a>
                 </li>   
-                <li class="custom-bullet" (click)="changeContent('alliance-behaviour')">
+                <li class="custom-bullet" (click)="changeContent('alliance-behaviour')" [ngClass]="{'active': selectedContent == 'alliance-behaviour'}">
                     <a>
                        <span>Alliance Behaviour</span>
                     </a>
                 </li>  
+
                 <li class="custom-bullet">
                     <a>
                        <span>User Behaviour</span>
                     </a>
-                </li>   
+                </li>
                 <li class="custom-bullet">
                     <a>
                         <span>My Organisation</span>
                     </a>
-                </li>   
+                </li>
                 <li class="custom-bullet">
                     <a>
                         <span>Area of Operation</span>
@@ -51,8 +53,8 @@
                     <a>
                         <span>03</span><span>Appearance</span>
                     </a>
-                </li>   
-                <li class="custom-bullet">
+                </li>
+                <li class="custom-bullet" (click)="changeContent('login')">
                     <a>
                         <span>Login Page</span>
                     </a>
@@ -61,7 +63,7 @@
                     <a>
                         <span>404 Error Page</span>
                     </a>
-                </li> 
+                </li>
                  <li class="custom-bullet">
                     <a>
                        <span>Product Page</span>

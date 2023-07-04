@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApperanceSettingComponent } from './component/modules/apperance-setting/apperance-setting.component';
@@ -15,6 +13,7 @@ import { GenerealBussinessInfoComponent } from './component/modules/Configure/ge
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
 import { TenantBehaviourComponent } from './component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
 import { AllianceBehaviourComponent } from './component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
+import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +27,12 @@ import { AllianceBehaviourComponent } from './component/modules/Configure/allian
     GovernanceComponent,
     TenantBehaviourComponent,
     GenerealBussinessInfoComponent,
-    AllianceBehaviourComponent
+    AllianceBehaviourComponent,
+    ConfigureLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     FormsModule
   ],
   providers: [],
