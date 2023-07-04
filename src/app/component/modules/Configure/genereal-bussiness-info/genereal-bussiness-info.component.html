@@ -1,0 +1,35 @@
+<section class="general_bussiness_info">
+    <form>
+        <div class="d-flex general_bussiness-input mb-24px">
+            <div class="general_bussiness-input00">
+                <label>Legal Business name</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="LegalBussinessName"
+                        [value]="LegalBussinessName" />
+                    <div class="star">
+                        *
+                    </div>
+                </div>
+                <label>Business registration Number</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyUrl" [(ngModel)]="BusinessRegNumber"
+                        [value]="BusinessRegNumber" />
+                    <div class="star">
+                        *
+                    </div>
+                </div>
+            </div>
+            <div class="general_bussiness-input00">
+                <label>Organisation Logo</label>
+                <div class="input-textarea-bgimg">
+                    <p>Drag and Drop</p>
+                    <div class="bg-img">
+                        <input class='form-controll ' type="file" style="opacity: 0;" name="Resources"
+                            [(ngModel)]="OrganisationLogo" [value]="OrganisationLogo" />
+                    </div>
+                    <p>Click here to select Files</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

@@ -10,7 +10,8 @@ import { Card2Component } from './component/shared/supportive_component/card2/ca
 import { PlanCardComponent } from './component/shared/supportive_component/plan-card/plan-card.component';
 import { ConfigureSideBarComponent } from './component/shared/supportive_component/configure-side-bar/configure-side-bar.component';
 import { GeneralBussinessComponent } from './component/modules/Configure/general-bussiness/general-bussiness.component';
-
+import { FormsModule } from '@angular/forms';
+import { GenerealBussinessInfoComponent } from './component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
 import { TenantBehaviourComponent } from './component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
 
@@ -24,12 +25,14 @@ import { TenantBehaviourComponent } from './component/modules/Configure/tenant-b
     ConfigureSideBarComponent,
     GeneralBussinessComponent,
     GovernanceComponent,
-    TenantBehaviourComponent
+    TenantBehaviourComponent,
+    GenerealBussinessInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent,]

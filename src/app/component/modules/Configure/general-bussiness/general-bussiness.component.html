@@ -1,70 +1,148 @@
 <section class="general_bussiness">
- <form>
-    <div class="d-flex general_bussiness-input">
-        <div class="general_bussiness-input00">
-            <label>Holacracy Name</label>
-            <div class="input">
-                <input class='form-controll' type="text" />
-                <div class="star">
-                  *
+    <form>
+        <div class="d-flex general_bussiness-input mb-24px">
+            <div class="general_bussiness-input00">
+                <label>Holacracy Name</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="HolacracyName"
+                        [value]="HolacracyName" />
+                    <div class="star">
+                        *
+                    </div>
+                </div>
+            </div>
+            <div class="general_bussiness-input00">
+                <label>Holacracy Url</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyUrl" [(ngModel)]="HolacracyUrl"
+                        [value]="HolacracyUrl" />
+                    <div class="star">
+                        *
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="general_bussiness-input00">
-            <label>Holacracy Url</label>
+        <div class="mb-24px">
+            <label>Marketplace description / Punchline</label>
             <div class="input">
-                <input class='form-controll' type="text" />
+                <input class='form-controll' type="text" name="Marketplacedesc" [(ngModel)]="Marketplacedesc"
+                    [value]="Marketplacedesc" />
                 <div class="star">
-                  *
+                    *
                 </div>
             </div>
         </div>
-    </div>
-    <div class="">
-        <label>Marketplace description / Punchline</label>
-        <div class="input">
-            <input class='form-controll' type="text" />
-            <div class="star">
-              *
+        <div class="mb-24px">
+            <label>Tags</label>
+            <div class="d-flex general_bussiness-Tag">
+                <div class="input">
+                    <input class='form-controll' type="text" name="Tags" [(ngModel)]="Tags" [value]="Tags" />
+                    <div class="star">
+                        *
+                    </div>
+                </div>
+                <select  name="selectProduct">
+                    <option></option>
+                    <option *ngFor="let category of SubcatList; let i = index" [value]="category.key">
+                        {{category.key}}
+                    </option>
+                </select>
+            </div>
+            <div class="invalid-feedback">
+                <div *ngIf="">Please select product</div>
             </div>
         </div>
-    </div>
-    <div class="">
-        <label>Tags</label>
-        <div class="input">
-            <input class='form-controll' type="text" />
-            <div class="star">
-              *
-            </div>
-        </div>
-    </div>
-    <div class="">
-        <label>Mission</label>
-        <div class="input">
-            <input class='form-controll' type="textarea" />
-            <div class="star">
-              *
-            </div>
-        </div>
-    </div>
-    <div class="">
-        <label>vision</label>
-        <div class="input">
-            <input class='form-controll' type="" />
-            <div class="star">
-              *
-            </div>
-        </div>
-    </div>
-    <div class="">
-        <label>value</label>
-        <div class="input-textarea">
-            <textarea class='form-controll ' type="text" >
+
+        <!-- (change)='onProductSelected($event)' [(ngModel)]="selectedProduct" -->
+        <!-- [ngClass]="{'is-invalid': (submitted  && formName.selectProduct.errors) || (formName.selectProduct.invalid && (formName.selectProduct.dirty || formName.selectProduct.touched)) }" -->
+        
+       
+
+
+        <div class="mb-24px">
+            <label>Mission</label>
+            <div class="input-textarea">
+                <textarea class='form-controll ' type="text" name="Mission" [(ngModel)]="Mission" [value]="Mission">
             </textarea>
-            <div class="star">
-                *
+                <div class="star">
+                    *
+                </div>
             </div>
         </div>
-    </div>
- </form>
+        <div class="mb-24px">
+            <label>vision</label>
+            <div class="input-textarea">
+                <textarea class='form-controll ' type="text" name="vision" name="vision" [(ngModel)]="vision"
+                    [value]="vision">
+            </textarea>
+                <div class="star">
+                    *
+                </div>
+            </div>
+        </div>
+        <div class="mb-24px">
+            <label>value</label>
+            <div class="d-flex general_bussiness-input">
+                <div class="general_bussiness-input00">
+                    <div class="input">
+                        <input class='form-controll' type="text" placeholder="Sustainability" />
+                        <div class="star">
+                            *
+                        </div>
+                    </div>
+                </div>
+                <div class="general_bussiness-input00">
+                    <div class="input">
+                        <input class='form-controll' type="text" placeholder="Long Termism" />
+                        <div class="star">
+                            *
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex general_bussiness-input">
+                <div class="general_bussiness-input00">
+                    <div class="input">
+                        <input class='form-controll' type="text" placeholder="Resilience" name="Resilience" />
+                        <div class="star">
+                            *
+                        </div>
+                    </div>
+                </div>
+                <div class="general_bussiness-input00">
+                    <div class="input">
+                        <input class='form-controll' type="text" placeholder="Integrity" name="Integrity" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex general_bussiness-input">
+                <div class="general_bussiness-input00">
+                    <div class="input">
+                        <input class='form-controll' type="text" placeholder="Compassion" name="Compassion" />
+
+                    </div>
+                </div>
+                <div class="general_bussiness-input00">
+                    <div class="input">
+                        <input class='form-controll' type="text" placeholder="Perseverence" name="Perseverence" />
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mb-24px">
+            <label>Resources</label>
+            <div class="input-textarea-bgimg">
+                <p>Drag and Drop</p>
+                <div class="bg-img">
+                    <input class='form-controll ' type="file" style="opacity: 0;" name="Resources"
+                        [(ngModel)]="Resources" [value]="Resources" />
+                </div>
+                <p>Click here to select Files</p>
+            </div>
+        </div>
+        <div (click)="submit()">hye</div>
+    </form>
 </section>

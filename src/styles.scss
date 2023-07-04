@@ -4,6 +4,10 @@
     src: url('../src/assets/font/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 @font-face {
+    font-family: 'Roboto-Black';
+    src: url('../src/assets/font/Roboto/Roboto-Black.ttf') format('truetype');
+}
+@font-face {
     font-family: 'Roboto-Medium';/*500*/
     src: url('../src/assets/font/Roboto/Roboto-Medium.ttf') format('truetype');
 }
@@ -43,8 +47,6 @@
     --shadow-light:rgba(255,255,255,0.1);
     --green-font:#163E33;
     --green-bg:#e7f8f5;
-
-
 }
 
 body{
@@ -66,9 +68,19 @@ body{
     box-shadow: 0rem .8rem .8rem .8rem var(--black-2);
     // filter: drop-shadow(0rem .8rem .8rem .8rem var(--black-2));
 }
-
+input, textarea{
+   cursor: pointer;
+}
 .input,.input-textarea{
     display: flex;
+    background-color:var(--white-1);
+    border: 3px solid var(--white-1);
+    border-right:3.33px solid var(--purple-1);
+    border-radius: .4rem;
+    padding:0 5px;
+
+}
+.input-textarea-bgimg{
     background-color:var(--white-1);
     border: 3px solid var(--white-1);
     border-right:3.33px solid var(--purple-1);
@@ -78,11 +90,22 @@ body{
 .input{
     align-items: center;
     justify-content: center;
+
 }
 .input-textarea textarea{
     height: 15vh;
 }
-.input input,.input-textarea textarea{
+.input-textarea-bgimg input{
+    // height: 10vh;
+    overflow: hidden;
+}
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.input input{
+    min-height:45px
+}
+.input input,.input-textarea textarea,.input-textarea-bgimg input{
     width: 100%;
     border: none;
     outline: none;
@@ -98,60 +121,20 @@ body{
     width:35px;
     opacity: .15;
 }
-// toggle CSS-----------------------
-.switch {
-    transform: rotate(90deg);
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    overflow: hidden;
+.bg-img{
+   background-image: url('./assets/images/configure/input-bg-img.png'); 
+   background-position: center ;
+   height: 10vh;
+   background-size: 30%;
+   background-repeat: no-repeat;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: gray;
-    transition: .1s;
-    border-radius: 4px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 1.5em;
-    width: 0.75em;
-    border-radius: 4px;
-    border: 1px solid #1575E1;
-    left: 0em;
-    bottom: 0em;
-    background-color: white;
-    transition: .1s;
-}
-
-input:checked+.slider {
-    background: #1575E1;
-    border-radius: 4px;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked+.slider:before {
-    transform: translateX(1em);
-    border-radius: 4px;
+.input-textarea-bgimg p{
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
 }
 //----------------------------------------
 
