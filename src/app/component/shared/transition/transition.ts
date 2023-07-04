@@ -13,6 +13,7 @@ export class Transition {
           this.payload.param1 = data.param1;
           this.payload.param2 = data.param2;
           // Set other parameters specific to API1
+          console.log(this.payload.param2)
           break;
         case 'API2':
           this.payload.paramA = data.paramA;
