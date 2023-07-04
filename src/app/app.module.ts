@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { GenerealBussinessInfoComponent } from './component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
 import { TenantBehaviourComponent } from './component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
+import { AllianceBehaviourComponent } from './component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TenantBehaviourComponent } from './component/modules/Configure/tenant-b
     GeneralBussinessComponent,
     GovernanceComponent,
     TenantBehaviourComponent,
-    GenerealBussinessInfoComponent
+    GenerealBussinessInfoComponent,
+    AllianceBehaviourComponent
   ],
   imports: [
     BrowserModule,

@@ -139,11 +139,11 @@ input[type="file"]::-webkit-file-upload-button {
 //----------------------------------------
 
 //-------------------------------
-//Slider Toggle
+//radio Toggle
 .radio-button input[type="radio"] {
     display: none;
   }      
-  .radio-button label {
+.radio-button label {
     display: inline-block;
     color:var(--white);
     border-radius: 14px;
@@ -155,11 +155,68 @@ input[type="file"]::-webkit-file-upload-button {
     margin-right: 0.5rem ;
     font-family: 'Roboto-Regular';
   }      
-  .radio-button input[type="radio"]:checked+label {
+.radio-button input[type="radio"]:checked+label {
     background-color: var(--blue-3);
   }
 
-  //-------------------------------
+//slider toggle------------------------------------
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    transition: .1s;
+    border-radius: 4px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5em;
+    width: 0.75em;
+    border-radius: 4px;
+    border: 1px solid #1575E1;
+    left: 0em;
+    bottom: 0em;
+    background-color: white;
+    transition: .1s;
+}
+
+input:checked+.slider {
+    background: #1575E1;
+    border-radius: 4px;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1em);
+    border-radius: 4px;
+}
+
+.switch {
+    transform: rotate(90deg);
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+//-------------------------------
   #governance-currency{
     line-height: 1.5rem;
     font-size: 0.75rem;
@@ -167,14 +224,14 @@ input[type="file"]::-webkit-file-upload-button {
     color: var(--black);
     
   }
-  //-----------------------------------
+  
 
-  //-------------------
-//checkbox selection 
+  
+//checkbox selection ------------------------------------------------
 .check-button input[type="checkbox"] {
     display: none;
   }      
-  .check-button label {
+.check-button label {
     display: inline-block;
     color:var(--white);
     border-radius: 14px;
@@ -186,6 +243,8 @@ input[type="file"]::-webkit-file-upload-button {
     margin-right: 0.5rem ;
     font-family: 'Roboto-Regular';
   }      
-  .check-button input[type="checkbox"]:checked+label {
+.check-button input[type="checkbox"]:checked+label {
     background-color: var(--blue-3);
   }
+
+  //------------------------------------------------------------------
