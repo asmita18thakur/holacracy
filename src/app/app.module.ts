@@ -9,6 +9,8 @@ import { Card2Component } from './component/shared/supportive_component/card2/ca
 import { PlanCardComponent } from './component/shared/supportive_component/plan-card/plan-card.component';
 import { ConfigureSideBarComponent } from './component/shared/supportive_component/configure-side-bar/configure-side-bar.component';
 import { GeneralBussinessComponent } from './component/modules/Configure/general-bussiness/general-bussiness.component';
+import { FormsModule } from '@angular/forms';
+import { GenerealBussinessInfoComponent } from './component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
 
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
 import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
@@ -23,11 +25,13 @@ import { ConfigureLoginComponent } from './component/modules/Configure/configure
     ConfigureSideBarComponent,
     GeneralBussinessComponent,
     GovernanceComponent,
+    GenerealBussinessInfoComponent,
     ConfigureLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent,]

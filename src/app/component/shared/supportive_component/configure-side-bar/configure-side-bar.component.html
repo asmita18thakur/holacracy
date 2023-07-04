@@ -2,12 +2,12 @@
     <div class="configure_sidebar">
         <div class="configure_sidebar-upperdiv">
             <ul class="configure_sidebar_ul">
-                <li (click)="changeContent('general-bussiness')">
+                <li (click)="changeContent('general-bussiness')" [ngClass]="{'active': selectedContent == 'general-bussiness'}">
                     <a>
                         <span>*</span><span>Marketplace Business Proposition</span>
                     </a>
                 </li>
-                <li>
+                <li (click)="changeContent('general-bussiness-info')" [ngClass]="{'active': selectedContent == 'general-bussiness-info'}">
                     <a>
                         <span>01</span><span>General Business Info</span>
                     </a>
@@ -18,7 +18,7 @@
                        <span>My Organisation</span>
                     </a>
                 </li>
-                <li (click)="changeContent('governance')">
+                <li (click)="changeContent('govebfner')">
                     <a>
                         <span>02</span><span>Governance</span>
                     </a>
