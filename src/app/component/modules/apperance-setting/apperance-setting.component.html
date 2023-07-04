@@ -1,70 +1,96 @@
-<section class="appearence_setting d-flex">
+<section class="appearence_setting d-flex" id="containerElement">
     <div class="appearence_sidebar">
         <div class="upper_div">
-                <ul class="appearence_sidebar_ul">
-                    <li><span>01</span><span>Featured</span></li>
-                    <li><span>02</span><span>Blog Posts</span></li>
-                    <li><span>03</span><span>Resources</span></li>
-                </ul>
+            <ul class="appearence_sidebar_ul">
+                <li  [ngClass]="isSectionActive('section1')?'active': 'inactive' " >
+                    <a >
+                        <span>01</span><span>Featured</span>
+                    </a>
+                </li>
+                <li [ngClass]="isSectionActive('section2')?'active': 'inactive' " >
+                    <a >
+                        <span>02</span><span>Blog Posts</span>
+                    </a>
+
+                </li>
+                <li   [ngClass]="isSectionActive('section3')?'active': 'inactive' " >
+                    <a >
+                        <span>03</span><span>Resources</span>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="lower_div">
-            <img src="assets/images/Appearance_settings/appearence_sidebar_bottom_img.png"/>
+            <img src="assets/images/Appearance_settings/appearence_sidebar_bottom_img.png" />
         </div>
     </div>
     <div class="appearence_content">
-        <div class="upperdiv d-flex">
-            <div class="leftdiv box-shadow" >
-                <div class="header">
+        <section id="section1">
+            <div class="upperdiv d-flex ">
+                <div class="leftdiv box-shadow">
+                    <div class="appearence_content-header">
 
                         <div class="header_left_div">
-                        <img src="../../../../assets/images/Appearance_settings/featured.png" />
+                            <img src="../../../../assets/images/Appearance_settings/featured.png" />
                             Featured
                         </div>
                         <h1>Broadcast Internet</h1>
                         <h1>Annual Outlook</h1>
                         <h1>2023</h1>
                         <div class="map_img">
-                            <img src="../../../assets/images/Appearance_settings/BroadcastInternetAnnualOutlook.png"/>
+                            <img src="../../../assets/images/Appearance_settings/BroadcastInternetAnnualOutlook.png" />
                         </div>
+                    </div>
+                    <div class="header_desc">
+                        <h2 class="header_desc_heading">Broadcast Internet annual outlook 2023</h2>
+                        <p class="header_desc_para">Download the Radio/TV Station annual outlook report here! In this
+                            report, five-year revenue projections for each of Nielsen Holdings PLC's 210 U.S. TV
+                            Designated Market Areas for 2021-22 and 253 Nielsen Audio rated radio markets as of spring
+                            2022 are presented. </p>
+                    </div>
                 </div>
-                <div class="header_desc">
-                    <h2 class="header_desc_heading">Broadcast Internet Annual Outlook 2023</h2>
-                    <p class="header_desc_para">Download the Radio/TV Station annual outlook report here! In this report, five-year revenue projections for each of Nielsen Holdings PLC's 210 U.S. TV Designated Market Areas for 2021-22 and 253 Nielsen Audio rated radio markets as of spring 2022 are presented. </p>
+                <div class="rightdiv">
+                    <div class="card box-shadow">
+                        <app-card1 />
+                    </div>
+                    <div class="card box-shadow " *ngFor="let cards of cards_2">
+                        <app-card2 [cards]="cards" />
+                    </div>
                 </div>
             </div>
-            <div class="rightdiv">
-                <div class="card box-shadow" >
-                    <app-card1/>
-                </div>
-                <div class="card box-shadow " *ngFor="let cards of cards_2">
-                    <app-card2 [cards]="cards"/>
-                </div>
-            </div>
-        </div>
-        <div class="lowerdiv mb_4">
-            <h1 class="heading mt_4 mb_4">
-                Blog Posts
-            </h1>
-            <div class="blogpost d-flex">
-               
-                <div class="card box-shadow"  *ngFor="let card of cards" >
-                    <app-card2 [cards]="card"/>
+        </section>
 
+        <div class="lowerdiv mb_4">
+            <section id="section2">
+                <h1 class="heading mt_4 ">
+                    Blog Posts
+                </h1>
+                <div class="blogpost d-flex">
+
+                    <div class="card box-shadow" *ngFor="let card of cards">
+                        <app-card2 [cards]="card" />
+
+                    </div>
                 </div>
-            </div>
-            <h1 class="heading mt_4 mb_4">
-                Resources
-            </h1>
-            <div class="resources d-flex">
-               
-                <div class="card box-shadow"  *ngFor="let card of cards">
-                    <app-card2 [cards]="card"/>
+            </section>
+            <section id="section3" class="mb-4">
+                <h1 class="heading mt_4 mb_4">
+                    Resources
+                </h1>
+                <div class="resources d-flex">
+
+                    <div class="card box-shadow" *ngFor="let card of cards">
+                        <app-card2 [cards]="card" />
+                    </div>
                 </div>
-            </div>
+                <div>
+                </div>
+                
+            </section>
+
             
-        
-            
+
         </div>
     </div>
-    
+
 </section>

@@ -1,0 +1,84 @@
+<section>
+    <div class="configure_sidebar">
+        <div class="configure_sidebar-upperdiv">
+            <ul class="configure_sidebar_ul">
+                <li (click)="changeContent('general-bussiness')">
+                    <a>
+                        <span>*</span><span>Marketplace Business Proposition</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span>01</span><span>General Business Info</span>
+                    </a>
+
+                </li>
+                <li class="custom-bullet">
+                    <a>
+                       <span>My Organisation</span>
+                    </a>
+                </li>
+                <li (click)="changeContent('governance')">
+                    <a>
+                        <span>02</span><span>Governance</span>
+                    </a>
+                </li>   
+                <li class="custom-bullet">
+                    <a>
+                       <span>Tenant Behaviour</span>
+                    </a>
+                </li>   
+                <li class="custom-bullet">
+                    <a>
+                       <span>User Behaviour</span>
+                    </a>
+                </li>   
+                <li class="custom-bullet">
+                    <a>
+                        <span>My Organisation</span>
+                    </a>
+                </li>   
+                <li class="custom-bullet">
+                    <a>
+                        <span>Area of Operation</span>
+                    </a>
+                </li>   <li>
+                    <a>
+                        <span>03</span><span>Appearance</span>
+                    </a>
+                </li>   
+                <li class="custom-bullet">
+                    <a>
+                        <span>Login Page</span>
+                    </a>
+                </li>
+                <li class="custom-bullet">
+                    <a>
+                        <span>404 Error Page</span>
+                    </a>
+                </li> 
+                 <li class="custom-bullet">
+                    <a>
+                       <span>Product Page</span>
+                    </a>
+                </li>
+                <li class="custom-bullet">
+                    <a>
+                       <span>Product Listing</span>
+                    </a>
+                </li>
+                <li >
+                    <a>
+                      <span>04</span><span>Billing</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="configure_sidebar-lowerdiv">
+            <img src="assets/images/configure/configure-sidebar.png" />
+        </div>
+    </div>
+    <div class="configure_content">
+        <ng-container *ngComponentOutlet="getContentComponent(selectedContent)"></ng-container>
+    </div>
+</section>

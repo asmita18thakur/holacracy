@@ -19,23 +19,34 @@
     font-family: 'Snippet';
     src: url('../src/assets/font/Snippet/Snippet-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Roboto-Black';/*700*/
+    src: url('../src/assets/font/Roboto/Roboto-Bold.ttf') format('truetype');
+}
 
 :root{
+    --purple-1:#4D45A9;
     --blue-1:#3C429E;
     --blue-2:#4C52AD;
+    --blue-3:#1575E1;
     --yellow-1:#FAC742;
     --white:#FFF;
+    --white-1:#F9F9F9;
     --grey-1:#636363;
     --grey-2:#F4F8FB;
     --grey-3:#919DAB;
     --grey-2:#E0E0E0;
+    --grey-4: #A2A8AF;
     --black:#2C2C2C;
+    --black-1:#525252;
+    --black-2:#e6e6e6;
     --shadow-light:rgba(255,255,255,0.1);
     --green-font:#163E33;
     --green-bg:#e7f8f5;
     --grey-4:#FFF;
     --blue-1:#CCFFFC;
     --blue-2:#81FFF7
+
 
 }
 
@@ -54,5 +65,95 @@ body{
 }
 
 .box-shadow{
-    box-shadow: 0rem 1rem 1rem 1rem var(--grey-2);
+    border: none !important;
+    box-shadow: 0rem .8rem .8rem .8rem var(--black-2);
+    // filter: drop-shadow(0rem .8rem .8rem .8rem var(--black-2));
 }
+
+.input,.input-textarea{
+    display: flex;
+    background-color:var(--white-1);
+    border: 3px solid var(--white-1);
+    border-right:3.33px solid var(--purple-1);
+    border-radius: .4rem;
+    padding:0 5px;
+}
+.input{
+    align-items: center;
+    justify-content: center;
+}
+.input-textarea textarea{
+    height: 15vh;
+}
+.input input,.input-textarea textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--white-1);
+}
+
+.input .star,.input-textarea  .star {
+    font-size:3rem;
+    font-family: 'Roboto-Medium';
+    padding-top: .8rem;
+    line-height: 2.1rem;
+    //Do not chnage px to rem it should be fixed everyplace that is why it need px
+    width:35px;
+    opacity: .15;
+}
+// toggle CSS-----------------------
+.switch {
+    transform: rotate(90deg);
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    transition: .1s;
+    border-radius: 4px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5em;
+    width: 0.75em;
+    border-radius: 4px;
+    border: 1px solid #1575E1;
+    left: 0em;
+    bottom: 0em;
+    background-color: white;
+    transition: .1s;
+}
+
+input:checked+.slider {
+    background: #1575E1;
+    border-radius: 4px;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1em);
+    border-radius: 4px;
+}
+//----------------------------------------

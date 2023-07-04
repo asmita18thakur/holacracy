@@ -1,0 +1,109 @@
+.governance-header{
+    font-family: 'Roboto-Medium';
+    line-height: 2.25rem;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.governance-body{
+    padding-top: 1rem;
+}
+
+.governance-opt_container{
+    margin-left: 2.54rem;
+    margin-top: 0.5rem;
+   
+}
+
+
+.opt_txt{
+    font-family: 'Roboto-Regular';
+    line-height: 1.5rem;
+    color: var(--black);
+}
+//-------------------------------
+.radio-button input[type="radio"] {
+    display: none;
+  }      
+  .radio-button label {
+    display: inline-block;
+    color:var(--white);
+    border-radius: 14px;
+    background: var(--grey-4);
+    cursor: pointer;
+    line-height: 1.25rem;
+    letter-spacing: -0.176px;
+    padding: 0.25rem 0.9rem;
+    margin-right: 0.5rem ;
+    font-family: 'Roboto-Regular';
+  }      
+  .radio-button input[type="radio"]:checked+label {
+    background-color: var(--blue-3);
+  }
+
+  //-------------------------------
+  #governance-currency{
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+    opacity: 0.699999988079071;
+    color: var(--black);
+    
+  }
+  //-----------------------------------
+  .currency_radio_button input[type="radio"] {
+    display: none;
+  }      
+  .currency_radio_button{
+    display: inline-block;
+    color:var(--black);
+    margin-right: 0.5rem ;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+ 
+  }      
+  .currency_radio_button input[type="radio"]:checked+label {
+    border: 2px solid var(--blue-3);
+  }
+  .currency_radio_button img{
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+
+#currency_show_more:hover{
+    cursor: pointer;
+    border: 2px solid var(--blue-3);
+}
+#currency_show_more{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.699999988079071;
+  color: var(--black);
+  
+}
+
+//-------------------
+.check-button input[type="checkbox"] {
+    display: none;
+  }      
+  .check-button label {
+    display: inline-block;
+    color:var(--white);
+    border-radius: 14px;
+    background: var(--grey-4);
+    cursor: pointer;
+    line-height: 1.25rem;
+    letter-spacing: -0.176px;
+    padding: 0.25rem 0.9rem;
+    margin-right: 0.5rem ;
+    font-family: 'Roboto-Regular';
+  }      
+  .check-button input[type="checkbox"]:checked+label {
+    background-color: var(--blue-3);
+  }

@@ -1,0 +1,74 @@
+.configure_setting {
+    width: 100%;
+}
+
+.configure_sidebar {
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    width: 24%;
+    height: 100vh;
+    position: fixed;
+}
+
+//note:- couse sidebar is fixed at left side covering 24% so right content take 25% margin 
+.configure_content {
+    width: 76%;
+    margin-left: 25%;
+    padding-top: 2.3rem;
+}
+
+.configure_sidebar_ul {
+    list-style-type: none;
+    margin: 15px;
+    padding: 0;
+
+}
+
+.configure_sidebar_ul li {
+    border-right: 3.6px solid var(--grey-2);
+    height: 48px;
+}
+
+.custom-bullet {
+    list-style-type: disc;
+    margin-left: 8%;
+    padding-left: 2%;
+}
+
+.configure_sidebar_ul li a {
+    color: var(--black-1);
+    opacity: 0.8;
+}
+
+.active {
+    border-right: 3.6px solid var(--blue-3) !important;
+    font-style: bold !important;
+}
+
+.active span {
+    color: var(--black-1);
+    font-style: bold;
+    font-weight: 700;
+}
+
+.inactive span {
+    color: var(--grey-1);
+}
+
+.configure_sidebar_ul li a span {
+    padding: 8px;
+    font-size: 1.4rem;
+    font-family: 'Roboto-Medium';
+    letter-spacing: .02em;
+}
+
+.configure_sidebar-lowerdiv {
+    width: 12%;
+    position: fixed;
+    bottom: 3.4%;
+    left: 3.4%;
+}
+
+.configure_sidebar-lowerdiv img {
+    width: 100%;
+}
