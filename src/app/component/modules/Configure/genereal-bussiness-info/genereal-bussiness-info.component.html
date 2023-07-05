@@ -1,7 +1,7 @@
 <section class="general_bussiness_info">
     <form>
         <div class="d-flex general_bussiness_info-input mb-24px">
-            <div class="general_bussiness_info-input00">
+            <div class="general_bussiness_info-input10">
                 <label>Legal Business name</label>
                 <div class="input mb-24px">
                     <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="LegalBussinessName"
@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <label>Business registration Number</label>
-                <div class="input mb-24px">
+                <div class="input">
                     <input class='form-controll' type="text" name="HolacracyUrl" [(ngModel)]="BusinessRegNumber"
                         [value]="BusinessRegNumber" />
                     <div class="star">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="general_bussiness_info-input00">
+            <div class="general_bussiness_info-input11">
                 <label>Organisation Logo</label>
                 <div class="input-textarea-bgimg">
                     <p>Drag and Drop</p>
@@ -28,6 +28,93 @@
                             [(ngModel)]="OrganisationLogo" [value]="OrganisationLogo" />
                     </div>
                     <p>Click here to select Files</p>
+                </div>
+            </div>
+        </div>
+        <div class="mb-24px">
+            <label>Bussiness Address</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="BusinessAddress"
+                        [value]="BusinessAddress" />
+                    <div class="star">
+                        *
+                    </div>
+                </div>
+        </div>
+        <div class="d-flex general_bussiness_info-input mb-24px">
+            <div class="general_bussiness_info-input01">
+                <label>Postal Code</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="PostalCode"
+                        [value]="PostalCode" />
+                </div>
+            </div>
+            <div class="general_bussiness_info-input01">
+                <label>City</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="City"
+                        [value]="City" />
+                </div>
+            </div>
+            <div class="general_bussiness_info-input01">
+                <label>State</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="State"
+                        [value]="State" />
+                </div>
+            </div>
+        </div>
+        <div class="d-flex general_bussiness_info-input mb-24px">
+            <div class="general_bussiness_info-input00">
+                <label>Email Address</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="EmailAddress"
+                        [value]="EmailAddress" />
+                    <div class="star">
+                        *
+                    </div>
+                </div>
+            </div>
+            <div class="general_bussiness_info-input00">
+                <label>Contact Number</label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyUrl" [(ngModel)]="ContactNumber"
+                        [value]="ContactNumber" />
+                    <div class="star">
+                        *
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex general_bussiness_info-input mb-24px">
+            <div class="general_bussiness_info-input00">
+                <label class="d-flex">CIK Key <img src="assets/images/configure/Information-Circle.svg" class="info-circle"/></label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="CIKKey"
+                        [value]="CIKKey" />
+                </div>
+            </div>
+            <div class="general_bussiness_info-input00">
+                <label class="d-flex">Crunchbase URL  <img src="assets/images/configure/Information-Circle.svg" class="info-circle"/></label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyUrl" [(ngModel)]="CrunchbaseURL"
+                        [value]="CrunchbaseURL" />
+                </div>
+            </div>
+        </div>
+        <div class="d-flex general_bussiness_info-input mb-24px">
+            <div class="general_bussiness_info-input00">
+                <label class="d-flex">National BBB ID  <img src="assets/images/configure/Information-Circle.svg" class="info-circle"/></label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyName" [(ngModel)]="NationalBBBID"
+                        [value]="NationalBBBID" />
+                </div>
+            </div>
+            <div class="general_bussiness_info-input00">
+                <label class="d-flex">Regional BBB ID  <img src="assets/images/configure/Information-Circle.svg" class="info-circle"/></label>
+                <div class="input">
+                    <input class='form-controll' type="text" name="HolacracyUrl" [(ngModel)]="RegionalBBBID"
+                        [value]="RegionalBBBID" />
                 </div>
             </div>
         </div>

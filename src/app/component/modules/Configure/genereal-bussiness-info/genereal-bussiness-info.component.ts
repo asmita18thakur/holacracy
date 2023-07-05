@@ -11,8 +11,10 @@ export class GenerealBussinessInfoComponent {
   BusinessRegNumber:string='';
   BusinessAddress:string='';
   PostalCode:string='';
+  City:string='';
+  State:string='';
   ContactNumber:string='';
-  Emailaddress:string='';
+  EmailAddress:string='';
   CIKKey:string='';
   CrunchbaseURL:string='';
   NationalBBBID:string='';

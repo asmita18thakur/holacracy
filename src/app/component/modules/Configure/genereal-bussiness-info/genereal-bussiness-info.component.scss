@@ -3,10 +3,10 @@
 }
 label{
     color: var(--black);
+    opacity: 0.699999988079071;
     font-size: 1.1rem;
     line-height: 150%;
     font-weight: 500;
-    opacity: 0.699999988079071;
 }
 .general_bussiness_info-input{
     width: 100%;
@@ -29,4 +29,21 @@ label{
 .general_bussiness_info-Tag select{
     width: 6%;
 }
+.general_bussiness_info-input01{
+    width: 32.1%;
+}
+.general_bussiness_info-input10{
+    width: 65%;
+}
+.general_bussiness_info-input11{
+    width: 35%;
+}
+.bg-img{
+    background-size: 93%;
+}
 
+.info-circle{
+margin-left: 8px;
+width: 4.5%;
+max-width: 26px;
+}

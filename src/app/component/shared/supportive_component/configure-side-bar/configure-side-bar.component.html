@@ -4,12 +4,12 @@
             <ul class="configure_sidebar_ul">
                 <li (click)="changeContent('general-bussiness')" [ngClass]="{'active': selectedContent == 'general-bussiness'}">
                     <a>
-                        <span>*</span><span>Marketplace Business Proposition</span>
+                        <span>*</span><span class="pl-2px">Marketplace Business Proposition</span>
                     </a>
                 </li>
                 <li (click)="changeContent('general-bussiness-info')" [ngClass]="{'active': selectedContent == 'general-bussiness-info'}">
                     <a>
-                        <span>01</span><span>General Business Info</span>
+                        <span>01</span><span class="pl-2px">General Business Info</span>
                     </a>
 
                 </li>
@@ -20,7 +20,7 @@
                 </li>
                 <li (click)="changeContent('governance')" [ngClass]="{'active': selectedContent == 'governance'}">
                     <a>
-                        <span>02</span><span>Governance</span>
+                        <span>02</span><span class="pl-2px">Governance</span>
                     </a>
 
                 </li>   
@@ -51,10 +51,10 @@
                     </a>
                 </li>   <li>
                     <a>
-                        <span>03</span><span>Appearance</span>
+                        <span>03</span><span class="pl-2px"> Appearance</span>
                     </a>
                 </li>
-                <li class="custom-bullet" (click)="changeContent('login')">
+                <li class="custom-bullet" (click)="changeContent('login')" [ngClass]="{'active': selectedContent == 'login'}">
                     <a>
                         <span>Login Page</span>
                     </a>
@@ -76,13 +76,16 @@
                 </li>
                 <li >
                     <a>
-                      <span>04</span><span>Billing</span>
+                      <span>04</span><span class="pl-2px">Billing</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="configure_sidebar-lowerdiv">
-            <img src="assets/images/configure/configure-sidebar.png" />
+            <img  *ngIf="selectedContent === 'general-bussiness' || selectedContent === 'general-bussiness-info'" src="assets/images/configure/configure-sidebar.png" />
+            <img  *ngIf="selectedContent !== 'general-bussiness' && selectedContent !== 'general-bussiness-info'" src="assets/images/configure/Data-Organization.svg" />
+            <p *ngIf="selectedContent === 'general-bussiness'" class="configure_sidebar-lowerdiv-text lowerdiv-width" >Together Better</p>
+            <p *ngIf="selectedContent !== 'general-bussiness'" class="configure_sidebar-lowerdiv-text">Better Tech for Better Inmates</p>
         </div>
     </div>
     <div class="configure_content">
