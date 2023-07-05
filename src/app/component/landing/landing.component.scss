@@ -1,0 +1,35 @@
+.sidebar-container{
+    width: 64px;
+    height: 100vh;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+// .main-container{
+//     background: red($color: #000000);
+// }
+
+.landing-page{
+    display: flex;
+    width: 100vw;
+}
+
+.expand{
+    width: 448px;
+}
+
+.asidebar{
+    transition: all 0.5s;
+}
+
+// .sidebar-container2{
+//     width: calc(100% - 64px);
+// }
+
+// .expand2{
+//     width: calc(100% - 448px);
+// }

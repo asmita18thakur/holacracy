@@ -15,6 +15,8 @@ import { TenantBehaviourComponent } from './component/modules/Configure/tenant-b
 import { AllianceBehaviourComponent } from './component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
 import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from './component/shared/sidebar/sidebar.component';
+import { LandingComponent } from './component/landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TenantBehaviourComponent,
     GenerealBussinessInfoComponent,
     AllianceBehaviourComponent,
-    ConfigureLoginComponent
+    ConfigureLoginComponent,
+    SidebarComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent,]
 })
 export class AppModule { }

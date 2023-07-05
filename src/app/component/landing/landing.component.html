@@ -1,0 +1,21 @@
+
+<section class="landing-page">
+    <section class="sidebar-container">
+        <app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
+    </section>
+   
+    <section [class.expand2]="isAsideExpanded"  [class.sidebar-container2]="!isAsideExpanded" #graphComponent class="main-container">
+           <router-outlet></router-outlet>
+    </section>
+
+   
+
+     
+    <section class="asidebar" [class.expand]="isAsideExpanded"  [class.sidebar-container]="!isAsideExpanded">
+    </section>
+   
+
+</section>
+    
+   
+ 
