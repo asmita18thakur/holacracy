@@ -11,9 +11,11 @@ import { ConfigureSideBarComponent } from './component/shared/supportive_compone
 import { GeneralBussinessComponent } from './component/modules/Configure/general-bussiness/general-bussiness.component';
 import { FormsModule } from '@angular/forms';
 import { GenerealBussinessInfoComponent } from './component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
-
+import { ColorPickerModule } from 'ngx-color-picker';
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
 import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
+import { ErrorPageComponent } from './component/modules/Configure/error-page/error-page.component';
+import { ProductListingComponent } from './component/shared/supportive_component/product-listing/product-listing.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,15 @@ import { ConfigureLoginComponent } from './component/modules/Configure/configure
     GeneralBussinessComponent,
     GovernanceComponent,
     GenerealBussinessInfoComponent,
-    ConfigureLoginComponent
+    ConfigureLoginComponent,
+    ErrorPageComponent,
+    ProductListingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ColorPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent,]

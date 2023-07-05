@@ -52,7 +52,7 @@
                         <span>Login Page</span>
                     </a>
                 </li>
-                <li class="custom-bullet">
+                <li class="custom-bullet" (click)="changeContent('error')"  [ngClass]="{'active': selectedContent == 'error'}">
                     <a>
                         <span>404 Error Page</span>
                     </a>
@@ -62,7 +62,7 @@
                        <span>Product Page</span>
                     </a>
                 </li>
-                <li class="custom-bullet">
+                <li class="custom-bullet" (click)="changeContent('productlisting')"  [ngClass]="{'active': selectedContent == 'productlisting'}">
                     <a>
                        <span>Product Listing</span>
                     </a>

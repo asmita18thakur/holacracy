@@ -1,23 +1,86 @@
-<section class="configure_login">
-  <div class="configure_login-heading">
-    <h1>What's the first thing users should see when they come to your holacracy?</h1>
+
+<div class="error_page-heading">
+  <h1>What's the first thing users should see when they come to your holacracy?</h1>
+</div>
+
+
+<div class="configure_login-login d-flex">
+
+  <div class="left">
+    <div class="left_heading">
+      <p [style.Color]="selectedColor">aventiv</p>
+    </div>
+    <div class="invitation">
+      <p>Invite expires in 3 hrs</p>
+    </div>
+    <div class="login_details d-flex flex-column align-items-center">
+      <div class="username">
+        <p>Username</p>
+        <input type="text" placeholder="Enter you username" />
+      </div>
+      <div class="username">
+        <p>Password</p>
+        <input type="text" placeholder="Enter your password" />
+      </div>
+      <div class="d-flex" style="width: 100%;">
+        <div class="remember d-flex">
+
+            <input type="checkbox" name="Remember" value="numberofdays" />
+            <p>Remember for 30days</p>
+
+        </div>
+        <div class="forgot">
+          <p>Forgot Password</p>
+        </div>
+      </div>
+      <div class="signin">
+        <button type="button" [style.backgroundColor]="selectedColor">Sign in</button>
+      </div>
+      <div class="register d-flex" style="padding-top: 20px;">
+
+          <p>Don't have an account?</p>
+          <button class="register_button">Register Now</button>
+
+      </div>
+    </div>
+
   </div>
-  <div class="configure_login-login d-flex ">
-    <div class="configure_login-login-left" >
+  <div class="right">
+    <img
+      src="./assets/images/rate_card_config/Screenshot 2023-06-07 at 5.47 23.png"
+    />
+  </div>
+</div>
+
+<div class="input_select d-flex">
+  <div class="input-textarea-bgimg">
+    <div class="d-flex">
       <div>
-        <p>aventiv</p>
+        <span class="mt-2 heading-text">Page Background</span>
       </div>
       <div>
-        <p>Invite expires in 3 hrs</p>
+        <p class="mt-2 heading-text">Drag and Drop</p>
+        <input
+          class="form-controll"
+          type="file"
+          style="opacity: 0"
+          name="Resources"
+        />
+        <p class="heading-text">or Click here to select Files</p>
       </div>
-
     </div>
-    <div class="configure_login-login-right" >
-      <img src="./assets/images/rate_card_config/Screenshot 2023-06-07 at 5.47 23.png"/>
-
-    </div>
-
-
   </div>
 
-</section>
+  <div class="color_picker d-flex" [style.backgroundColor]="selectedColor">
+    <div class="d-flex flex-column">
+      <div class="heading"><p class="heading-text">Custom Primary Color</p></div>
+      <div class="heading">{{selectedColor}}</div>
+    </div>
+
+    <div class="input_color">
+      <img class="image-input" src="../../../../../assets/images/rate_card_config/Color_Picker_1.svg"/>
+      <input  type="color" [(ngModel)]="selectedColor" (input)="onColorPickerChange($event)">
+    </div>
+
+</div>
+

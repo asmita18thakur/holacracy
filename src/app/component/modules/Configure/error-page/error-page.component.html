@@ -1,0 +1,51 @@
+<div class="error_page ">
+  <div class="error_page-heading">
+    <h1>What happens when something dosen't work?</h1>
+  </div>
+  <div class="error_page-screen d-flex flex-column justify-content-center" >
+    <div class="error">
+      <p [style.Color]="selectedColor" >404</p>
+    </div>
+    <div class="error_reason">
+      <p>OOPS, THE PAGE YOU ARE LOOKING FOR CAN'T BE FOUND!</p>
+    </div>
+
+    <div class="error_button">
+      <button><i class="fas fa-chevron-left"></i>Return To Homepage</button>
+    </div>
+  </div>
+  <div class="input_select d-flex">
+    <div class="input-textarea-bgimg">
+      <div class="d-flex">
+        <div>
+          <span class="mt-2 heading-text">Page Background</span>
+        </div>
+        <div>
+          <p class="mt-2 heading-text">Drag and Drop</p>
+          <input
+            class="form-controll"
+            type="file"
+            style="opacity: 0"
+            name="Resources"
+          />
+          <p class="heading-text">or Click here to select Files</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="color_picker d-flex" [style.backgroundColor]="selectedColor">
+      <div class="d-flex flex-column">
+        <div class="heading"><p class="heading-text">Custom Primary Color</p></div>
+        <div class="heading">{{selectedColor}}</div>
+      </div>
+
+      <div class="input_color">
+        <img class="image-input" src="../../../../../assets/images/rate_card_config/Color_Picker_1.svg"/>
+        <input  type="color" [(ngModel)]="selectedColor" (input)="onColorPickerChange($event)">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
