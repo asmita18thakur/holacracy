@@ -17,7 +17,7 @@ export class SidebarComponent {
   @Input() isExpanded: boolean = false;
   @Output() toggleSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
   headerColorChanged: Subject<string> = new Subject<string>();
-  
+
   show: any = 'apperancesetting';
   provider: any;
   activePage:string='';
@@ -41,7 +41,7 @@ export class SidebarComponent {
     private activeRoute: ActivatedRoute,
     private cdr: ChangeDetectorRef,
   ) {
-   
+
     let sideTabClicked = this.activeRoute.snapshot.params['type'] ? this.activeRoute.snapshot.params['type'] : 'apperancesetting';
     // this.navigateTo(sideTabClicked);
   }
@@ -54,9 +54,12 @@ export class SidebarComponent {
     if (pagename) {
           this.show = pagename;
     }
+    // else{
+    //   this.show=''
+    // }
     // this.activeRoute.paramMap.subscribe(params => {
     //   const pagename = params.get('pagename');
-    //   
+    //
     // });
     console.log(this.show)
   }
@@ -66,7 +69,7 @@ export class SidebarComponent {
     this.activePage=page
     this.router.navigate([page])
   }
- 
+
   handleToggle(pagename: string) {
       this.show=pagename;
       this.pages = this.pages.map(page => {
@@ -78,7 +81,7 @@ export class SidebarComponent {
       });
       console.log(this.pages)
     }
- 
+
 
 
   handleSidebarToggle = () => this.isExpanded = true;
@@ -89,7 +92,7 @@ export class SidebarComponent {
     return this.show == pagename;
   }
 
- 
+
   logout() {
     sessionStorage.clear();
     localStorage.clear();
