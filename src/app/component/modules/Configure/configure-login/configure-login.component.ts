@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./configure-login.component.scss']
 })
 export class ConfigureLoginComponent {
-  selectedColor: string = '#FF508E';
+  changedColor: string= '#FF508E'
 
-  onColorPickerChange(event: Event): void {
-    this.selectedColor = (event.target as HTMLInputElement).value;
+  onColorChange(color: string ) {
+    this.changedColor = color;
+
+
+
   }
 
 }

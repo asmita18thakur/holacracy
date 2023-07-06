@@ -1,10 +1,28 @@
 .productlisting{
   margin-left:1rem ;
 }
-.productlisting_ratecard{
-  width: 31%;
+.input_radio{
+  label{
+    font-family: 'Roboto-Regular';/*400*/
+    color: #2C2C2C;
+  }
 }
-.productlsiting_input{
-  border: 1px solid black;
-width: 66%;
+.product_listing_input{
+  width: 40%;
+  .input_child{
+    width: 73%;
+  }
+
+}
+.productlisting_head_input{
+  .head_input{
+    margin-right:15%;
+  }
+
+}
+.card_background{
+  p{
+    color: #2C2C2C;
+    opacity: 0.7;
+  }
 }

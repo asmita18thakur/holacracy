@@ -2,19 +2,81 @@
   <div class="productlisting_heading">
     <h1>Product Listing</h1>
   </div>
-  <div class="productlsiting_input">
-    <input type="radio" id="compact" name="productlisting" value="compact">
-    <label for="compact">Compact</label>
-
-    <input type="radio" id="detailed" name="productlisting" value="detailed">
-    <label for="detailed">Detailed</label>
-
+  <div class="productlisting_head_input d-flex">
+    <div class="d-flex head_input gap-3">
+      <input
+        type="radio"
+        id="compact"
+        name="productlisting"
+        value="compact"
+        checked
+      />
+      <label for="compact">Compact</label>
+    </div>
+    <div class="d-flex gap-2">
+      <input
+        type="radio"
+        id="detailed"
+        name="productlisting"
+        value="detailed"
+      />
+      <label for="detailed">Detailed</label>
+    </div>
   </div>
-  <div class="productlisting_ratecard">
-
-
+  <div class="d-flex gap-4">
+    <app-product-listing-component
+      [heading]="product[1].heading"
+      [subheading]="product[1].subheading"
+      [ownerid]="product[1].ownerid"
+      [description]="product[1].description"
+    ></app-product-listing-component>
+    <app-product-listing-component
+      [heading]="product[0].heading"
+      [subheading]="product[0].subheading"
+    ></app-product-listing-component>
   </div>
 
-
-
+  <div class="d-flex product_listing_input">
+    <div
+      class="d-flex mt-4 flex-column justify-content-between w-50 input_child"
+    >
+      <div class="card_background">
+        <p>Card Background</p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="input_radio d-flex">
+          <input
+            type="radio"
+            id="option1"
+            name="options"
+            value="option1"
+            checked
+          />
+          <label class="small" for="option1">by Product type</label>
+        </div>
+        <div class="input_radio d-flex">
+          <input type="radio" id="option2" name="options" value="option2" />
+          <label class="small" for="option2">No Background</label>
+        </div>
+        <div class="input_radio d-flex">
+          <input type="radio" id="option3" name="options" value="option3" />
+          <label class="small" for="option3">Custom</label>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4">
+      <div class="input-textarea-bgimg">
+        <p>Drag and Drop</p>
+        <div>
+          <input
+            class="form-controll"
+            type="file"
+            style="opacity: 0"
+            name="Resources"
+          />
+        </div>
+        <p>Click here to select Files</p>
+      </div>
+    </div>
+  </div>
 </div>

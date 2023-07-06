@@ -8,7 +8,7 @@
 
   <div class="left">
     <div class="left_heading">
-      <p [style.Color]="selectedColor">aventiv</p>
+      <p [style.Color]="changedColor">aventiv</p>
     </div>
     <div class="invitation">
       <p>Invite expires in 3 hrs</p>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="signin">
-        <button type="button" [style.backgroundColor]="selectedColor">Sign in</button>
+        <button type="button" [style.backgroundColor]="changedColor">Sign in</button>
       </div>
       <div class="register d-flex" style="padding-top: 20px;">
 
@@ -50,37 +50,11 @@
       src="./assets/images/rate_card_config/Screenshot 2023-06-07 at 5.47 23.png"
     />
   </div>
-</div>
-
-<div class="input_select d-flex">
-  <div class="input-textarea-bgimg">
-    <div class="d-flex">
-      <div>
-        <span class="mt-2 heading-text">Page Background</span>
-      </div>
-      <div>
-        <p class="mt-2 heading-text">Drag and Drop</p>
-        <input
-          class="form-controll"
-          type="file"
-          style="opacity: 0"
-          name="Resources"
-        />
-        <p class="heading-text">or Click here to select Files</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="color_picker d-flex" [style.backgroundColor]="selectedColor">
-    <div class="d-flex flex-column">
-      <div class="heading"><p class="heading-text">Custom Primary Color</p></div>
-      <div class="heading">{{selectedColor}}</div>
-    </div>
-
-    <div class="input_color">
-      <img class="image-input" src="../../../../../assets/images/rate_card_config/Color_Picker_1.svg"/>
-      <input  type="color" [(ngModel)]="selectedColor" (input)="onColorPickerChange($event)">
-    </div>
 
 </div>
+<div class="color_picker">
+  <app-colorpicker  (colorChange)="onColorChange($event)"></app-colorpicker>
+</div>
+
+
 

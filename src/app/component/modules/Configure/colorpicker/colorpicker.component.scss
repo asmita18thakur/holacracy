@@ -1,0 +1,51 @@
+
+.input_select{
+  width: 80%;
+  margin-top: 1.875rem;
+
+}
+::placeholder{
+  color: red;
+}
+
+.input-textarea-bgimg span{
+  float:  left;
+  display: flex;
+
+}
+
+.input-textarea-bgimg  input{
+  height: 0px;
+}
+.input-textarea-bgimg{
+  width: 60%;
+
+}
+.color_picker{
+  margin-left: 5px;
+  width: 23%;
+  border-radius: 12px;
+
+}
+.heading{
+  color: white;
+  font-family: 'Roboto-Regular';/*400*/
+  margin-top: 10px;
+  margin-left: 10px;
+
+
+}
+
+.heading-text{
+  font-size: 12px;
+  color: #2C2C2C ;
+  opacity: 0.7;
+}
+.image-input{
+  top: 24px;
+  position: relative;
+  left: 18px;
+  height: 20px;
+}
+
+

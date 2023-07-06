@@ -15,13 +15,16 @@
 .configure_login-login{
   margin:0 0 1.68rem 1rem;
   width: 55%;
-  height: 30%
+  height: 30%;
+  border: 1px solid #CBCBCB;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
 
 
 }
 .left{
-  width: 70%;
+  width: 50%;
   height: 30%;
+  padding: 40px;
 
 
   .left_heading{
@@ -48,30 +51,36 @@
   }
 }
 .invitation{
-  margin-bottom: 30px;
+  position: relative;
+  bottom: 20px;
 
   p{
     text-align: center;
-    color:rgb(51, 51, 228)
+    color:rgb(51, 51, 228);
+    font-size:15px;
 
     }
 }
 .username{
   width: 100%;
   margin-bottom: 10px;
-  P{
+  p{
     font-weight: bold;
+    font-size: 10px;
   }
 
   input{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(180 190 199 / 14%);
     border: 0px;
     border-right: 2px solid grey;
     margin-top: 5px;
     margin-bottom: 5px;
     width: 100%;
     color: grey;
-    font-weight: bold;
+    font-size: 10px;
+    border-radius: 4px;
+    height: 30px;
+    padding: 10px;
   }
 }
 .forgot{
@@ -83,6 +92,7 @@
     font-weight: 200;
     color: blue;
     width: 100%;
+    font-size: 10px;
 
   }
 }
@@ -93,28 +103,28 @@
 .remember{
   width: 70%;
   width: 70%;
-  margin-top: 16px;
-
-
-
-  margin-right: 30%;
+input{
+  margin-right: 5px;
+}
  p{
   font-size: small;
   font-weight: bold;
   color: grey;
+  font-size: 10px;
  }
 }
 .signin{
   width: 100%;
   button{
     width: 100%;
-    height: 41px;
+    height: 35px;
     border-radius: 10px;
     background-color: #A9DF7B;
     margin-top: 10px;
     color: white;
     font-weight: 700;
     border: 0px;
+    font-size: 10px;
   }
 
 
@@ -127,49 +137,25 @@
     font-family: Roboto-Medium;
     color: grey;
     margin-left: 10%;
+    font-size: 10px;
   }
   .register_button{
     color: blue;
     border: none;
     background: transparent;
     font-weight: 600;
+    font-size: 10px;
+    margin-left:5px;
 
   }
 
 
 }
-.input_select{
-  width: 90%;
-  margin-top: 1.875rem;
-
-}
-::placeholder{
-  color: grey;
-}
-.input-textarea-bgimg{
-  width: 47%;
-}
-
-.input-textarea-bgimg span{
-  float:  left;
-  display: flex;
-
-}
 
 .color_picker{
-  margin-left: 5px;
-  width: 15%;
-  border-radius: 12px;
-
+  width: 85%;
 }
-.heading{
-  color: white;
-  font-family: 'Roboto-Regular';/*400*/
-  margin-top: 10px;
-  margin-left: 10px;
 
-
-}
 
 .heading-text{
   font-size: 12px;
