@@ -12,6 +12,8 @@ export class ProductListingComponentComponent {
   @Input() subheading:any;
   @Input() ownerid:any;
   @Input() description:any;
+constructor(){
 
+}
 
 }
