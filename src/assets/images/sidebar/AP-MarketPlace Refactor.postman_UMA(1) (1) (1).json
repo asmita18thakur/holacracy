@@ -1,0 +1,2815 @@
+{
+	"info": {
+		"_postman_id": "3394da2c-25fb-44ce-9c6c-8e4ca7c2def1",
+		"name": "AP:MarketPlace Refactor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account Controller",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYxNjU3MzEsImp0aSI6Ijc2NDNiZDE4LTY4ZGMtNDIxMS1iMzgwLWE1Mjc1ODcyMzVkOSIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.WltlNwvh7bFPgfdI3abBIyB1aHcguB-5LoegL83XdkWKNnObCbUi0QmdIMXhth9WaHVIR3nHqHOFzkF-px2Rj7L3uGsCN6tnlEY-Zv8w4RjN-Gvykiuv9RDsx6KNIJzbp0qxKdfymsierVVrkwfZmVyyDhPnCYs6d5lMj6rn69gmMa2c73gTXAnSLeD5EFulmAT0qvkz89D-79mEUXIjeFUrUjY0e_TZ2KMWohyDFflzQqMiaAlDXS9BWGZ3MFxB9A7wo5pH_I9N0V5MtPrFtSumxqlywwclT5DtRaMiIko3MEMzqHzp4-x8LrNg5HaXkSsC1jjHARAFsK1KM9Pmww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountHolderName\": \"Exception Gaian\",\n    \"accountNum\": \"0758754951520\",\n    \"accountType\": \"COMPANY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account By AccountId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/accounts/648ed5e914eeb26b09df5f16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"accounts",
+								"648ed5e914eeb26b09df5f16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Accounts -Restriced",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account By AccountId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/accounts/647c99f7baf8404076b4c7ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"accounts",
+								"647c99f7baf8404076b4c7ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account By AccountId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountHolderName\": \"Citizen Bank\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/accounts/648ed5e914eeb26b09df5f16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"accounts",
+								"648ed5e914eeb26b09df5f16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organisation Controller",
+			"item": [
+				{
+					"name": "Create Organisation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"registrationNumber\": \"Exception-kakfka\",\n    \"organisationName\": \"Kafka-Gaian\",\n    \"accountId\": \"6491573392cfdf0f35bd9a1f\",\n    \"website\": \"https://www.gaiansolutions.com/\",\n    \"routingNum\": \"4520005\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/organisations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"organisations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Organisation By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/organisations/648ed7e014eeb26b09df5f1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"organisations",
+								"648ed7e014eeb26b09df5f1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Organisation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/organisations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"organisations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Organisation By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/organisations/647c9a04baf8404076b4c7ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"organisations",
+								"647c9a04baf8404076b4c7ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Organisation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountId\": \"64805ca2cd6e743c5df8cb70\",\n    \"website\": \"https://www.gaiansolutions.com/org/uganda\",\n    \"routingNum\": \"48520999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/organisations/648ed7e014eeb26b09df5f1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"organisations",
+								"648ed7e014eeb26b09df5f1c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Platform Controller",
+			"item": [
+				{
+					"name": "Create Platform",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"MO Mobius Gaian Platform\",\n    \"desc\": \"MO created a platform from the existing one. Bought a producta as a service.\",\n    \"icon\": \"https://www.gaiansolutions.com/\",\n    \"title\": \"MO Mobius Gaian Platform\",\n    \"currencies\": [\n        \"INR\",\n        \"USD\"\n    ],\n    \"ownerId\": \"648f00eb0476cd6d801fc559\",\n    \"config\": {},\n    \"serpLocation\": {},\n    \"parentPlatformId\": \"648edd4d14eeb26b09df5f23\",\n    \"platformConfig\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/platforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Default Platform For Gaian",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Gaian Platform\",\n    \"desc\": \"Gaian Platform\",\n    \"icon\": \"www.amazon.com/icon/gaian\",\n    \"title\": \"Gaian Base Platform.\",\n    \"currencies\": [\n        \"INR\",\n        \"USD\"\n    ],\n    \"ownerId\": \"618b6fdef5dacc0001agaian\",\n    \"config\": {},\n    \"serpLocation\": {},\n    \"parentPlatformId\": \"NA\",\n    \"platformConfig\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/default/platforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"default",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Platform By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/platforms/648edd4d14eeb26b09df5f23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"platforms",
+								"648edd4d14eeb26b09df5f23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Defautl Platform By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/platforms/647c98ddbaf8404076b4c7ec",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"platforms",
+								"647c98ddbaf8404076b4c7ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Palatform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/platforms",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Palatform With Filter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"platformType\": \"IPO\",\n    \"currencies\": [\n        \"INR\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/platforms/filter?size=2&page=0",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"platforms",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Plaform",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/platforms/6474e0d643c7266dc01c85f4",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"platforms",
+								"6474e0d643c7266dc01c85f4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Platforms By Ids",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/platforms/ids?platformIds=6474e2df5ff9690d27d38204",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"platforms",
+								"ids"
+							],
+							"query": [
+								{
+									"key": "platformIds",
+									"value": "6474e2df5ff9690d27d38204"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Platform By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"648edd4d14eeb26b09df5f23\",\n    \"name\": \"Gaian Platform Default\",\n    \"desc\": \"Gaian Platform Default\",\n    \"icon\": \"www.amazon.com/icon/gaian/default\",\n    \"title\": \"Gaian Base Platform Default.\",\n    \"currencies\": [\n        \"INR\",\n        \"USD\"\n    ],\n    \"access\": \"PRIVATE\",\n    \"visibility\": \"PUBLIC\",\n    \"ownerId\": \"64805bcbed18ec6c6f231141\",\n    \"serpLocation\": {},\n    \"parentPlatformId\": \"NA\",\n    \"platformConfig\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/platforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tenant Controller",
+			"item": [
+				{
+					"name": "Create SubTenant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailId\": \"patelavinashbirgunj@gmail.com\",\n    \"name\": \"Avinsh Patel\",\n    \"address\": {\n        \"addressLine1\": \"10880 Malibu Point, 90265\",\n        \"addressLine2\": \"10880 Malibu Point, 90265\",\n        \"city\": \"Malibu\",\n        \"state\": \"Malibu\",\n        \"country\": \"US\",\n        \"postCode\": \"90265\",\n        \"longitude\": 102.02,\n        \"latitude\": 10.2,\n        \"type\": \"PRIMARY\"\n    },\n    \"defaultCurrency\": \"INR\",\n    \"profileUrl\": \"www.google.com/profileUrl\",\n    \"parentTenantId\": \"6471e8214ceff701236066be\",\n    \"product\": {\n        \"604789eb42b7dc00017a8341\": [\n            \"MARKETPLACE_USER\"\n        ]\n    },\n    \"platformDetails\": {\n        \"604789eb42b7dc00017a8341\": \"MO\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-tenants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-tenants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tenant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"6491d6a1f2d6216ade789ab2\",\n    \"countryCode\": \"+977\",\n    \"description\": \" Tenant\",\n    \"version\": \"v1.0\",\n    \"url\": \"www.google.com/images/avinash-patel-rockz\",\n    \"emailId\": \"mobile1@gatestautomation.com\",\n    \"organisationId\": \"6491c82d6333f94eaa2b2ed3\",\n    \"geoLocation\": null,\n    \"dmas\": [],\n    \"selectedTags\": [],\n    \"telephoneNum\": \"7089786854\",\n    \"interestedProducts\": [],\n    \"address\": {\n        \"addressLine1\": \"\",\n        \"addressLine2\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"country\": \"\",\n        \"postCode\": \"\",\n        \"longitude\": 0,\n        \"latitude\": 0,\n        \"type\": \"PRIMARY\"\n    },\n    \"defaultCurrency\": \"INR\",\n    \"currenciesSupported\": [],\n    \"logo\": \"www.google.com/images.\",\n    \"userName\": \"mobile1@gatestautomation.com\",\n    \"firstName\": \"kafka\",\n    \"lastName\": \"zookeeper\",\n    \"name\": \"mobile1@gatestautomation.com\",\n    \"password\": \"Gaian@123\",\n    \"parentTenantId\": \"\",\n    \"product\": {\n        \"648ee3e37f271849193b2166\": [\n            \"MARKETPLACE_USER\"\n        ]\n    },\n    \"platformDetails\": {\n        \"648edd4d14eeb26b09df5f23\": [\n            \"AP\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tenant Default : Super Admin Gaian.",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"648edf1e0476cd6d801fc548\",\n    \"countryCode\": \"91\",\n    \"description\": \"Default Tenant\",\n    \"version\": \"v1.0\",\n    \"url\": \"www.google.com/images\",\n    \"emailId\": \"default_gaian@gatestautomation.com\",\n    \"organisationId\": \"648edf8b14eeb26b09df5f25\",\n    \"geoLocation\": null,\n    \"dmas\": [],\n    \"selectedTags\": [],\n    \"telephoneNum\": \"8127719901\",\n    \"interestedProducts\": [],\n    \"address\": {\n        \"addressLine1\": \"10880 Malibu Point, 90265\",\n        \"addressLine2\": \"10880 Malibu Point, 90265\",\n        \"city\": \"Malibu\",\n        \"state\": \"Malibu\",\n        \"country\": \"US\",\n        \"postCode\": \"90265\",\n        \"longitude\": 102.02,\n        \"latitude\": 10.2,\n        \"type\": \"PRIMARY\"\n    },\n    \"defaultCurrency\": \"INR\",\n    \"currenciesSupported\": [\n        \"INR\",\n        \"USD\",\n        \"BAM\",\n        \"CUP\"\n    ],\n    \"logo\": \"www.google.com/images.\",\n    \"userName\": \"default_gaian@gatestautomation.com\",\n    \"firstName\": \"Default Gaian\",\n    \"lastName\": \"Default Solutions\",\n    \"name\": \"Default Gaian Solutions\",\n    \"password\": \"Gaian@123\",\n    \"parentTenantId\": \"\",\n    \"product\": {\n        \"648ee3e37f271849193b2166\": [\n            \"MARKETPLACE_USER\",\n            \"SUPER_ADMIN\",\n            \"MO\"\n        ]\n    },\n    \"platformDetails\": {\n        \"648edd4d14eeb26b09df5f23\": [\n            \"SUPER_ADMIN\",\n            \"MO\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenants/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenants",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tenant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/tenants/647e157acdca7b3124558568",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"tenants",
+								"647e157acdca7b3124558568"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tenant By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenants/648ef4b10476cd6d801fc559",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenants",
+								"648ef4b10476cd6d801fc559"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tenant By Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenants/email/AP_gaian@gatestautomation.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenants",
+								"email",
+								"AP_gaian@gatestautomation.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tenants By ParentTeanantId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/tenants?parentTenantId=6470fe929ed8fa71a621f005",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"tenants"
+							],
+							"query": [
+								{
+									"key": "parentTenantId",
+									"value": "6470fe929ed8fa71a621f005"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tenant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"648ef46c0476cd6d801fc552\",\n    \"platformDetails\": {\n        \"648edd4d14eeb26b09df5f23\": [\n            \"TP\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tenants By PlatformId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/tenants/platforms?platformId=647c9a39baf8404076b4c7ef",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"tenants",
+								"platforms"
+							],
+							"query": [
+								{
+									"key": "platformId",
+									"value": "647c9a39baf8404076b4c7ef"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant Like/Dislike the Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/tenants/6470ec809ed8fa0905162114/{productId}",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"tenants",
+								"6470ec809ed8fa0905162114",
+								"{productId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant Search API",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keyword\": \"Whut\",\n    \"platformId\":\"647eeb91bf0e2b731226f5c1\",\n    \"indices\": {\n        \"TENANT\": [\n            \"name\",\n            \"description\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/search?page=0&size=1",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"search"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Tenant-User Controller",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"avinash11.patel@gaiansolutions.com\",\n    \"name\": \"Avinsh Patel\",\n    \"address\": {\n        \"addressLine1\": \"Plot No, Suite 2, 3, 5, Amara Jyothi, 502B, Road Number 31, Jubilee Hills, Hyderabad, Telangana 500033\",\n        \"addressLine2\": \"JublieeHill, sector 25, Hydrabad, Telangana\",\n        \"city\": \"Hyderabad\",\n        \"state\": \"Telangana\",\n        \"postCode\": \"500033\",\n        \"country\": \"Paris\",\n        \"type\": \"permanent\"\n    },\n    \"profileUrl\": \"www.google.com/profileUrl\",\n    \"parentTenantId\": \"64734b377215b400ff328195\",\n    \"product\": {\n        \"644d399ff406c8ddabfbab3d\": [\n            \"CONSUMER_FACEBOOK\"\n        ],\n        \"644d39b4f406c8ddabfbab3e\": [\n            \"CONSUMER_INSTAGRAM\"\n        ]\n    },\n    \"constructs\": {\n        \"READ\": {\n            \"UNIVERSE\": [],\n            \"SCHEMA\": [],\n            \"AQ\": [],\n            \"CONTEXT\": [],\n            \"GROUP\": [],\n            \"TEMPLATE\": [],\n            \"CHART\": [],\n            \"BA\": [],\n            \"ENGAGEMENT\": [],\n            \"MAPPING\": [],\n            \"WORKFLOW\": []\n        },\n        \"READ_WRITE_EXECUTE\": {\n            \"UNIVERSE\": [],\n            \"SCHEMA\": [],\n            \"AQ\": [],\n            \"CONTEXT\": [],\n            \"GROUP\": [],\n            \"TEMPLATE\": [],\n            \"CHART\": [],\n            \"BA\": [],\n            \"ENGAGEMENT\": [],\n            \"MAPPING\": [],\n            \"WORKFLOW\": []\n        },\n        \"READ_WRITE\": {\n            \"UNIVERSE\": [],\n            \"SCHEMA\": [],\n            \"AQ\": [],\n            \"CONTEXT\": [],\n            \"GROUP\": [],\n            \"TEMPLATE\": [],\n            \"CHART\": [],\n            \"BA\": [],\n            \"ENGAGEMENT\": [],\n            \"MAPPING\": [],\n            \"WORKFLOW\": []\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenant-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenant-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete SubTenant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenant-user/647363377215b400ff32819b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenant-user",
+								"647363377215b400ff32819b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SubTenant By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenant-user/647363377215b400ff32819b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenant-user",
+								"647363377215b400ff32819b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SubTenant By ParentTeanantId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenant-user?parentTenantId=64734b377215b400ff328195",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenant-user"
+							],
+							"query": [
+								{
+									"key": "parentTenantId",
+									"value": "64734b377215b400ff328195"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update SubTenant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"647363377215b400ff32819b\",\n    \"constructs\": {\n        \"READ\": {\n            \"UNIVERSE\": [\n                \"6461ca9206035b0001835963\"\n            ],\n            \"SCHEMA\": [],\n            \"AQ\": [],\n            \"CONTEXT\": [],\n            \"GROUP\": [],\n            \"TEMPLATE\": [],\n            \"CHART\": [],\n            \"BA\": [],\n            \"ENGAGEMENT\": [],\n            \"MAPPING\": [],\n            \"WORKFLOW\": []\n        },\n        \"READ_WRITE_EXECUTE\": {\n            \"UNIVERSE\": [],\n            \"SCHEMA\": [],\n            \"AQ\": [],\n            \"CONTEXT\": [],\n            \"GROUP\": [],\n            \"TEMPLATE\": [],\n            \"CHART\": [],\n            \"BA\": [],\n            \"ENGAGEMENT\": [],\n            \"MAPPING\": [],\n            \"WORKFLOW\": []\n        },\n        \"READ_WRITE\": {\n            \"UNIVERSE\": [],\n            \"SCHEMA\": [],\n            \"AQ\": [],\n            \"CONTEXT\": [],\n            \"GROUP\": [],\n            \"TEMPLATE\": [],\n            \"CHART\": [],\n            \"BA\": [],\n            \"ENGAGEMENT\": [],\n            \"MAPPING\": [],\n            \"WORKFLOW\": []\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/tenant-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"tenant-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Helper Controller",
+			"item": [
+				{
+					"name": "Migrate To Neo4j",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/migrate/constructs?constructType=TENANT",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"migrate",
+								"constructs"
+							],
+							"query": [
+								{
+									"key": "constructType",
+									"value": "TENANT"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invitation Controller",
+			"item": [
+				{
+					"name": "Get Invitation By Email And ToPlatformId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/invitations/647eeb91bf0e2b731226f5c1/xp_gaian@gatestautomation.com",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"invitations",
+								"647eeb91bf0e2b731226f5c1",
+								"xp_gaian@gatestautomation.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inviation By PlatformsId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/invitations/platformId?toPlatformId=&fromPlatformId=648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"invitations",
+								"platformId"
+							],
+							"query": [
+								{
+									"key": "toPlatformId",
+									"value": ""
+								},
+								{
+									"key": "fromPlatformId",
+									"value": "648f3f41b0feaa0e0d333aa1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Inviation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/invitations/647e17b71dae571e703a556d",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"invitations",
+								"647e17b71dae571e703a556d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Invite to mulitple",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"toPlatformId\": \"648edd4d14eeb26b09df5f23\",\n        \"tenantIds\": [\n            \"647e321fcdca7b312455856a\"\n        ],\n        \"currencies\": [\n            \"INR\",\n            \"BAM\"\n        ],\n        \"productTags\": [\n            \"ADVERTISING\",\n            \"OTT\"\n        ],\n        \"tenantType\": \"IP\",\n        \"inviteFilterType\": [\n            \"TENANT_TYPE\"\n        ],\n        \"mxUrl\": \"www.google.com/url\",\n        \"expiryTime\": 1000\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/invitations/invite/648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"invitations",
+								"invite",
+								"648f3f41b0feaa0e0d333aa1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Product Invite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"toPlatformId\": \"647dd8bed037ba1144104cac\",\n        \"tenantIds\": [\n            \"6479ca6919175ffce968e369\",\n            \"6479caa119175ffce968e36a\"\n        ],\n        \"currencies\": [\n            \"INR\",\n            \"BAM\"\n        ],\n        \"productTags\": [\n            \"OTT\"\n        ],\n        \"tenantType\": \"XP\",\n        \"inviteFilterType\": [\n            \"TENANT_TYPE\"\n        ],\n        \"mxUrl\": \"www.google.com/url\",\n        \"expiryTime\": 1000\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/invitations/products/647e306bb337a45f881878b0/invite",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"invitations",
+								"products",
+								"647e306bb337a45f881878b0",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Invitation By InvitationId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/invitations/648f41c6b0feaa0e0d333aa4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"invitations",
+								"648f41c6b0feaa0e0d333aa4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response To Invite : /v1.0/invitations/{invitationId}/tenants/{tenantId}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/invitations/648f41c6b0feaa0e0d333aa4/tenants/648ef4840476cd6d801fc553?response=ACCEPT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"invitations",
+								"648f41c6b0feaa0e0d333aa4",
+								"tenants",
+								"648ef4840476cd6d801fc553"
+							],
+							"query": [
+								{
+									"key": "response",
+									"value": "ACCEPT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Respond to product Invite.",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/invitations/647e332c855bcf4df351cde3/tenants/647e321fcdca7b312455856a/product?response=ACCEPT",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"invitations",
+								"647e332c855bcf4df351cde3",
+								"tenants",
+								"647e321fcdca7b312455856a",
+								"product"
+							],
+							"query": [
+								{
+									"key": "response",
+									"value": "ACCEPT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingest Invite to Datalake",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"64771e880f503023716e7c2c\",\n    \"invitedToPlatformId\": \"6476f675fe189c45adff4091\",\n    \"invitedFromPlatformId\": \"6476f5d3fe189c45adff4090\",\n    \"ownerId\": \"6476f590ea45edef36ac87d7\",\n    \"mxUrl\": \"www.google.com/url\",\n    \"tenantId\": \"6476f62bea45edef36ac87da\",\n    \"emailId\": \"avi_tp@gatestautomation.com\",\n    \"platformType\": \"IP\",\n    \"inviteExpiryDate\": 1685588200129,\n    \"inviteExpired\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/tf-web/v1.0/618b6fdef5dacc0001a6b1b0/schemas/647710f994854e000178145e/instance?upsert=false",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"tf-web",
+								"v1.0",
+								"618b6fdef5dacc0001a6b1b0",
+								"schemas",
+								"647710f994854e000178145e",
+								"instance"
+							],
+							"query": [
+								{
+									"key": "upsert",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete From Datalake",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/tf-web/v1.0/618b6fdef5dacc0001a6b1b0/schemas/647710f994854e000178145e/instances/647ddbbfd037ba1144104cb0",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"tf-web",
+								"v1.0",
+								"618b6fdef5dacc0001a6b1b0",
+								"schemas",
+								"647710f994854e000178145e",
+								"instances",
+								"647ddbbfd037ba1144104cb0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Controller",
+			"item": [
+				{
+					"name": "DataLake",
+					"item": [
+						{
+							"name": "Create Schema",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"All Marketplae Product\",\n    \"entityName\": \"Marketplae Product\",\n    \"type\": \"SIMPLE\",\n    \"primaryKey\": [\n        \"id\"\n    ],\n    \"attributes\": [\n        {\n            \"name\": \"salesCount\",\n            \"nestedName\": \"salesCount\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"templateNodes\",\n            \"nestedName\": \"templateNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"universeNodes\",\n            \"nestedName\": \"universeNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"masterConfig\",\n            \"nestedName\": \"masterConfig\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"engagementNodes\",\n            \"nestedName\": \"engagementNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"videos\",\n            \"nestedName\": \"videos\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"videoUrls\",\n            \"nestedName\": \"videoUrls\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"ownerId\",\n            \"nestedName\": \"ownerId\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"groupNodes\",\n            \"nestedName\": \"groupNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"parentPlatformId\",\n            \"nestedName\": \"parentPlatformId\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"chartNodes\",\n            \"nestedName\": \"chartNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"baNodes\",\n            \"nestedName\": \"baNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"id\",\n            \"nestedName\": \"id\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": true,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"visibility\",\n            \"nestedName\": \"visibility\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"vendorCount\",\n            \"nestedName\": \"vendorCount\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"active\",\n            \"nestedName\": \"active\",\n            \"type\": {\n                \"type\": \"boolean\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"hostedApps\",\n            \"nestedName\": \"hostedApps\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"version\",\n            \"nestedName\": \"version\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"logoUrl\",\n            \"nestedName\": \"logoUrl\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"tags\",\n            \"nestedName\": \"tags\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"wfNodes\",\n            \"nestedName\": \"wfNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productRoles\",\n            \"nestedName\": \"productRoles\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"updatedTimeMs\",\n            \"nestedName\": \"updatedTimeMs\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"createdTimeMs\",\n            \"nestedName\": \"createdTimeMs\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"allowsMultiplePurchases\",\n            \"nestedName\": \"allowsMultiplePurchases\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"domain\",\n            \"nestedName\": \"domain\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"name\",\n            \"nestedName\": \"name\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"allianceInfo\",\n            \"nestedName\": \"allianceInfo\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"participation\",\n            \"nestedName\": \"participation\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"schemaNodes\",\n            \"nestedName\": \"schemaNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"servingAreas\",\n            \"nestedName\": \"servingAreas\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"snapshotsUrls\",\n            \"nestedName\": \"snapshotsUrls\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"rateCardIds\",\n            \"nestedName\": \"rateCardIds\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"description\",\n            \"nestedName\": \"description\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"interestedTenants\",\n            \"nestedName\": \"interestedTenants\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"tenantName\",\n            \"nestedName\": \"tenantName\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"currency\",\n            \"nestedName\": \"currency\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"listing\",\n            \"nestedName\": \"listing\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productType\",\n            \"nestedName\": \"productType\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"plpConfiguration\",\n            \"nestedName\": \"plpConfiguration\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"attachedDocumentsUrls\",\n            \"nestedName\": \"attachedDocumentsUrls\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"website\",\n            \"nestedName\": \"website\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"contextNodes\",\n            \"nestedName\": \"contextNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"vendorCommercials\",\n            \"nestedName\": \"vendorCommercials\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productStatus\",\n            \"nestedName\": \"productStatus\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"platformId\",\n            \"nestedName\": \"platformId\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"aqNodes\",\n            \"nestedName\": \"aqNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"activeSince\",\n            \"nestedName\": \"activeSince\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"alliancedProduct\",\n            \"nestedName\": \"alliancedProduct\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"relatedInformation\",\n            \"nestedName\": \"relatedInformation\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productUrl\",\n            \"nestedName\": \"productUrl\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"config\",\n            \"nestedName\": \"config\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ingress-gateway.gaiansolutions.com/tf-web/v1.0/618b6fdef5dacc0001a6b1b0/schemas",
+									"protocol": "https",
+									"host": [
+										"ingress-gateway",
+										"gaiansolutions",
+										"com"
+									],
+									"path": [
+										"tf-web",
+										"v1.0",
+										"618b6fdef5dacc0001a6b1b0",
+										"schemas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Schema Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"All Marketplae Product\",\n    \"entityName\": \"Marketplae Product\",\n    \"type\": \"SIMPLE\",\n    \"primaryKey\": [\n        \"id\"\n    ],\n    \"attributes\": [\n        {\n            \"name\": \"salesCount\",\n            \"nestedName\": \"salesCount\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"templateNodes\",\n            \"nestedName\": \"templateNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"universeNodes\",\n            \"nestedName\": \"universeNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"masterConfig\",\n            \"nestedName\": \"masterConfig\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"engagementNodes\",\n            \"nestedName\": \"engagementNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"videos\",\n            \"nestedName\": \"videos\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"videoUrls\",\n            \"nestedName\": \"videoUrls\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"ownerId\",\n            \"nestedName\": \"ownerId\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"groupNodes\",\n            \"nestedName\": \"groupNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"parentPlatformId\",\n            \"nestedName\": \"parentPlatformId\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"chartNodes\",\n            \"nestedName\": \"chartNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"baNodes\",\n            \"nestedName\": \"baNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"id\",\n            \"nestedName\": \"id\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": true,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"visibility\",\n            \"nestedName\": \"visibility\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"vendorCount\",\n            \"nestedName\": \"vendorCount\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"active\",\n            \"nestedName\": \"active\",\n            \"type\": {\n                \"type\": \"boolean\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"hostedApps\",\n            \"nestedName\": \"hostedApps\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"version\",\n            \"nestedName\": \"version\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"logoUrl\",\n            \"nestedName\": \"logoUrl\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"tags\",\n            \"nestedName\": \"tags\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"wfNodes\",\n            \"nestedName\": \"wfNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productRoles\",\n            \"nestedName\": \"productRoles\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"updatedTimeMs\",\n            \"nestedName\": \"updatedTimeMs\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"createdTimeMs\",\n            \"nestedName\": \"createdTimeMs\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"allowsMultiplePurchases\",\n            \"nestedName\": \"allowsMultiplePurchases\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"domain\",\n            \"nestedName\": \"domain\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"name\",\n            \"nestedName\": \"name\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"allianceInfo\",\n            \"nestedName\": \"allianceInfo\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"participation\",\n            \"nestedName\": \"participation\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"schemaNodes\",\n            \"nestedName\": \"schemaNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"servingAreas\",\n            \"nestedName\": \"servingAreas\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"snapshotsUrls\",\n            \"nestedName\": \"snapshotsUrls\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"rateCardIds\",\n            \"nestedName\": \"rateCardIds\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"description\",\n            \"nestedName\": \"description\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"interestedTenants\",\n            \"nestedName\": \"interestedTenants\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"tenantName\",\n            \"nestedName\": \"tenantName\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"currency\",\n            \"nestedName\": \"currency\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"listing\",\n            \"nestedName\": \"listing\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productType\",\n            \"nestedName\": \"productType\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"plpConfiguration\",\n            \"nestedName\": \"plpConfiguration\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"attachedDocumentsUrls\",\n            \"nestedName\": \"attachedDocumentsUrls\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"website\",\n            \"nestedName\": \"website\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"contextNodes\",\n            \"nestedName\": \"contextNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"vendorCommercials\",\n            \"nestedName\": \"vendorCommercials\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productStatus\",\n            \"nestedName\": \"productStatus\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"platformId\",\n            \"nestedName\": \"platformId\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"aqNodes\",\n            \"nestedName\": \"aqNodes\",\n            \"type\": {\n                \"type\": \"array\",\n                \"itemType\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"activeSince\",\n            \"nestedName\": \"activeSince\",\n            \"type\": {\n                \"type\": \"number\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"alliancedProduct\",\n            \"nestedName\": \"alliancedProduct\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"relatedInformation\",\n            \"nestedName\": \"relatedInformation\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"productUrl\",\n            \"nestedName\": \"productUrl\",\n            \"type\": {\n                \"type\": \"string\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        },\n        {\n            \"name\": \"config\",\n            \"nestedName\": \"config\",\n            \"type\": {\n                \"type\": \"object\"\n            },\n            \"required\": false,\n            \"reference\": false,\n            \"childAttributes\": [],\n            \"access\": \"PUBLIC\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ingress-gateway.gaiansolutions.com/tf-web/v1.0/618b6fdef5dacc0001a6b1b0/schemas/647e22b3bbce5500018719b3",
+									"protocol": "https",
+									"host": [
+										"ingress-gateway",
+										"gaiansolutions",
+										"com"
+									],
+									"path": [
+										"tf-web",
+										"v1.0",
+										"618b6fdef5dacc0001a6b1b0",
+										"schemas",
+										"647e22b3bbce5500018719b3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ingest Data into product Schema",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"647e1f76e3d26303050d7477\",\n    \"rateCardIds\": [],\n    \"name\": \"GPay PhonePay\",\n    \"platformId\": \"647ddb30d037ba1144104cad\",\n    \"parentPlatformId\": \"647ddb30d037ba1144104cad\",\n    \"description\": \"Identity Access Management, for access controll and authorization of resources.\",\n    \"productType\": \"XP\",\n    \"logoUrl\": \"www.google.com/logo\",\n    \"tags\": [\n        \"OTT\",\n        \"DATA CASTING\"\n    ],\n    \"masterConfig\": {},\n    \"servingAreas\": [],\n    \"snapshotsUrls\": [],\n    \"activeSince\": 1685987189822,\n    \"relatedInformation\": \"Dont know what sort of related information.\",\n    \"attachedDocumentsUrls\": [],\n    \"videoUrls\": [],\n    \"videos\": [],\n    \"website\": \"www.website.com\",\n    \"updatedTimeMs\": 1685987189822,\n    \"createdTimeMs\": 1685987189822,\n    \"allowsMultiplePurchases\": true,\n    \"active\": true,\n    \"productRoles\": [\n        \"ROLE_CONSUMER\",\n        \"ROLE_USER\"\n    ],\n    \"config\": {},\n    \"ownerId\": \"647dd87ecdca7b0613ff2d0f\",\n    \"version\": \"v1.0\",\n    \"productUrl\": \"www.google.com/product/url\",\n    \"hostedApps\": [],\n    \"domain\": \"\",\n    \"allianceInfo\": {},\n    \"interestedTenants\": [],\n    \"productStatus\": \"PENDING_AT_SU\",\n    \"currency\": \"USD\",\n    \"visibility\": \"PUBLIC\",\n    \"plpConfiguration\": {\n        \"plpDetails\": null\n    },\n    \"participation\": \"OPEN\",\n    \"listing\": \"PUBLIC\",\n    \"vendorCommercials\": [],\n    \"tenantName\": \"\",\n    \"salesCount\": 0,\n    \"vendorCount\": 0,\n    \"alliancedProduct\": \"\",\n    \"schemaNodes\": [],\n    \"universeNodes\": [],\n    \"groupNodes\": [],\n    \"contextNodes\": [],\n    \"aqNodes\": [],\n    \"templateNodes\": [],\n    \"chartNodes\": [],\n    \"baNodes\": [],\n    \"engagementNodes\": [],\n    \"wfNodes\": [],\n    \"mappingNode\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://ingress-gateway.gaiansolutions.com/tf-web/v1.0/618b6fdef5dacc0001a6b1b0/schemas/647e22b3bbce5500018719b3/instance?upsert=false",
+									"protocol": "https",
+									"host": [
+										"ingress-gateway",
+										"gaiansolutions",
+										"com"
+									],
+									"path": [
+										"tf-web",
+										"v1.0",
+										"618b6fdef5dacc0001a6b1b0",
+										"schemas",
+										"647e22b3bbce5500018719b3",
+										"instance"
+									],
+									"query": [
+										{
+											"key": "upsert",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Demo Product\",\n    \"platformId\": \"648f3f41b0feaa0e0d333aa1\",\n    \"description\": \"AP-40 IAM\",\n    \"productType\": \"AP\",\n    \"logoUrl\": \"www.google.com/logo\",\n    \"tags\": [\n        \"OTT\",\n        \"DATA CASTING\"\n    ],\n    \"masterConfig\": {},\n    \"servingAreas\": [],\n    \"snapshotsUrls\": [],\n    \"relatedInformation\": \"Dont know what sort of related information.\",\n    \"attachedDocumentsUrls\": [],\n    \"videoUrls\": [],\n    \"videos\": [],\n    \"website\": \"www.website.com\",\n    \"allowsMultiplePurchases\": true,\n    \"productRoles\": [\n        \"ROLE_CONSUMER\",\n        \"ROLE_USER\",\n        \"ROLE_MARKETPLACE_USER\"\n    ],\n    \"config\": {},\n    \"ownerId\": \"64914bc9f2d621053350a236\",\n    \"productUrl\": \"www.google.com/product/url\",\n    \"version\": \"v1.0\",\n    \"hostedApps\": [],\n    \"domain\": \"\",\n    \"allianceInfo\": {},\n    \"interestedTenants\": [],\n    \"currency\": \"USD\",\n    \"plpConfiguration\": {},\n    \"participation\": \"OPEN\",\n    \"tenantName\": \"\",\n    \"alliancedProduct\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product Default",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Default-Product\",\n    \"platformId\": \"648edd4d14eeb26b09df5f23\",\n    \"description\": \"Identity Access Management, for access controll and authorization of resources.\",\n    \"productType\": \"IP\",\n    \"logoUrl\": \"www.google.com/logo\",\n    \"tags\": [\n        \"OTT\",\n        \"DATA CASTING\"\n    ],\n    \"masterConfig\": {},\n    \"servingAreas\": [],\n    \"snapshotsUrls\": [],\n    \"relatedInformation\": \"Dont know what sort of related information.\",\n    \"attachedDocumentsUrls\": [],\n    \"videoUrls\": [],\n    \"videos\": [],\n    \"website\": \"www.website.com\",\n    \"allowsMultiplePurchases\": true,\n    \"productRoles\": [\n        \"ROLE_CONSUMER\",\n        \"ROLE_USER\",\n        \"ROLE_MARKETPLACE_USER\"\n    ],\n    \"config\": {},\n    \"ownerId\": \"64805bcbed18ec6c6f231141\",\n    \"productUrl\": \"www.google.com/product/url\",\n    \"version\": \"v1.0\",\n    \"hostedApps\": [],\n    \"domain\": \"\",\n    \"allianceInfo\": {},\n    \"interestedTenants\": [],\n    \"currency\": \"USD\",\n    \"plpConfiguration\": {},\n    \"participation\": \"OPEN\",\n    \"tenantName\": \"\",\n    \"alliancedProduct\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products/648f51bff452f4654e3127ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products",
+								"648f51bff452f4654e3127ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Product Based on Product Status for Super Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products/category/APPROVED?platformId=648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products",
+								"category",
+								"APPROVED"
+							],
+							"query": [
+								{
+									"key": "platformId",
+									"value": "648f3f41b0feaa0e0d333aa1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products Based On Filter Like Tags, Type, TenantId and PlatformId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products/tenants/648ef4b10476cd6d801fc555?platformId=648edd4d14eeb26b09df5f23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products",
+								"tenants",
+								"648ef4b10476cd6d801fc555"
+							],
+							"query": [
+								{
+									"key": "productTag",
+									"value": "OTT",
+									"disabled": true
+								},
+								{
+									"key": "productType",
+									"value": "AP",
+									"disabled": true
+								},
+								{
+									"key": "platformId",
+									"value": "648edd4d14eeb26b09df5f23"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tags and Types Of Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/products/tags-types?productType=true&productTags=false",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"products",
+								"tags-types"
+							],
+							"query": [
+								{
+									"key": "productType",
+									"value": "true"
+								},
+								{
+									"key": "productTags",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/products/647e240d4803fe6ed71f33f6",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"products",
+								"647e240d4803fe6ed71f33f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Or Reject The Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products/648f4276b0feaa0e0d333aa6/tenants/648f00eb0476cd6d801fc559/status/APPROVED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products",
+								"648f4276b0feaa0e0d333aa6",
+								"tenants",
+								"648f00eb0476cd6d801fc559",
+								"status",
+								"APPROVED"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Udpate Product Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODY4NTQ2NTgsImp0aSI6ImMwYjBjMTUxLTIyNTUtNDYwYy1hYWE3LTJhYmNlMDdlNzFlNiIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.Hr7XWXuycpN6ZD48RIVNFzO_Kwtf789x5CnK2O91GnkkE_Wv_qbhyoFkaU-WTR5JciFqiK82qygWNqAGxzfvhhXK3rYG0HP0A9ConOctRv3TRcQtgvj20nHCRy3iI0pPJem0vMG-WGRj9kDeSRrR6h3DqQzS_I74RBap_8OR1DbtSWqi8-V3cEE3eyAWXHB45jiaGL09zRvC-BeNJDQizuBJiDnsmZ8l-zIcmlv19zFTLzptH8XOpZSOMtOd8UMc4C6Ten1B4uv_VEOsRiDoyDBnTxKMgyJfX-D6lK6xM_VuBh2V91WW1bJDF8QSRAmWszgQBVu4iXdus3G6QNZUXw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"648f2773b0c69f69043ecba3\",\n    \"rateCardIds\": [],\n    \"name\": \"TP_1 Product\",\n    \"platformId\": \"648edd4d14eeb26b09df5f23\",\n    \"parentPlatformId\": \"648edd4d14eeb26b09df5f23\",\n    \"description\": \"TP_1 IAM\",\n    \"productType\": \"TP\",\n    \"logoUrl\": \"www.google.com/logo\",\n    \"tags\": [\n        \"OTT\",\n        \"DATA CASTING\"\n    ],\n    \"masterConfig\": {},\n    \"servingAreas\": [],\n    \"snapshotsUrls\": [],\n    \"activeSince\": 1687103347684,\n    \"relatedInformation\": \"Dont know what sort of related information.\",\n    \"attachedDocumentsUrls\": [],\n    \"videoUrls\": [],\n    \"videos\": [],\n    \"website\": \"www.website.com\",\n    \"updatedTimeMs\": 1687103347684,\n    \"createdTimeMs\": 1687103347684,\n    \"allowsMultiplePurchases\": true,\n    \"active\": true,\n    \"productRoles\": [\n        \"ROLE_CONSUMER\",\n        \"ROLE_USER\",\n        \"ROLE_MARKETPLACE_USER\"\n    ],\n    \"config\": {},\n    \"ownerId\": \"648ef4840476cd6d801fc553\",\n    \"version\": \"v1.0\",\n    \"productUrl\": \"www.google.com/product/url\",\n    \"hostedApps\": [],\n    \"domain\": \"\",\n    \"interestedTenants\": [],\n    \"productStatus\": \"PENDING_AT_SU\",\n    \"currency\": \"USD\",\n    \"visibility\": \"PUBLIC\",\n    \"plpConfiguration\": {\n        \"plpDetails\": null\n    },\n    \"participation\": \"OPEN\",\n    \"listing\": \"PUBLIC\",\n    \"vendorCommercials\": [],\n    \"tenantName\": \"\",\n    \"salesCount\": 0,\n    \"vendorCount\": 0,\n    \"alliancedProduct\": \"\",\n    \"schemaNodes\": [],\n    \"universeNodes\": [],\n    \"groupNodes\": [],\n    \"contextNodes\": [],\n    \"aqNodes\": [],\n    \"templateNodes\": [],\n    \"chartNodes\": [],\n    \"baNodes\": [],\n    \"engagementNodes\": [],\n    \"wfNodes\": [],\n    \"mappingNode\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Search API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYyODQ5NjIsImp0aSI6ImZhNmNmMmUxLTg5ZWYtNDkxZS04MTFiLWZmYzczNjFjZGJjZSIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.juZaOuq1LZG4XflPAs-stonpPtr4TCkSKbcMOKueIcKpaPwV5eBz9Ow_4KmK51nPBXsl5xV9UKNudPXyHrWKekg3nYpSFdH0LKvF6ekiKuF-XmO_d47aLzdEkhDUBDsdc8KLf1CBW8dwQNU9LIUIVEUqCED1_ECLMhPPjJNn0ZyS0rnssdDGUw9bDY5Mq0SLkrXM6oIonE7i0ls___2dw-MI1yjwSNBYh6LxSLzYxMGHvZOsUwQz8Q8A1GREatH9mhnUbFzNwHYHbuq2_p4MZ1Xq6trp4LA5WyT-WnUUDUsI2gQT_JjRAU_rO5RC7wKDM5NEmNa1BJ-9XdOmX38qsg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keyword\": \"IAM\",\n    \"platformId\":\"647c98ddbaf8404076b4c7ec\",\n    \"indices\": {\n        \"PRODUCT\": [\n            \"name\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ingress-gateway.gaiansolutions.com/market-place-beta/v1.0/search",
+							"protocol": "https",
+							"host": [
+								"ingress-gateway",
+								"gaiansolutions",
+								"com"
+							],
+							"path": [
+								"market-place-beta",
+								"v1.0",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clone Products after Invitation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmOGYxNjhmLTNmZjYtNDZlMi1iMTJlLWE2YTdlN2Y2YTY5MCJ9.eyJwcm9maWxlVXJsIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJzdWIiOiJnYWlhbi5jb20iLCJwYXJlbnRUZW5hbnRJZCI6Ik5BIiwiY29sb3IiOiJCbGFjayIsInVzZXJfbmFtZSI6IlByYXNhbm5ha3VtYXIiLCJpc3MiOiJnYWlhbi5jb20iLCJpc0FkbWluIjp0cnVlLCJwbGF0Zm9ybUlkIjoiNjA0Nzg5ZWI0MmI3ZGMwMDAxN2E4MzQxIiwidXNlck5hbWUiOiJQcmFzYW5uYWt1bWFyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9NQVJLRVRQTEFDRV9VU0VSIl0sImNsaWVudF9pZCI6ImdhaWFuIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwidGVuYW50SWQiOiI2MTVlOGI1Mzk3Yjk0ZDAwMDE1NTQ0OGMiLCJsb2dvIjoiaHR0cDovL2luZ3Jlc3MtZ2F0ZXdheS5nYWlhbnNvbHV0aW9ucy5jb20vY29udGVudC1zZXJ2aWNlL3YxLjAvY29udGVudC8xOTAxNjc4MS0zOGJmLTRhMzQtYTU0ZS03NjdkYjk2OGFhMDciLCJleHAiOjE2ODYwNzk0MTgsImp0aSI6IjEyZDY3OWVlLThkZDAtNDVhMy05Y2Q2LTc4MzZlNzZlMGIzMyIsImVtYWlsIjoicHJhc2FubmFrdW1hci5uYWxhbUBnYWlhbnNvbHV0aW9ucy5jb20ifQ.TveeQeq_uvtB0Ia9sA9czCEDl0jDpGzOX-RAZTbUhsoAaUNYH1jkbhsf8tW0ObltupVF5C-ID0yop7Nx78Z08QNbAj9dFql2TrZMs_XojskJcvf7XKkIBzCoEMZ20YSL4eR0UjMhYb2uSoJMGKRbK_MtvYvmxLBU7oybOOsCvxZlv_w72Sh1U6T-JLkxAHngUgoKyJbxHFwO9D7FD3Jep_RhA_cxpUgeSqscTWjYOW3UN9Ii4tqB5OjsR03iX30oRebBD__W4UxQzUX4V6uI_iLDWd-SW8gxVPV96WKlIFtrZM1vGC4BURmV2YiYtii57068J5aqEk3oqnRqnFIn8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"648f2dd3b0c69f69043ecba7\",\n        \"rateCardIds\": [],\n        \"primaryRateCard\": \"648f380ab0c69f69043ecbb7\",\n        \"defaultRatecardId\": \"648f3ce2b0feaa0e0d333a9b\",\n        \"name\": \"IP_1 Product\",\n        \"platformId\": \"648f3f41b0feaa0e0d333aa1\",\n        \"parentPlatformId\": \"648edd4d14eeb26b09df5f23\",\n        \"description\": \"IP_1 IAM\",\n        \"productType\": \"IP\",\n        \"logoUrl\": \"www.google.com/logo\",\n        \"tags\": [\n            \"OTT\",\n            \"DATA CASTING\"\n        ],\n        \"masterConfig\": {},\n        \"servingAreas\": [],\n        \"snapshotsUrls\": [],\n        \"activeSince\": 1687104979300,\n        \"relatedInformation\": \"Dont know what sort of related information.\",\n        \"attachedDocumentsUrls\": [],\n        \"videoUrls\": [],\n        \"videos\": [],\n        \"website\": \"www.website.com\",\n        \"updatedTimeMs\": 1687104979300,\n        \"createdTimeMs\": 1687104979300,\n        \"allowsMultiplePurchases\": true,\n        \"active\": true,\n        \"productRoles\": [\n            \"ROLE_CONSUMER\",\n            \"ROLE_USER\",\n            \"ROLE_MARKETPLACE_USER\"\n        ],\n        \"config\": {},\n        \"ownerId\": \"648ef4b10476cd6d801fc555\",\n        \"version\": \"v1.0\",\n        \"productUrl\": \"www.google.com/product/url\",\n        \"hostedApps\": [],\n        \"domain\": \"\",\n        \"interestedTenants\": [],\n        \"productStatus\": \"APPROVED\",\n        \"currency\": \"USD\",\n        \"visibility\": \"PUBLIC\",\n        \"plpConfiguration\": {\n            \"plpDetails\": null\n        },\n        \"participation\": \"OPEN\",\n        \"listing\": \"PUBLIC\",\n        \"vendorCommercials\": [],\n        \"tenantName\": \"\",\n        \"salesCount\": 0,\n        \"vendorCount\": 0,\n        \"alliancedProduct\": \"\",\n        \"schemaNodes\": [],\n        \"universeNodes\": [],\n        \"groupNodes\": [],\n        \"contextNodes\": [],\n        \"aqNodes\": [],\n        \"templateNodes\": [],\n        \"chartNodes\": [],\n        \"baNodes\": [],\n        \"engagementNodes\": [],\n        \"wfNodes\": [],\n        \"mappingNode\": []\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/products/tenant/648ef4b10476cd6d801fc555/platfromId/648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"products",
+								"tenant",
+								"648ef4b10476cd6d801fc555",
+								"platfromId",
+								"648f3f41b0feaa0e0d333aa1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PrimaryRateCard Controller",
+			"item": [
+				{
+					"name": "Create Primary Rate Card",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"TP-Gaian\",\n    \"paasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 102.0,\n        \"type\": \"PAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"saasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 100.0,\n        \"type\": \"SAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"apiCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 700.0,\n        \"type\": \"COUNT\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"70.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"volCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 900.0,\n        \"type\": \"VOLUME\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"90.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 800.0,\n        \"type\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"80.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 15.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"consumerRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 0.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"currenciesSupported\": [\n        \"USD\",\n        \"INR\"\n    ],\n    \"contextId\": \"6347e3577b7aa20001108d79\",\n    \"billingCycleUnit\": \"MINUTES\",\n    \"billingCycle\": \"2\",\n    \"eligibleForRoyalty\": \"false\",\n    \"dataSharable\": false,\n    \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/primary-rate-card/648f51bff452f4654e3127ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"primary-rate-card",
+								"648f51bff452f4654e3127ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Primary Rate Card",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"648f3875b0c69f69043ecbbb\",\n    \"name\": \"TP TP01-Gaian \",\n    \"updatedTimeMs\": 1687107701545,\n    \"createdTimeMs\": 1687107701545,\n    \"paasFee\": {\n        \"description\": \"\",\n        \"type\": \"PAAS\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1665413598,\n        \"validityTo\": 1731196800,\n        \"fixedFee\": 102.0,\n        \"baseFee\": 0.0,\n        \"unit\": \"MONTHS\",\n        \"negotiable\": false\n    },\n    \"saasFee\": {\n        \"description\": \"\",\n        \"type\": \"SAAS\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1665413598,\n        \"validityTo\": 1731196800,\n        \"fixedFee\": 100.0,\n        \"baseFee\": 0.0,\n        \"unit\": \"MONTHS\",\n        \"negotiable\": false\n    },\n    \"apiCountFee\": {\n        \"description\": \"\",\n        \"type\": \"COUNT\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1646765091,\n        \"validityTo\": 1646765091,\n        \"fixedFee\": 700.0,\n        \"baseFee\": 70.0,\n        \"unit\": \"MINUTES\",\n        \"negotiable\": false\n    },\n    \"volCountFee\": {\n        \"description\": \"\",\n        \"type\": \"VOLUME\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1646765091,\n        \"validityTo\": 1646765091,\n        \"fixedFee\": 900.0,\n        \"baseFee\": 90.0,\n        \"unit\": \"MINUTES\",\n        \"negotiable\": false\n    },\n    \"adFee\": {\n        \"description\": \"\",\n        \"type\": \"AD\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1646765091,\n        \"validityTo\": 1646765091,\n        \"fixedFee\": 800.0,\n        \"baseFee\": 80.0,\n        \"unit\": \"MINUTES\",\n        \"negotiable\": false\n    },\n    \"adRevenueShare\": {\n        \"description\": \"\",\n        \"revenueShareType\": \"AD\",\n        \"shareLowerLimit\": 0.0,\n        \"shareUpperLimit\": 0.0,\n        \"fixedShare\": 15.0,\n        \"baseShare\": 0.0,\n        \"negotiable\": false,\n        \"eligibleForRoyalty\": false\n    },\n    \"consumerRevenueShare\": {\n        \"description\": \"\",\n        \"revenueShareType\": \"AD\",\n        \"shareLowerLimit\": 0.0,\n        \"shareUpperLimit\": 0.0,\n        \"fixedShare\": 0.0,\n        \"baseShare\": 0.0,\n        \"negotiable\": false,\n        \"eligibleForRoyalty\": false\n    },\n    \"dataSharable\": false,\n    \"currenciesSupported\": [\n        \"USD\",\n        \"INR\"\n    ],\n    \"active\": true,\n    \"contextId\": \"6347e3577b7aa20001108d79\",\n    \"billingCycleUnit\": \"MINUTES\",\n    \"billingCycle\": 2,\n    \"eligibleForRoyalty\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/primary-rate-card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"primary-rate-card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Primary Rate Card By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/primary-rate-card/648f3875b0c69f69043ecbbb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"primary-rate-card",
+								"648f3875b0c69f69043ecbbb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Primary Rate Card By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/primary-rate-card/64880c5273cf595c5398196e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"primary-rate-card",
+								"64880c5273cf595c5398196e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve all Primary Rate Cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/primary-rate-card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"primary-rate-card"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RateCard Controller",
+			"item": [
+				{
+					"name": "Create RateCard Default.",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"TP_2145 Product\",\n    \"primaryRateCardId\": \"648f51d4f452f4654e3127ae\",\n    \"version\": \"v1.0\",\n    \"__platformId\": \"\",\n    \"paasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 102.0,\n        \"type\": \"PAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"saasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 100.0,\n        \"type\": \"SAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"apiCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 700.0,\n        \"type\": \"COUNT\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"70.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"volCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 900.0,\n        \"type\": \"VOLUME\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"90.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 800.0,\n        \"type\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"80.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 15.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"consumerRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 0.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"dataSharable\": true,\n    \"currency\": \"INR\",\n    \"isActive\": true,\n    \"contextId\": \"\",\n    \"keywords\": [],\n    \"billingCycleUnit\": \"MINUTES\",\n    \"billingCycle\": \"2\",\n    \"eligibleForRoyalty\": true,\n    \"comment\": \"Comment Section.\",\n    \"defaultRateCard\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards/product/648f51bff452f4654e3127ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards",
+								"product",
+								"648f51bff452f4654e3127ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create RateCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"AP-3333 Product\",\n    \"primaryRateCardId\": \"648f51d4f452f4654e3127ae\",\n    \"version\": \"v1.0\",\n    \"platformId\": \"648f3f41b0feaa0e0d333aa1\",\n    \"contextId\": \"6347e3577b7aa20001108d79\",\n    \"paasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 102.0,\n        \"type\": \"PAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"saasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 100.0,\n        \"type\": \"SAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"apiCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 700.0,\n        \"type\": \"COUNT\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"70.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"volCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 900.0,\n        \"type\": \"VOLUME\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"90.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 800.0,\n        \"type\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"80.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 15.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"consumerRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 0.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"dataSharable\": true,\n    \"currency\": \"INR\",\n    \"isActive\": true,\n    \"keywords\": [],\n    \"billingCycleUnit\": \"MINUTES\",\n    \"billingCycle\": \"2\",\n    \"eligibleForRoyalty\": true,\n    \"comment\": \"Comment Section.\",\n    \"defaultRateCard\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards/product/648f51bff452f4654e3127ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards",
+								"product",
+								"648f51bff452f4654e3127ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create RateCard For Negotiating.",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"AP-3333 Product\",\n    \"primaryRateCardId\": \"648f51d4f452f4654e3127ae\",\n    \"version\": \"v1.0\",\n    \"platformId\": \"648f3f41b0feaa0e0d333aa1\",\n    \"contextId\": \"6347e3577b7aa20001108d79\",\n    \"paasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 102.0,\n        \"type\": \"PAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"saasFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 100.0,\n        \"type\": \"SAAS\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"0.0\",\n        \"validityFrom\": 1665413598.391000000,\n        \"validityTo\": 1731196800.000000000,\n        \"unit\": \"MONTHS\"\n    },\n    \"apiCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 700.0,\n        \"type\": \"COUNT\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"70.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"volCountFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 900.0,\n        \"type\": \"VOLUME\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"90.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adFee\": {\n        \"description\": \"\",\n        \"fixedFee\": 800.0,\n        \"type\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseFee\": \"80.0\",\n        \"validityFrom\": 1646765091.204000000,\n        \"validityTo\": 1646765091.204000000,\n        \"unit\": \"MINUTES\"\n    },\n    \"adRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 15.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"consumerRevenueShare\": {\n        \"description\": \"\",\n        \"fixedShare\": 0.0,\n        \"revenueShareType\": \"AD\",\n        \"queryId\": null,\n        \"multiplierField\": null,\n        \"baseShare\": \"0.0\",\n        \"eligibleForRoyalty\": false\n    },\n    \"dataSharable\": true,\n    \"currency\": \"INR\",\n    \"isActive\": true,\n    \"keywords\": [],\n    \"billingCycleUnit\": \"MINUTES\",\n    \"billingCycle\": \"2\",\n    \"eligibleForRoyalty\": true,\n    \"comment\": \"Comment Section.\",\n    \"defaultRateCard\": false,\n    \"parentRateCard\": \"648f5869f1a6a021322b22ac\",\n    \"id\": \"648f5869f1a6a021322b22ac\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards/product/648f51bff452f4654e3127ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards",
+								"product",
+								"648f51bff452f4654e3127ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rate Card By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"648eeb4fe7d5d310705ca8aa\",\n    \"name\": \"Default Gaian\",\n    \"primaryRateCardId\": \"648ee88b481f1b055f7ba525\",\n    \"version\": \"v1.0\",\n    \"updatedTimeMs\": 1687087951728,\n    \"createdTimeMs\": 1687087951728,\n    \"paasFee\": {\n        \"description\": \"\",\n        \"type\": \"PAAS\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1665413598,\n        \"validityTo\": 1731196800,\n        \"fixedFee\": 102.0,\n        \"baseFee\": 0.0,\n        \"unit\": \"MONTHS\",\n        \"negotiable\": false\n    },\n    \"saasFee\": {\n        \"description\": \"\",\n        \"type\": \"SAAS\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1665413598,\n        \"validityTo\": 1731196800,\n        \"fixedFee\": 100.0,\n        \"baseFee\": 0.0,\n        \"unit\": \"MONTHS\",\n        \"negotiable\": false\n    },\n    \"apiCountFee\": {\n        \"description\": \"\",\n        \"type\": \"COUNT\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1646765091,\n        \"validityTo\": 1646765091,\n        \"fixedFee\": 700.0,\n        \"baseFee\": 70.0,\n        \"unit\": \"MINUTES\",\n        \"negotiable\": false\n    },\n    \"volCountFee\": {\n        \"description\": \"\",\n        \"type\": \"VOLUME\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1646765091,\n        \"validityTo\": 1646765091,\n        \"fixedFee\": 900.0,\n        \"baseFee\": 90.0,\n        \"unit\": \"MINUTES\",\n        \"negotiable\": false\n    },\n    \"adFee\": {\n        \"description\": \"\",\n        \"type\": \"AD\",\n        \"feeLowerLimit\": 0.0,\n        \"feeUpperLimit\": 0.0,\n        \"validityFrom\": 1646765091,\n        \"validityTo\": 1646765091,\n        \"fixedFee\": 800.0,\n        \"baseFee\": 80.0,\n        \"unit\": \"MINUTES\",\n        \"negotiable\": false\n    },\n    \"adRevenueShare\": {\n        \"description\": \"\",\n        \"revenueShareType\": \"AD\",\n        \"shareLowerLimit\": 0.0,\n        \"shareUpperLimit\": 0.0,\n        \"fixedShare\": 15.0,\n        \"baseShare\": 0.0,\n        \"negotiable\": false,\n        \"eligibleForRoyalty\": false\n    },\n    \"consumerRevenueShare\": {\n        \"description\": \"\",\n        \"revenueShareType\": \"AD\",\n        \"shareLowerLimit\": 0.0,\n        \"shareUpperLimit\": 0.0,\n        \"fixedShare\": 0.0,\n        \"baseShare\": 0.0,\n        \"negotiable\": false,\n        \"eligibleForRoyalty\": false\n    },\n    \"dataSharable\": true,\n    \"currency\": \"INR\",\n    \"contextId\": \"\",\n    \"keywords\": [],\n    \"billingCycleUnit\": \"MINUTES\",\n    \"billingCycle\": 2,\n    \"eligibleForRoyalty\": true,\n    \"comment\": \"Comment Section.\",\n    \"defaultRateCard\": true,\n    \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get RateCard By ProductId  ie. Only approved One.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards/product/648f51bff452f4654e3127ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards",
+								"product",
+								"648f51bff452f4654e3127ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieval of RateCard by Status.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards/approve-reject/status/PENDING_AT_SU/platforms/648f3f41b0feaa0e0d333aa1?page=0&size=1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards",
+								"approve-reject",
+								"status",
+								"PENDING_AT_SU",
+								"platforms",
+								"648f3f41b0feaa0e0d333aa1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve or Reject RateCard By Super Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards/648f5205f452f4654e3127b0/super-admin/648f00eb0476cd6d801fc559/status/APPROVED_BY_SU",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards",
+								"648f5205f452f4654e3127b0",
+								"super-admin",
+								"648f00eb0476cd6d801fc559",
+								"status",
+								"APPROVED_BY_SU"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get RateCard By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/rate-cards/648f4c44b0feaa0e0d333aab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"rate-cards",
+								"648f4c44b0feaa0e0d333aab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negotiation Controller",
+			"item": [
+				{
+					"name": "Create Negotiation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sellerId\": \"648ef4b10476cd6d801fc555\",\n    \"productId\": \"648f415fb0feaa0e0d333aa3\",\n    \"rateCardId\": \"648f5b8cf1a6a021322b22af\",\n    \"buyerId\": \"648ef4840476cd6d801fc553\",\n    \"appId\": \"648f4276b0feaa0e0d333aa5\",\n    \"platformId\": \"648f3f41b0feaa0e0d333aa1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/negotiations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"negotiations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apporval By SuperAdmin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/negotiations/648f5d0a7765f37e6e94bcdb/approve-reject/super-admin/648f00eb0476cd6d801fc559/status/APPROVED_BY_SU",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"negotiations",
+								"648f5d0a7765f37e6e94bcdb",
+								"approve-reject",
+								"super-admin",
+								"648f00eb0476cd6d801fc559",
+								"status",
+								"APPROVED_BY_SU"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apporval By Seller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/negotiations/648f5d0a7765f37e6e94bcdb/approve-reject/seller/648ef4b10476cd6d801fc555/status/APPROVED_BY_PARTIES",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"negotiations",
+								"648f5d0a7765f37e6e94bcdb",
+								"approve-reject",
+								"seller",
+								"648ef4b10476cd6d801fc555",
+								"status",
+								"APPROVED_BY_PARTIES"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apporval By Buyer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/negotiations/648f5d0a7765f37e6e94bcdb/approve-reject/buyer/648ef4b10476cd6d801fc555/status/APPROVED_BY_PARTIES",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"negotiations",
+								"648f5d0a7765f37e6e94bcdb",
+								"approve-reject",
+								"buyer",
+								"648ef4b10476cd6d801fc555",
+								"status",
+								"APPROVED_BY_PARTIES"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alliance Controller",
+			"item": [
+				{
+					"name": "Create Alliance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"appId\":\"\",\n    \"buyerId\":\"\",\n    \"subAllianceIds\":[],\n    \"platformId\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/alliances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"alliances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Alliances By BuyerId and PlatformId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/alliances/buyerId/648ef4840476cd6d801fc553/platforms/648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"alliances",
+								"buyerId",
+								"648ef4840476cd6d801fc553",
+								"platforms",
+								"648f3f41b0feaa0e0d333aa1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Alliance By AllianceID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/alliances/648f5fa700327b48640efdf5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"alliances",
+								"648f5fa700327b48640efdf5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sub-Alliance Controller",
+			"item": [
+				{
+					"name": "Create Sub Alliance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sellerId\": \"\",\n    \"productId\": \"\",\n    \"rateCardId\": \"\",\n    \"buyerId\": \"\",\n    \"appId\": \"\",\n    \"platformId\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SubAlliance By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances/648f5fa500327b48640efdf4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances",
+								"648f5fa500327b48640efdf4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Break SubAlliance By SubAllianceId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances/{subAllianceId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances",
+								"{subAllianceId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve SubAlliance By ProductId and SubAllianceId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances/products/648f415fb0feaa0e0d333aa3/platforms/648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances",
+								"products",
+								"648f415fb0feaa0e0d333aa3",
+								"platforms",
+								"648f3f41b0feaa0e0d333aa1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve SubAlliance By AppId and SubAllianceId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances/app/648f4276b0feaa0e0d333aa5/platforms/648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances",
+								"app",
+								"648f4276b0feaa0e0d333aa5",
+								"platforms",
+								"648f3f41b0feaa0e0d333aa1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SubAlliance By Buyer App And PlatformId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/alliances/buyers/648ef4840476cd6d801fc553/app/648f4276b0feaa0e0d333aa5/platfroms/648f3f41b0feaa0e0d333aa1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"alliances",
+								"buyers",
+								"648ef4840476cd6d801fc553",
+								"app",
+								"648f4276b0feaa0e0d333aa5",
+								"platfroms",
+								"648f3f41b0feaa0e0d333aa1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete RateCard Permanently",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances/648f3f41b0feaa0e0d333aa1/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances",
+								"648f3f41b0feaa0e0d333aa1",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update SubAlliance",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"648f5fa500327b48640efdf4\",\n    \"sellerId\": \"648ef4b10476cd6d801fc555\",\n    \"productId\": \"648f415fb0feaa0e0d333aa3\",\n    \"buyerId\": \"648ef4840476cd6d801fc553\",\n    \"appId\": \"648f4276b0feaa0e0d333aa5\",\n    \"updatedTimeMs\": 1687117733459,\n    \"createdTimeMs\": 1687117733459,\n    \"createdBy\": \"648ef4840476cd6d801fc553\",\n    \"updatedBy\": \"648ef4840476cd6d801fc553\",\n    \"targeting\": [],\n    \"billingCycleUnit\": \"MINUTES\",\n    \"billingCycle\": 2,\n    \"allianceConfig\": {},\n    \"metadata\": {},\n    \"currencyFlow\": \"OUT\",\n    \"suspended\": false,\n    \"currencyCode\":\"INR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suspend SubAlliance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances/648f5fa500327b48640efdf4/suspend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances",
+								"648f5fa500327b48640efdf4",
+								"suspend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Continue SubAlliance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9191/v1.0/sub-alliances/tenants/648ef4840476cd6d801fc553/currency/INR/continue",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"v1.0",
+								"sub-alliances",
+								"tenants",
+								"648ef4840476cd6d801fc553",
+								"currency",
+								"INR",
+								"continue"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AP : Tenant Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "prasannakumar.nalam@gaiansolutions.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Gaian@123",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "checkB2B",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "clientId",
+							"value": "gaian",
+							"type": "text"
+						},
+						{
+							"key": "provider",
+							"value": "other",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "604789eb42b7dc00017a8341",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ingress-gateway.gaiansolutions.com/iam-service-alpha/oauth/token",
+					"protocol": "https",
+					"host": [
+						"ingress-gateway",
+						"gaiansolutions",
+						"com"
+					],
+					"path": [
+						"iam-service-alpha",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
