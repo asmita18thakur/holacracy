@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-configure-login',
-  templateUrl: './configure-login.component.html',
-  styleUrls: ['./configure-login.component.scss']
+  selector: 'app-error-page',
+  templateUrl: './error-page.component.html',
+  styleUrls: ['./error-page.component.scss']
 })
-export class ConfigureLoginComponent {
+export class ErrorPageComponent {
   selectedColor: string = '#FF508E';
 
   onColorPickerChange(event: Event): void {
     this.selectedColor = (event.target as HTMLInputElement).value;
   }
+
+
 
 }

@@ -123,7 +123,7 @@ textarea {
 .input-textarea-bgimg input {
     // height: 10vh;
     overflow: hidden;
-    
+
 }
 
 input[type="file"]::-webkit-file-upload-button {
@@ -152,13 +152,12 @@ input[type="file"]::-webkit-file-upload-button {
     width: 35px;
     opacity: .15;
 }
-
-.bg-img {
-    background-image: url('./assets/images/configure/input-bg-img.png');
-    background-position: center;
-    height: 10vh;
-    background-size: 30%;
-    background-repeat: no-repeat;
+.bg-img{
+   background-image: url('./assets/images/configure/input-bg-img.png');
+   background-position: center ;
+   height: 10vh;
+   background-size: 30%;
+   background-repeat: no-repeat;
 }
 
 .input-textarea-bgimg p {
