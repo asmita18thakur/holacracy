@@ -9,10 +9,9 @@
 }
 
 .appearence_content {
-    width: 87%;
-    margin-left: 12%;
+    width: 100%;
+    margin-left: 15%;
     margin-top: 2rem;
-
 }
 
 .appearence_sidebar_ul {
@@ -52,6 +51,7 @@
 }
 
 .upperdiv {
+    width: 100%;
     column-gap: 2rem;
 }
 
@@ -63,14 +63,14 @@
 }
 
 .leftdiv {
-    width: 74%;
+    width: 80%;
     margin-right: .81rem;
     border-radius: .46rem;
 
 }
 
 .rightdiv {
-    width: 26%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     row-gap: 2.3rem;
@@ -117,7 +117,7 @@ header h1:last-child {
 }
 
 .header_left_div {
-    width: 8%;
+    width: 10%;
     font-family: "Roboto-Medium";
     height: 33px;
     font-size: .95rem;

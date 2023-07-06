@@ -1,11 +1,14 @@
 .sidebar-container{
     width: 64px;
     height: 100vh;
+    background: #ffffff;
+    // position: relative;
+    z-index: 9999;
 }
 
 .main-container {
     position: relative;
-    width: 100%;
+    width: 95%;
     overflow: hidden;
 }
 
@@ -15,7 +18,7 @@
 
 .landing-page{
     display: flex;
-    width: 100vw;
+    width: 100%;
 }
 
 .expand{
