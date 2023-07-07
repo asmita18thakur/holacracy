@@ -5,20 +5,27 @@ import { RatecardMessagecenterComponent } from './component/modules/ratecard-mes
 import { PlanCardComponent } from './component/shared/supportive_component/plan-card/plan-card.component';
 import { ConfigureSideBarComponent } from './component/shared/supportive_component/configure-side-bar/configure-side-bar.component';
 import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
+import { LandingComponent } from './component/landing/landing.component';
 
 const routes: Routes = [
   {
-    path:'apperancesetting',
-    component:ApperanceSettingComponent
-  },
-  {
-    path:'messagecenter',
-    component:RatecardMessagecenterComponent
-
-  },
-  {
-    path:'card',
-    component:ConfigureSideBarComponent
+    path: '',
+    component: LandingComponent,
+    children:[
+      {
+        path:'apperancesetting',
+        component:ApperanceSettingComponent
+      },
+      {
+        path:'messagecenter',
+        component:RatecardMessagecenterComponent
+    
+      },
+      {
+        path:'configure',
+        component:ConfigureSideBarComponent
+      }
+    ]
   }
 ];
 

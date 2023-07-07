@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+.sidebar-main{
+  position: fixed;
+}
+.sidebar {
+  position: absolute;
+  font-family: 'Roboto';
+  font-size: 10px;
+  line-height: 150%;
+  font-style: normal;
+  font-weight: 400;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 64px;
+ 
+  transition: width 0.3s;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: inset 0px 0px 16px -6px rgba($color: #000000, $alpha: 0.2);
+  border-right: 1px solid #EAEAEA;
+  z-index: 9999;
+  .construct-section {
+    overflow: auto;
+    height: calc(100vh - 186px);
+    overflow: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Edge */
+    overflow: -moz-scrollbars-none;
+    /* Firefox */
+  }
+
+  .construct-section::-webkit-scrollbar {
+    width: 0em !important;
+    height: 0em !important;
+
+  }
+
+  .menu-btn span {
+    position: absolute;
+    width: 100%;
+    left: 55px;
+    top: 25px;
+    margin: 0 10px;
+    transition: color 0.3s;
+    color: rgba($color: #000000, $alpha: 1.0);
+
+  }
+
+  .menu-btn {
+    height: 60px;
+    line-height: 10px;
+    position: relative;
+    padding: 8px;
+    transition: border 0.3s;
+  }
+
+  .icon-conPI {
+    height: 60px;
+    line-height: 10px;
+    position: relative;
+    transition: border 0.3s;
+  }
+
+  .icon-conPI span {
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    margin: 0 10px;
+  }
+
+  .icon-con {
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .icon-con:active,
+  .icon-con.selected {
+    background:rgba(230, 229, 239, 1);
+    .btn-txt {
+      // color: #FFFFFF;
+    }
+
+    // color: #FFFFFF;
+    padding: 8px;
+    border-radius: 4px;
+    // background: var(--purple-2);
+  }
+
+  .profile {
+    position: absolute;
+    // bottom: 3vh;
+    height: 120px;
+    line-height: 10px;
+    transition: border 0.5s;
+    padding: 3.2px;
+    p{
+      color: var(--black-3);
+    }
+    hr{
+      border: 1.5px solid var(--black-1);
+    }
+  }
+  hr{
+    margin: 0;
+  }
+
+  .btn-profile {
+    position: absolute;
+    width: 150px;
+    left: 55px;
+    top: 10px;
+    margin: 0 10px;
+    transition: color 0.3s;
+    color: rgba($color: #000000, $alpha: 1.0);
+  }
+
+  .profile-pic {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    margin-left: 8px;
+    transition: border 0.3s;
+    border-radius: 100%;
+  }
+  .mobius-bottom-pic{
+    height: 32px;
+    width: 38px;
+    position: relative;
+    margin-left: 5px;
+  }
+
+  .logout {
+    // border: 1px solid gray;
+    position: absolute;
+    border-radius: 10px;
+    width: 80px;
+    left: 55px;
+    padding: 10px;
+    top: 30px;
+    margin: 0 10px;
+
+  }
+
+  .logout:hover {
+    color: #364AFF;
+    border: 1px solid #364AFF;
+  }
+
+
+  .mobius-img {
+    margin-left: 11px;
+    margin-right: auto;
+  }
+
+}
+
+.sidebar:hover {
+  width: 216px;
+  background: #FFFFFF;
+
+}

@@ -13,8 +13,8 @@ import { UserBehaviourComponent } from 'src/app/component/modules/Configure/user
 })
 export class ConfigureSideBarComponent {
 
-  contents: string[] = ['general-bussiness','general-bussiness-info', 'about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour'];
-
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour'];
+ 
   selectedContent: string = this.contents[0];
 
   changeContent(content: string): void {
@@ -26,8 +26,8 @@ export class ConfigureSideBarComponent {
     switch (content) {
       case 'general-bussiness':
         return GeneralBussinessComponent;
-      case 'about':
-        return "";
+      case 'general-bussiness-info':
+        return GenerealBussinessInfoComponent;
       case 'login':
         return ConfigureLoginComponent;
       case 'governance':

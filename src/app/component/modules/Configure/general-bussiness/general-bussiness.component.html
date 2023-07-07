@@ -35,18 +35,28 @@
         <div class="mb-24px">
             <label>Tags</label>
             <div class="d-flex general_bussiness-Tag">
-                <div class="input">
-                    <input class='form-controll' type="text" name="Tags" [(ngModel)]="Tags" [value]="Tags" />
+                <div class="input general_bussiness-input31" >
+                    <div *ngFor="let tag of Tags" class="general_bussiness-tags">
+                        {{tag}} 
+                        <img src="assets/images/configure/cross.svg" (click)="deleteTag(tag)">
+                    </div>
+                    <input disabled/>
                     <div class="star">
                         *
                     </div>
                 </div>
-                <select  name="selectProduct">
-                    <option></option>
-                    <option *ngFor="let category of SubcatList; let i = index" [value]="category.key">
-                        {{category.key}}
-                    </option>
-                </select>
+
+                <!-- dropdown box for tag  by using ngDropdown bootstrap -->
+                <div class="general_bussiness-input13">
+                    <div class="dropdown" ngbDropdown>
+                        <img class="dropdownButton" src="assets/images/configure/expand-arrow.png" alt="" ngbDropdownToggle>
+                        <div class="dropdown-menu" aria-labelledby="dropdownButton" ngbDropdownMenu>
+                          <button class="dropdown-item" *ngFor="let category of SubcatList; let i = index" [value]="category.key"  (click)="selectTag(category.value)">
+                            {{ category.value }}
+                          </button>
+                        </div>
+                    </div>                      
+                </div>
             </div>
             <div class="invalid-feedback">
                 <div *ngIf="">Please select product</div>
@@ -135,10 +145,14 @@
         <div class="mb-24px">
             <label>Resources</label>
             <div class="input-textarea-bgimg">
+                <div>
+                    {{Resources}}
+                   <img [src]="Resources"/>    
+                </div>
                 <p>Drag and Drop</p>
                 <div class="bg-img">
                     <input class='form-controll ' type="file" style="opacity: 0;" name="Resources"
-                        [(ngModel)]="Resources" [value]="Resources" />
+                        [(ngModel)]="Resources" [value]="Resources" (change)="uploadResources($event)"/>
                 </div>
                 <p>Click here to select Files</p>
             </div>

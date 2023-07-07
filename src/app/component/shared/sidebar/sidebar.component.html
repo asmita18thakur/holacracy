@@ -1,0 +1,145 @@
+<section class="sidebar-main">
+    <div class="sidebar" [class.expanded]="!isExpanded" (mouseout)="handleSidebarToggle()"
+    (mouseover)="handleSidebarToggleOut()">
+    <div class="icon-conPI" [routerLink]="['/apperancesetting']" (click)="navigateTo('apperancesetting')">
+        <div class="menu-con">
+            <img src="../../../../assets/images/sidebar/Mobius_logo.svg" class="mobius-img">
+            <span class="mobius-text"></span>
+        </div>
+    </div>
+    <div class="construct-section">
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p " (click)="navBack()" (click)="handleToggle('apperancesetting')"
+                (click)="navigateTo('apperancesetting')" [class.selected]="changeColor('apperancesetting')"
+                [routerLink]="['/apperancesetting']">
+                <div class="menu-con">
+                    <img style="filter: invert(1);" *ngIf="activePage!='apperancesetting'" class="iconss"
+                        src="../../../../assets/images/sidebar/News_Paper.svg">
+                    <img *ngIf="activePage=='apperancesetting'" class="iconss" src="../../../../assets/images/sidebar/News_Paper.svg">
+                    <span class="btn-txt">In The News</span>
+                </div>
+            </div>
+        </div>
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p "  (click)="navigateTo('storefront')"
+                [class.selected]="changeColor('storefront')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='storefront'" src="../../../../assets/images/sidebar/Storefront.svg" class="iconss ">
+                    <img *ngIf="activePage=='storefront'" src="../../assets/images/Model.png" class="iconss ">
+                    <span class="btn-txt">Storefront</span>
+                </div>
+            </div>
+        </div>
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p "  (click)="navigateTo('holacracy')" (click)="handleToggle('holacracy')"
+                [class.selected]="changeColor('holacracy')" >
+                <div class="menu-con">
+                    <img *ngIf="activePage!='holacracy'" src="../../../../assets/images/sidebar/Workflow_Teamwork_Handshake.svg" class="iconss ">
+                    <img *ngIf="activePage=='holacracy'" src="../../assets/images/TargetGroup.png" class="iconss ">
+                    <span class="btn-txt">Holacracy* Uncertain yet</span>
+                </div>
+            </div>
+        </div>
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p "  (click)="navigateTo('messages')"  (click)="handleToggle('messages')"
+                [class.selected]="changeColor('messages')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='messages'" class="iconss " src="../../../../assets/images/sidebar/Mail_Chat_Bubble_Typing_Square.svg">
+                    <img *ngIf="activePage=='messages'" class="iconss " src="../../assets/images/Aq.svg">
+                    <span class="btn-txt">Messages</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p " (click)="navigateTo('configure')" (click)="handleToggle('configure')"
+                [class.selected]="changeColor('configure')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='configure'" src="../../../../assets/images/sidebar/Configre.svg" class="iconss ">
+                    <img *ngIf="activePage=='configure'" src="../../../../assets/images/sidebar/Configure_Active.svg" class="iconss ">
+                    <span class="btn-txt">Configure</span>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p " (click)="navigateTo('moscribe')" (click)="handleToggle('moscribe')"
+                [class.selected]="changeColor('moscribe')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='moscribe'" src="../../../../assets/images/sidebar/Moscribe.png" class="iconss ">
+                    <img *ngIf="activePage=='moscribe'" src="../../assets/images/contextx.png" class="iconss ">
+                    <span class="btn-txt">Moscribe Home</span>
+                </div>
+            </div>
+        </div>
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p " (click)="navigateTo('products')" (click)="handleToggle('products')"
+                [class.selected]="changeColor('products')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='products'" src="../../../../assets/images/sidebar/Products.svg" class="iconss ">
+                    <img *ngIf="activePage=='products'" src="../../assets/images/engagements.png" class="iconss ">
+                    <span class="btn-txt">Products</span>
+                </div>
+            </div>
+        </div>
+        <div class="universe menu-btn">
+            <div class="icon-con icon-p " (click)="navigateTo('catalogue')" (click)="handleToggle('catalogue')"
+                [class.selected]="changeColor('catalogue')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='catalogue'" src="../../../../assets/images/sidebar/Product_Catalog.svg" class="iconss ">
+                    <img *ngIf="activePage=='catalogue'" src="../../assets/images/jobs.png" class="iconss ">
+                    <span class="btn-txt">Catalogue</span>
+                </div>
+            </div>
+        </div>
+
+        <div class=" menu-btn">
+            <div class="icon-con icon-p " (click)="navigateTo('ratecard')"  (click)="handleToggle('ratecard')"
+                [class.selected]="changeColor('ratecard')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='ratecard'" class="iconss " src="../../../../assets/images/sidebar/RateCard.svg">
+                    <img *ngIf="activePage=='ratecard' " src="../../assets/images/tabularNew.png">
+                    <span class="btn-txt">Rate Cards</span>
+                </div>
+            </div>
+        </div>
+        <div class=" menu-btn">
+            <div class="icon-con icon-p " (click)="navigateTo('ledger')" (click)="handleToggle('ledger')"
+                [class.selected]="changeColor('ledger')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='ratecard'" class="iconss " src="../../../../assets/images/sidebar/Ledger.svg">
+                    <img *ngIf="activePage=='ratecard'" src="../../assets/images/tabularNew.png">
+                    <span class="btn-txt">Ledger</span>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class=" menu-btn">
+            <div class="icon-con icon-p " (click)="navigateTo('superdashboard')" (click)="handleToggle('superdashboard')"
+                [class.selected]="changeColor('superdashboard')">
+                <div class="menu-con">
+                    <img *ngIf="activePage!='superdashboard'" class="iconss " src="../../../../assets/images/sidebar/SuperDashboard.svg">
+                    <img *ngIf="activePage=='superdashboard'" class="iconss " src="../../assets/images/tabularNew.png">
+                    <span class="btn-txt">Super Dashboard</span>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="profile">
+        <hr/>
+        <div class="icon-con">
+            <img class="profile-pic" src="../../../../assets/images/sidebar/Login_user.svg">
+        </div>
+        <p>Powered by</p>
+        <img  src="../../../../assets/images/sidebar/Mobius_logo_Black.png" class="mobius-bottom-pic"/>
+        <!-- <div class="icon-con">
+            <span class="btn-profile">My Account</span>
+            <span class="logout" (click)="logout()">
+                Log out
+            </span>
+        </div> -->
+    </div>
+
+</div>
+</section>

@@ -9,10 +9,9 @@
 }
 
 .appearence_content {
-    width: 87%;
-    margin-left: 12%;
+    width: 100%;
+    margin-left: 13%;
     margin-top: 2rem;
-
 }
 
 .appearence_sidebar_ul {
@@ -52,7 +51,8 @@
 }
 
 .upperdiv {
-    column-gap: 2rem;
+    width: 100%;
+    column-gap: 1rem;
 }
 
 .lower_div {
@@ -63,14 +63,14 @@
 }
 
 .leftdiv {
-    width: 74%;
+    width: 72%;
     margin-right: .81rem;
     border-radius: .46rem;
 
 }
 
 .rightdiv {
-    width: 26%;
+    width: 28%;
     display: flex;
     flex-direction: column;
     row-gap: 2.3rem;
@@ -89,10 +89,10 @@
 }
 
 .appearence_content-header h1 {
-    padding: 3.7rem;
+    padding: 2.4rem;
     padding-top: 0;
     font-family: 'Snippet';
-    font-size: 7.7rem;
+    font-size: 5.4rem;
     font-weight: 400;
     // line-height: 150%;
     font-weight: 100;
@@ -117,7 +117,7 @@ header h1:last-child {
 }
 
 .header_left_div {
-    width: 8%;
+    width: 10%;
     font-family: "Roboto-Medium";
     height: 33px;
     font-size: .95rem;
@@ -154,7 +154,7 @@ header h1:last-child {
     width: 80%;
     font-family: 'Roboto-Medium';
     letter-spacing: 0.028rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
     line-height: 150%;
     font-weight: 500;
     text-align: left;
@@ -163,9 +163,9 @@ header h1:last-child {
 }
 
 .header_desc_para {
-    width: 98%;
+    width: 96%;
     letter-spacing: 0.02rem;
-    font-size: 2.4rem;
+    font-size: 1.7rem;
     line-height: 150%;
     font-weight: 500;
     text-align: left;

@@ -19,14 +19,59 @@ label{
 .mb-24px{
     margin-bottom: 24px;
 }
-.general_bussiness-Tag div{
-    width: 93%;
-}
 .general_bussiness-Tag{
     column-gap: 1%;
 }
 
-.general_bussiness-Tag select{
+.general_bussiness{
+    select {
+        width: 0%;
+        border: none;
+        outline: none;
+        opacity: 0;
+    }
+    select option{
+        opacity: 1;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    select::-webkit-select-arrow,select::-webkit-scrollbar{
+        display: none;
+    }
+    .dropdown-menu {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+   
+     
+}
+.general_bussiness-input13{
     width: 6%;
 }
+.general_bussiness-input31{
+    width: 94%;
+}
+.general_bussiness-tags{
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    text-align: center;
+    width: fit-content;
+    height: 45px;
+    color: var(--white);
+    background-color: var(--blue-3);
+    border-radius:.4rem ;
+    img{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}
 
+//........** general_bussiness_info-input00   class for 50% (2 input in same row)
+//........** general_bussiness_info-input01   class for 30% (3 input in same row) 
+//........** general_bussiness_info-input10-11 classes for 65% 35% (2 input in same row)
