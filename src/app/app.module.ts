@@ -14,6 +14,7 @@ import { GovernanceComponent } from './component/modules/Configure/governance/go
 import { TenantBehaviourComponent } from './component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
 import { AllianceBehaviourComponent } from './component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
 import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
+import { UserBehaviourComponent } from './component/modules/Configure/user-behaviour/user-behaviour.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ConfigureLoginComponent } from './component/modules/Configure/configure
     TenantBehaviourComponent,
     GenerealBussinessInfoComponent,
     AllianceBehaviourComponent,
-    ConfigureLoginComponent
+    ConfigureLoginComponent,
+    UserBehaviourComponent
   ],
   imports: [
     BrowserModule,

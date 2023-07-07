@@ -5,7 +5,7 @@ import { GovernanceComponent } from 'src/app/component/modules/Configure/governa
 import { TenantBehaviourComponent } from 'src/app/component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
 import { GenerealBussinessInfoComponent } from 'src/app/component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
 import { AllianceBehaviourComponent } from 'src/app/component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
-
+import { UserBehaviourComponent } from 'src/app/component/modules/Configure/user-behaviour/user-behaviour.component';
 @Component({
   selector: 'app-configure-side-bar',
   templateUrl: './configure-side-bar.component.html',
@@ -13,7 +13,7 @@ import { AllianceBehaviourComponent } from 'src/app/component/modules/Configure/
 })
 export class ConfigureSideBarComponent {
 
-  contents: string[] = ['general-bussiness','general-bussiness-info', 'about', 'contact','governance','tenant-behaviour','alliance-behaviour'];
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour'];
 
   selectedContent: string = this.contents[0];
 
@@ -37,7 +37,9 @@ export class ConfigureSideBarComponent {
       case 'tenant-behaviour':
         return TenantBehaviourComponent;
       case 'alliance-behaviour':
-        return AllianceBehaviourComponent;   
+        return AllianceBehaviourComponent; 
+      case 'user-behaviour':
+        return UserBehaviourComponent;     
       default:
         return null;
     }

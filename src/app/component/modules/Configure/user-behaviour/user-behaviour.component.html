@@ -1,0 +1,162 @@
+<section id="user_behaviour">
+    <div class="user_behaviour-header">User Behaviour</div>
+    <div class="user_behaviour-body ">
+       
+        
+        <div>
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Make 2FA Mandatory</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="cooldownPeriod1" name="cooldownPeriod" value="1Month" checked>
+                    <label for="cooldownPeriod1">Alliances with >20 participants</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="cooldownPeriod2" name="cooldownPeriod" value="1Quarter">
+                    <label for="cooldownPeriod2">Alliance ARR >10M</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="cooldownPeriod3" name="cooldownPeriod" value="ComplianceFailure">
+                    <label for="cooldownPeriod3">Alliance ARR >20M</label>
+                    </div>
+                  
+            </div>
+
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Allow login from multiple devices</div>
+            <div class="dropdown" ngbDropdown>
+                <div>
+                    <input type="radio" id="cooldownPeriod1" name="cooldownPeriod" value="1Month" checked>
+                <label for="cooldownPeriod1">Alliances with >20 participants</label>
+                </div>
+                <img class="dropdownButton" src="assets/images/configure/expand-arrow.png" alt="" ngbDropdownToggle>
+                <div class="dropdown-menu" aria-labelledby="dropdownButton" ngbDropdownMenu>
+                  <button class="dropdown-item" >
+                   klnfldksnlk
+                  </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Allow Login using OTP if password is forgotten</div>
+        </div>
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Force require password change</div>
+        </div>
+
+        <div>    
+            <div class="d-flex mb-3">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">New Password should be different from old passwords</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="operatorsApproval1" name="operatorsApproval" value="Always" checked>
+                    <label for="operatorsApproval1">First four letters different</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="operatorsApproval2" name="operatorsApproval" value="365+">
+                    <label for="operatorsApproval2">No 4 characters similar</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="operatorsApproval3" name="operatorsApproval" value="firstAlliance">
+                    <label for="operatorsApproval3">First 4 letter, last 4 letters</label>
+                    </div>
+                    
+                 
+            </div>
+
+        </div>
+
+        <div>    
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Define Password Complexity</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="exitAllianceApproval1" name="approvalToExitAlliance" value="300kUSD+" checked>
+                    <label for="exitAllianceApproval1">No consecutive alphabets</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="exitAllianceApproval2" name="approvalToExitAlliance" value="100kUSD+">
+                    <label for="exitAllianceApproval2">Aa1#</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="exitAllianceApproval3" name="approvalToExitAlliance" value="500kUSD+">
+                    <label for="exitAllianceApproval3">At least 16 charachters</label>
+                    </div>
+                   
+                 
+            </div>
+
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Password Hint</div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Security Question</div>
+        </div>
+
+
+        <div>    
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Forgot username workflow</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="exitAllianceApproval1" name="approvalToExitAlliance" value="300kUSD+" checked>
+                    <label for="exitAllianceApproval1">OTP using phone number and email</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="exitAllianceApproval2" name="approvalToExitAlliance" value="100kUSD+">
+                    <label for="exitAllianceApproval2">Directly login using OTP</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="exitAllianceApproval3" name="approvalToExitAlliance" value="500kUSD+">
+                    <label for="exitAllianceApproval3">Reset Password</label>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Trusted Devices</div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Ability to Always stay logged in</div>
+        </div>
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Force logout on inactivity</div>
+        </div>
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Only admin can reset password</div>
+        </div>
+
+       
+        
+
+    </div>  
+</section>
