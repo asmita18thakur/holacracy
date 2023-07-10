@@ -5,21 +5,21 @@
         
         <div>
             <div class="d-flex">
-                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox1" (change)="toggleOptions()"/> <span class="slider"></span></label>
                 <div class="opt_txt ms-3">Require cool-down period after alliance exit </div>
             </div>
             <div class="alliance_behaviour-opt_container radio-button d-flex mb-3 ">
 
                     <div>
-                        <input type="radio" id="cooldownPeriod1" name="cooldownPeriod" value="1Month" checked>
+                        <input type="radio" id="cooldownPeriod1" name="cooldownPeriod" value="1Month" [(ngModel)]="allianceBehaviour.coolDownPeriodAfterAlliance" [disabled]="!enableOptions.checkbox1">
                     <label for="cooldownPeriod1">1 Month</label>
                     </div>
                     <div >
-                        <input type="radio" id="cooldownPeriod2" name="cooldownPeriod" value="1Quarter">
+                        <input type="radio" id="cooldownPeriod2" name="cooldownPeriod" value="1Quarter" [(ngModel)]="allianceBehaviour.coolDownPeriodAfterAlliance" [disabled]="!enableOptions.checkbox1">
                     <label for="cooldownPeriod2">1 Quarter</label>
                     </div>
                     <div >
-                        <input type="radio" id="cooldownPeriod3" name="cooldownPeriod" value="ComplianceFailure">
+                        <input type="radio" id="cooldownPeriod3" name="cooldownPeriod" value="ComplianceFailure" [(ngModel)]="allianceBehaviour.coolDownPeriodAfterAlliance" [disabled]="!enableOptions.checkbox1">
                     <label for="cooldownPeriod3">Compliance Failure</label>
                     </div>
                   
@@ -29,25 +29,25 @@
 
         <div>    
             <div class="d-flex">
-                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox2" (change)="toggleOptions()"/> <span class="slider"></span></label>
                 <div class="opt_txt ms-3">Alliance formation requires an Operator’s approval</div>
             </div>
             <div class="alliance_behaviour-opt_container radio-button d-flex mb-3 ">
 
                     <div>
-                        <input type="radio" id="operatorsApproval1" name="operatorsApproval" value="Always" checked>
+                        <input type="radio" id="operatorsApproval1" name="operatorsApproval" value="Always" [(ngModel)]="allianceBehaviour.AllianceFormationRequiresOperatorApproval" [disabled]="!enableOptions.checkbox2">
                     <label for="operatorsApproval1">Always</label>
                     </div>
                     <div >
-                        <input type="radio" id="operatorsApproval2" name="operatorsApproval" value="365+">
+                        <input type="radio" id="operatorsApproval2" name="operatorsApproval" value="Tenants >365days old" [(ngModel)]="allianceBehaviour.AllianceFormationRequiresOperatorApproval" [disabled]="!enableOptions.checkbox2">
                     <label for="operatorsApproval2">Tenants &gt;365days old</label>
                     </div>
                     <div >
-                        <input type="radio" id="operatorsApproval3" name="operatorsApproval" value="firstAlliance">
+                        <input type="radio" id="operatorsApproval3" name="operatorsApproval" value="firstAlliance" [(ngModel)]="allianceBehaviour.AllianceFormationRequiresOperatorApproval" [disabled]="!enableOptions.checkbox2"> 
                     <label for="operatorsApproval3">First Alliance</label>
                     </div>
                     <div >
-                    <input type="radio" id="operatorsApproval4" name="operatorsApproval" value="after1MonthFormerAllianceDissolution">
+                    <input type="radio" id="operatorsApproval4" name="operatorsApproval" value="after1MonthFormerAllianceDissolution" [(ngModel)]="allianceBehaviour.AllianceFormationRequiresOperatorApproval" [disabled]="!enableOptions.checkbox2">
                     <label for="operatorsApproval4">1 month after former alliance dissolution</label>
                     </div>
                  
@@ -57,21 +57,21 @@
 
         <div>    
             <div class="d-flex">
-                <label class="switch"><input type="checkbox" /> <span class="slider"></span></label>
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox3" (change)="toggleOptions()"/> <span class="slider"></span></label>
                 <div class="opt_txt ms-3">Require approval to exit alliance</div>
             </div>
             <div class="alliance_behaviour-opt_container radio-button d-flex mb-3 ">
 
                     <div>
-                        <input type="radio" id="exitAllianceApproval1" name="approvalToExitAlliance" value="300kUSD+" checked>
+                        <input type="radio" id="exitAllianceApproval1" name="approvalToExitAlliance" value="ARR >300kUSD" [(ngModel)]="allianceBehaviour.RequireApprovalToExitAlliance" [disabled]="!enableOptions.checkbox3">
                     <label for="exitAllianceApproval1">For ARR &gt;300k USD</label>
                     </div>
                     <div >
-                        <input type="radio" id="exitAllianceApproval2" name="approvalToExitAlliance" value="100kUSD+">
+                        <input type="radio" id="exitAllianceApproval2" name="approvalToExitAlliance" value="ARR >100kUSD" [(ngModel)]="allianceBehaviour.RequireApprovalToExitAlliance" [disabled]="!enableOptions.checkbox3">
                     <label for="exitAllianceApproval2">For ARR &gt;100k USD</label>
                     </div>
                     <div >
-                        <input type="radio" id="exitAllianceApproval3" name="approvalToExitAlliance" value="500kUSD+">
+                        <input type="radio" id="exitAllianceApproval3" name="approvalToExitAlliance" value="ARR >500kUSD" [(ngModel)]="allianceBehaviour.RequireApprovalToExitAlliance" [disabled]="!enableOptions.checkbox3">
                     <label for="exitAllianceApproval3">For ARR &gt;500k USD</label>
                     </div>
                    
@@ -86,28 +86,28 @@
                 <div class="opt_txt mb-1">Who can dissolve an alliance ?</div>
 
                 <div class="mb-1">
-                    <input type="radio" id="dissolver1" name="allianceDissolver" value="operator" />  
+                    <input type="radio" id="dissolver1" name="allianceDissolver" value="operator" [(ngModel)]="allianceBehaviour.allianceDissolver" />  
                     <label for="dissolver1" class="opt_txt">Operator only</label>
                 </div>
                 <div class="mb-1">
-                    <input type="radio" id="dissolver2" name="allianceDissolver" value="ExperienceProvider" />  
+                    <input type="radio" id="dissolver2" name="allianceDissolver" value="ExperienceProvider" [(ngModel)]="allianceBehaviour.allianceDissolver"  />  
                     <label for="dissolver2" class="opt_txt">Experience Provider</label>
 
                 </div>
                 <div class="mb-1">
-                    <input type="radio" id="dissolver3" name="allianceDissolver" value="InfrastructureProvider" />
+                    <input type="radio" id="dissolver3" name="allianceDissolver" value="InfrastructureProvider" [(ngModel)]="allianceBehaviour.allianceDissolver" />
                       <label for="dissolver3" class="opt_txt">Infrastructure Provider</label>
                 </div>
                 <div class="mb-1">
-                    <input type="radio" id="dissolver4" name="allianceDissolver" value="ContentProvider" />
+                    <input type="radio" id="dissolver4" name="allianceDissolver" value="ContentProvider" [(ngModel)]="allianceBehaviour.allianceDissolver" />
                       <label for="dissolver4" class="opt_txt">Content Provider</label>
                 </div>
                 <div class="mb-1">
-                    <input type="radio" id="dissolver5" name="allianceDissolver" value="MonetisationPartner" />
+                    <input type="radio" id="dissolver5" name="allianceDissolver" value="MonetisationPartner" [(ngModel)]="allianceBehaviour.allianceDissolver" />
                       <label for="dissolver5" class="opt_txt">Monetisation Partner</label>
                 </div>
                 <div class="mb-3">
-                    <input type="radio" id="dissolver6" name="allianceDissolver" value="TechnologyProvider" />
+                    <input type="radio" id="dissolver6" name="allianceDissolver" value="TechnologyProvider" [(ngModel)]="allianceBehaviour.allianceDissolver" />
                       <label for="dissolver6" class="opt_txt">Technology Provider</label>
                 </div>
             </div>
@@ -115,3 +115,4 @@
 
     </div>  
 </section>
+<button (click)="submitAnswer()">Submit</button>

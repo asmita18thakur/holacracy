@@ -6,35 +6,54 @@ import { Component } from '@angular/core';
   styleUrls: ['./governance.component.scss']
 })
 export class GovernanceComponent {
-  checkboxValue1: boolean = false;
-  checkboxValue2 = false;
-  checkboxValue3 = false;
-  checkboxValue4 = false;
-  checkboxValue5 = false;
-  checkboxValue6 = false;
-
-  radioValue1: string = '';
-  radioValue2: string = '';
-  radioValue3: string = '';
-
-  handleCheckboxChange(): void {
-    if (!this.checkboxValue1) {
-      this.radioValue1 = ''; // Reset the radio button selection when checkbox is unchecked
-    }else if (!this.checkboxValue2) {
-      this.radioValue2 = ''; // Reset the radio button selection when checkbox is unchecked
-    }else if (!this.checkboxValue3) {
-      this.radioValue3 = ''; // Reset the radio button selection when checkbox is unchecked
-    }
-    // else if (!this.checkboxValue4) {
-    //   this.checkboxValue4 = true; // Reset the radio button selection when checkbox is unchecked
-    // }
-    // else if (!this.checkboxValue5) {
-    //   this.checkboxValue5 = true; // Reset the radio button selection when checkbox is unchecked
-    // }
-    // else if (!this.checkboxValue6) {
-    //   this.checkboxValue6 = true; // Reset the radio button selection when checkbox is unchecked
-    // }
+  
+  // enableOptions: boolean = false; // Added property for enabling/disabling options
+  enableOptions={
+    checkbox1:false,
+    checkbox2:false,
+    checkbox3:false,
+    checkbox4:false
   }
+  goveranceSettings={
+    marketplaceNature:'',
+    marketplaceAccessType:'',
+    expiryDuration:'',
+    currency:'',
+    inviteOneTimeUseOnly:{
+      inviteAlreadyUsed:'',
+      inviteMisuseAlert:''
+
+    }
+
+  }
+
+  toggleOptions(): void {
+    
+    // console.log("1",this.goveranceSettings.expiryDuration,"----",this.enableOptions.checkbox3)
+    if (!this.enableOptions.checkbox1) {
+      this.goveranceSettings.marketplaceNature = ''; // Reset the selected option when options are disabled
+    }
+    if (!this.enableOptions.checkbox2) {
+      this.goveranceSettings.marketplaceAccessType = ''; // Reset the selected option when options are disabled
+    }
+    if (!this.enableOptions.checkbox3) {
+      this.goveranceSettings.expiryDuration = ''; // Reset the selected option when options are disabled
+      // console.log("2",this.goveranceSettings.expiryDuration,"----",this.enableOptions.checkbox3)
+    }
+    if (!this.enableOptions.checkbox4) {
+      this.goveranceSettings.inviteOneTimeUseOnly.inviteAlreadyUsed = '';// Reset the selected option when options are disabled 
+      this.goveranceSettings.inviteOneTimeUseOnly.inviteMisuseAlert = '';// Reset the selected option when options are disabled
+      // console.log("2",this.goveranceSettings.expiryDuration,"----",this.enableOptions.checkbox3)
+    }
+
+  }
+ 
+  
+  // submitAnswer(): void {
+  //   console.log(this.goveranceSettings); // Log the selected answer value
+  // }
+
+  
 }
 
 

@@ -4,48 +4,54 @@
         <div class="d-flex flex-column justify-content-start">
 
             <div class="d-flex">
-                <label class="switch"><input type="checkbox" [(ngModel)]="checkboxValue1" (change)="handleCheckboxChange()" /> <span class="slider"></span></label>
+                <label class="switch"><input type="checkbox"  [(ngModel)]="enableOptions.checkbox1" (change)="toggleOptions()" /> <span class="slider"></span></label>
                 <div class="opt_txt ms-3">What is the nature of the Marketplace ?</div>
             </div>
             <div class="governance-opt_container">
                 <div class="mb-1">
-                    <input type="radio" id="traditional" name="marketplaceNature" value="traditional" [(ngModel)]="radioValue1" [disabled]="!checkboxValue1"/>  
+                    <input type="radio" id="traditional" name="marketplaceNature" value="traditional" [(ngModel)]="goveranceSettings.marketplaceNature" [disabled]="!enableOptions.checkbox1"/>  
                     <label for="traditional" class="opt_txt">Traditional</label>
                 </div>
                 <div class="mb-1">
-                    <input type="radio" id="holacratic" name="marketplaceNature" value="holacratic" [(ngModel)]="radioValue1" [disabled]="!checkboxValue1"/>  
+                    <input type="radio" id="holacratic" name="marketplaceNature" value="holacratic" [(ngModel)]="goveranceSettings.marketplaceNature" [disabled]="!enableOptions.checkbox1"/>  
                     <label for="holacratic" class="opt_txt">Holacratic</label>
 
                 </div>
                 <div class="mb-3">
-                    <input type="radio" id="Web3" name="marketplaceNature" value="Web3" [(ngModel)]="radioValue1" [disabled]="!checkboxValue1"/>
+                    <input type="radio" id="Web3" name="marketplaceNature" value="Web3" [(ngModel)]="goveranceSettings.marketplaceNature" [disabled]="!enableOptions.checkbox1"/>
                       <label for="Web3" class="opt_txt">Web 3.0 DAO</label>
                 </div>
             </div>
         </div>
+      
+
+            
+        
+          
+          
 
         <div class="d-flex flex-column justify-content-start">
 
             <div class="d-flex ">
-                <label class="switch"><input type="checkbox"  [(ngModel)]="checkboxValue2" (change)="handleCheckboxChange()"/> <span class="slider"></span></label>
+                <label class="switch"><input type="checkbox"  [(ngModel)]="enableOptions.checkbox2" (change)="toggleOptions()" /> <span class="slider"></span></label>
                 <div class="opt_txt ms-3">Is marketplace private ?</div>
             </div>
             <div class="governance-opt_container">
                 <div  class="mb-1">
-                    <input type="radio" id="orgPublic" name="marketplaceAccessType" value="orgPublic" [(ngModel)]="radioValue2" [disabled]="!checkboxValue2"/>  
+                    <input type="radio" id="orgPublic" name="marketplaceAccessType" value="orgPublic" [(ngModel)]="goveranceSettings.marketplaceAccessType" [disabled]="!enableOptions.checkbox2"/>  
                     <label for="orgPublic" class="opt_txt">Org Public</label>
                 </div>
                 <div class="mb-1">
-                    <input type="radio" id="public" name="marketplaceAccessType" value="public" [(ngModel)]="radioValue2" [disabled]="!checkboxValue2"/>  
+                    <input type="radio" id="public" name="marketplaceAccessType" value="public" [(ngModel)]="goveranceSettings.marketplaceAccessType" [disabled]="!enableOptions.checkbox2"/>  
                     <label for="public" class="opt_txt">Public</label>
 
                 </div>
                 <div class="mb-1">
-                    <input type="radio" id="invite" name="marketplaceAccessType" value="invite" [(ngModel)]="radioValue2" [disabled]="!checkboxValue2"/>
+                    <input type="radio" id="invite" name="marketplaceAccessType" value="invite" [(ngModel)]="goveranceSettings.marketplaceAccessType" [disabled]="!enableOptions.checkbox2"/>
                       <label for="invite" class="opt_txt">Invite only (private)</label>
                 </div>
                 <div class="mb-3">
-                    <input type="radio" id="inherited" name="marketplaceAccessType" value="inherited" [(ngModel)]="radioValue2" [disabled]="!checkboxValue2"/>
+                    <input type="radio" id="inherited" name="marketplaceAccessType" value="inherited" [(ngModel)]="goveranceSettings.marketplaceAccessType" [disabled]="!enableOptions.checkbox2"/>
                      <label for="inherited" class="opt_txt">Inherited</label>
                 </div>
             </div>
@@ -54,25 +60,25 @@
 
         <div>
             <div class="d-flex">
-                <label class="switch"><input type="checkbox" [(ngModel)]="checkboxValue3" (change)="handleCheckboxChange()"/> <span class="slider"></span></label>
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox3" (change)="toggleOptions()" /> <span class="slider"></span></label>
                 <div class="opt_txt ms-3">Do invite expires ?</div>
             </div>
             <div class="governance-opt_container radio-button d-flex mb-3">
 
                     <div>
-                        <input type="radio" id="expiry1" name="expiryDuration" value="30Days" checked [(ngModel)]="radioValue3" [disabled]="!checkboxValue3 ">
+                        <input type="radio" id="expiry1" name="expiryDuration" value="30Days"  [(ngModel)]="goveranceSettings.expiryDuration" [disabled]="!enableOptions.checkbox3" >
                     <label for="expiry1">30 Days</label>
                     </div>
                     <div >
-                        <input type="radio" id="expiry2" name="expiryDuration" value="7Days" [(ngModel)]="radioValue3" [disabled]="!checkboxValue3">
+                        <input type="radio" id="expiry2" name="expiryDuration" value="7Days"  [(ngModel)]="goveranceSettings.expiryDuration" [disabled]="!enableOptions.checkbox3" >
                     <label for="expiry2">7 Days</label>
                     </div>
                     <div >
-                        <input type="radio" id="expiry3" name="expiryDuration" value="24Hours" [(ngModel)]="radioValue3" [disabled]="!checkboxValue3">
+                        <input type="radio" id="expiry3" name="expiryDuration" value="24Hours"  [(ngModel)]="goveranceSettings.expiryDuration" [disabled]="!enableOptions.checkbox3">
                     <label for="expiry3">24 Hours</label>
                     </div>
                     <div >
-                    <input type="radio" id="expiry4" name="expiryDuration" value="onUsage" [(ngModel)]="radioValue3" [disabled]="!checkboxValue3">
+                    <input type="radio" id="expiry4" name="expiryDuration" value="onUsage"  [(ngModel)]="goveranceSettings.expiryDuration" [disabled]="!enableOptions.checkbox3">
                     <label for="expiry4">On Usage</label>
                     </div>
             </div>
@@ -84,21 +90,21 @@
             <div class="d-flex">
                 <div class="currency_radio_button">
                     <div>
-                        <input type="radio" id="currency1" name="currency" value="USD" checked>
+                        <input type="radio" id="currency1" name="currency" value="USD" [(ngModel)]="goveranceSettings.currency" checked>
                         <label for="currency1"><img src="../../../../../assets/images/goverancePage/usFlag.png" alt="usFlag"></label>
                     </div>
                     <div>USD</div>
                 </div>
                 <div class="currency_radio_button">
                     <div>
-                        <input type="radio" id="currency2" name="currency" value="USD" checked>
+                        <input type="radio" id="currency2" name="currency" value="CAD" [(ngModel)]="goveranceSettings.currency" >
                         <label for="currency2"><img src="../../../../../assets/images/goverancePage/cad.png" alt="canadaFlag"></label>
                     </div>
                     <div>CAD</div>
                 </div>
                 <div class="currency_radio_button">
                     <div>
-                        <input type="radio" id="currency3" name="currency" value="USD" checked>
+                        <input type="radio" id="currency3" name="currency" value="PESO" [(ngModel)]="goveranceSettings.currency" >
                         <label for="currency3"><img src="../../../../../assets/images/goverancePage/peso.png" alt="brazilFlag"></label>
                     </div>
                     <div>PESO</div>
@@ -115,18 +121,18 @@
 
         <div class="d-flex flex-column justify-content-start">
             <div class="d-flex">
-                <label class="switch"><input type="checkbox" [(ngModel)]="checkboxValue4" (change)="handleCheckboxChange()"/> <span class="slider"></span></label>
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox4" (change)="toggleOptions()" /> <span class="slider"></span></label>
                 <div class="opt_txt ms-3">Are invites one-time use only ?</div>
             </div>
             <div class="governance-opt_container check-button d-flex flex-column">
                     <div class="mb-1" style="font-size: 0.75rem;line-height: 1.125rem;color: var(--black);">Engagements</div>
                     <div class="d-flex">
                         <div>
-                            <input type="checkbox" id="invite_check_1" name="inviteAlreadyUsed" value="true" checked [(ngModel)]="checkboxValue5" [disabled]="!checkboxValue5" (change)="handleCheckboxChange()">
+                            <input type="checkbox" id="invite_check_1" name="inviteAlreadyUsed" value="true" [(ngModel)]="goveranceSettings.inviteOneTimeUseOnly.inviteAlreadyUsed" [disabled]="!enableOptions.checkbox4">
                         <label for="invite_check_1">Invite already used</label>
                         </div>
                         <div >
-                            <input type="checkbox" id="invite_check_2" name="inviteMisuseAlert" value="true" [(ngModel)]="checkboxValue6" [disabled]="!checkboxValue6" (change)="handleCheckboxChange()">
+                            <input type="checkbox" id="invite_check_2" name="inviteMisuseAlert" value="true" [(ngModel)]="goveranceSettings.inviteOneTimeUseOnly.inviteMisuseAlert" [disabled]="!enableOptions.checkbox4" >
                         <label for="invite_check_2">Invite misuse alert</label>
                         </div>
                     </div>
@@ -135,6 +141,6 @@
             </div>
 
         </div>
-
+        <!-- <button (click)="submitAnswer()">Submit</button> -->
     </div>  
 </section>
