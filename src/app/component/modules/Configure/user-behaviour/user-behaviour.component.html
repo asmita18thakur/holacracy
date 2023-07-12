@@ -1,0 +1,200 @@
+<section id="user_behaviour">
+    <div class="user_behaviour-header">User Behaviour</div>
+    <div class="user_behaviour-body ">
+       
+        
+        <div>
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox1" (change)="toggleOptions()" /> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Make 2FA Mandatory</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="2FAmandatory1" name="2FAmandatory" value="Allianceswith>20Participants"  [(ngModel)]="userBehaviour.TwoFAmandatory" [disabled]="!enableOptions.checkbox1">
+                    <label for="2FAmandatory1">Alliances with >20 participants</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="2FAmandatory2" name="2FAmandatory" value="AllianceARR>10M"  [(ngModel)]="userBehaviour.TwoFAmandatory" [disabled]="!enableOptions.checkbox1">
+                    <label for="2FAmandatory2">Alliance ARR >10M</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="2FAmandatory3" name="2FAmandatory" value="AllianceARR>20M"  [(ngModel)]="userBehaviour.TwoFAmandatory" [disabled]="!enableOptions.checkbox1">
+                    <label for="2FAmandatory3">Alliance ARR >20M</label>
+                    </div>
+                  
+            </div>
+
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox11" (change)="toggleOptions()"/> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Allow login from multiple devices</div>
+        </div>
+        <div class="d-flex flex-column user_behaviour-opt_container ">
+            <div class="mb-1" style="font-size: 1rem;line-height: 1.125rem;color: var(--black);opacity: 0.699999988079071;">Number of devices</div>
+            <div class="d-flex mb-3 ">
+                <div class="input" name="allowLoginFromMultipleDevices" [textContent]="multipleDevicesValue" style="width:5.6rem ; height:2rem ;"></div>
+                <div class="dropdown ms-2" ngbDropdown style="height: 32px; width: 32px;padding: 0px; min-height: 0px;">
+                    <img class="dropdownButton" src="assets/images/configure/expand-arrow.png" alt="" ngbDropdownToggle style="margin:15%" >
+                    <div class="dropdown-menu" aria-labelledby="dropdownButton" ngbDropdownMenu>
+                      <button class="dropdown-item" *ngFor="let category of multipleDevicesList; let i = index" [value]="category.key"  (click)="selectDevices(category.value)">
+                        {{ category.value }}
+                      </button>
+                    </div>
+                </div>                      
+             </div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox2" (change)="toggleOptions()" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Allow Login using OTP if password is forgotten</div>
+        </div>
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox12" (change)="toggleOptions()" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Force require password change</div>
+        </div>
+        <div class="d-flex flex-column user_behaviour-opt_container ">
+            <div class="mb-1" style="font-size: 1rem;line-height: 1.125rem;color: var(--black);opacity: 0.699999988079071;">Every</div>
+            <div class="d-flex mb-3 ">
+                <div class="input"   style="width:5.6rem ; height:2rem ;">
+                    <input type="text" name="forceRequirePswdChangeValue" [(ngModel)]="userBehaviour.ForceRequirePasswordChange.ForceRequirePasswordChangeValue" [disabled]="!enableOptions.checkbox12">
+                </div>
+                <div class="input ms-2" name="forceRequirePswdChangeUnit" [textContent]="periodValue"  style="width:5.6rem ; height:2rem ;" [(ngModel)]="userBehaviour.ForceRequirePasswordChange.ForceRequirePasswordChangeUnit" [disabled]="!enableOptions.checkbox12"></div>
+                <div class="dropdown ms-2" ngbDropdown style="height: 32px; width: 32px;padding: 0px; min-height: 0px;">
+                    <img class="dropdownButton" src="assets/images/configure/expand-arrow.png" alt="" ngbDropdownToggle style="margin:15%" >
+                    <div class="dropdown-menu" aria-labelledby="dropdownButton" ngbDropdownMenu>
+                      <button class="dropdown-item" *ngFor="let category of periodList; let i = index" [value]="category.key"  (click)="selectPeriod(category.value)">
+                        {{ category.value }}
+                      </button>
+                    </div>
+                </div>                      
+             </div>
+        </div>
+
+        <div>    
+            <div class="d-flex mb-3">
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox8" (change)="toggleOptions()"/> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">New Password should be different from old passwords</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="newPasswordRules1" name="newPasswordRules" value="First4LettersDifferent" [(ngModel)]="userBehaviour.newPasswordRules" [disabled]="!enableOptions.checkbox8">
+                    <label for="newPasswordRules1">First four letters different</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="newPasswordRules2" name="newPasswordRules" value="No4CharactersSimilar" [(ngModel)]="userBehaviour.newPasswordRules" [disabled]="!enableOptions.checkbox8">
+                    <label for="newPasswordRules2">No 4 characters similar</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="newPasswordRules3" name="newPasswordRules" value="First4Letter&Last4Letters" [(ngModel)]="userBehaviour.newPasswordRules" [disabled]="!enableOptions.checkbox8">
+                    <label for="newPasswordRules3">First 4 letter, last 4 letters</label>
+                    </div>
+                    
+                 
+            </div>
+
+        </div>
+
+        <div>    
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox9" (change)="toggleOptions()"/> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Define Password Complexity</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="PasswordComplexity1" name="PasswordComplexity" value="NoConsecutiveAlphabets" [(ngModel)]="userBehaviour.PasswordComplexity" [disabled]="!enableOptions.checkbox9">
+                    <label for="PasswordComplexity1">No consecutive alphabets</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="PasswordComplexity2" name="PasswordComplexity" value="Aa1#" [(ngModel)]="userBehaviour.PasswordComplexity" [disabled]="!enableOptions.checkbox9">
+                    <label for="PasswordComplexity2">Aa1#</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="PasswordComplexity3" name="PasswordComplexity" value="AtLeast16Charachters" [(ngModel)]="userBehaviour.PasswordComplexity" [disabled]="!enableOptions.checkbox9">
+                    <label for="PasswordComplexity3">At least 16 charachters</label>
+                    </div>
+                   
+                 
+            </div>
+
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox3" (change)="toggleOptions()"/> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Password Hint</div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox4" (change)="toggleOptions()"/> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Security Question</div>
+        </div>
+
+
+        <div>    
+            <div class="d-flex">
+                <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox10" (change)="toggleOptions()"/> <span class="slider"></span></label>
+                <div class="opt_txt ms-3">Forgot username workflow</div>
+            </div>
+            <div class="user_behaviour-opt_container radio-button d-flex mb-3 ">
+
+                    <div>
+                        <input type="radio" id="ForgotUsername1" name="ForgotUsername" value="OTPusingPhoneNumber&Email" [(ngModel)]="userBehaviour.ForgotUsername" [disabled]="!enableOptions.checkbox10">
+                    <label for="ForgotUsername1">OTP using phone number and email</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="ForgotUsername2" name="ForgotUsername" value="Directly login using OTP" [(ngModel)]="userBehaviour.ForgotUsername" [disabled]="!enableOptions.checkbox10">
+                    <label for="ForgotUsername2">Directly login using OTP</label>
+                    </div>
+                    <div >
+                        <input type="radio" id="ForgotUsername3" name="ForgotUsername" value="ResetPassword" [(ngModel)]="userBehaviour.ForgotUsername" [disabled]="!enableOptions.checkbox10">
+                    <label for="ForgotUsername3">Reset Password</label>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox5" (change)="toggleOptions()"/> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Trusted Devices</div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox6" (change)="toggleOptions()" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Ability to Always stay logged in</div>
+        </div>
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox13" (change)="toggleOptions()" /> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Force logout on inactivity</div>
+        </div>
+
+        <div class="d-flex flex-column user_behaviour-opt_container ">
+            <div class="mb-1" style="font-size: 1rem;line-height: 1.125rem;color: var(--black);opacity: 0.699999988079071;">Number of devices</div>
+            <div class="d-flex mb-3 ">
+                <div class="input"   style="width:5.6rem;height:2rem;"><input type="text" name="forceLogoutOnInactivity" [(ngModel)]="userBehaviour.forceLogoutOnInactivity.forceLogoutOnInactivityValue" [disabled]="!enableOptions.checkbox13"></div>
+                <div class="input ms-2" [textContent]="logOutTime"  style="width:5.6rem;height:2rem;" [(ngModel)]="userBehaviour.forceLogoutOnInactivity.forceLogoutOnInactivityUnit" [disabled]="!enableOptions.checkbox13"></div>
+                <div class="dropdown ms-2" ngbDropdown style="height: 32px; width: 32px;padding: 0px; min-height: 0px;">
+                    <img class="dropdownButton" src="assets/images/configure/expand-arrow.png" alt="" ngbDropdownToggle style="margin:15%" >
+                    <div class="dropdown-menu" aria-labelledby="dropdownButton" ngbDropdownMenu>
+                      <button class="dropdown-item" *ngFor="let category of logoutTimeList; let i = index" [value]="category.key"  (click)="selectLogoutTime(category.value)">
+                        {{ category.value }}
+                      </button>
+                    </div>
+                </div>                      
+             </div>
+        </div>
+
+        
+        <div class="d-flex mb-3">
+            <label class="switch"><input type="checkbox" [(ngModel)]="enableOptions.checkbox7" (change)="toggleOptions()"/> <span class="slider"></span></label>
+            <div class="opt_txt ms-3">Only admin can reset password</div>
+        </div>
+
+       
+        
+
+    </div>  
+</section>
+ <!-- <button (click)="submitAnswer()">Submit</button> -->

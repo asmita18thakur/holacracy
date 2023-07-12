@@ -5,18 +5,17 @@ import { GovernanceComponent } from 'src/app/component/modules/Configure/governa
 import { TenantBehaviourComponent } from 'src/app/component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
 import { GenerealBussinessInfoComponent } from 'src/app/component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
 import { AllianceBehaviourComponent } from 'src/app/component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
+import { UserBehaviourComponent } from 'src/app/component/modules/Configure/user-behaviour/user-behaviour.component';
+
 import { ErrorPageComponent } from 'src/app/component/modules/Configure/error-page/error-page.component';
 import { ProductListingComponent } from '../product-listing/product-listing.component';
-
 @Component({
   selector: 'app-configure-side-bar',
   templateUrl: './configure-side-bar.component.html',
   styleUrls: ['./configure-side-bar.component.scss']
 })
 export class ConfigureSideBarComponent {
-
-  contents: string[] = ['general-bussiness','general-bussiness-info','login','about','error', 'contact','governance','productlisting'];
-
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about','error', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','productlisting'];
   selectedContent: string = this.contents[0];
 
   changeContent(content: string): void {
@@ -39,6 +38,9 @@ export class ConfigureSideBarComponent {
       case 'tenant-behaviour':
         return TenantBehaviourComponent;
       case 'alliance-behaviour':
+        return AllianceBehaviourComponent; 
+      case 'user-behaviour':
+        return UserBehaviourComponent;     
         return AllianceBehaviourComponent;
       case 'error':
         return ErrorPageComponent;
