@@ -12,6 +12,7 @@ import { ProductListingComponent } from '../product-listing/product-listing.comp
 import { MarketplaceListingPageComponent } from 'src/app/component/modules/Configure/marketplace-listing-page/marketplace-listing-page.component';
 import { BillingComponent } from 'src/app/component/modules/Configure/billing/billing.component';
 import { ApperanceComponent } from 'src/app/component/modules/Configure/apperance/apperance.component';
+import { ProductPageComponent } from 'src/app/component/modules/Configure/product-page/product-page.component';
 
 @Component({
   selector: 'app-configure-side-bar',
@@ -19,7 +20,7 @@ import { ApperanceComponent } from 'src/app/component/modules/Configure/apperanc
   styleUrls: ['./configure-side-bar.component.scss']
 })
 export class ConfigureSideBarComponent {
-  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about','error', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','productlisting','marketplacelisting','billing','apperance'];
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about','error', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','productlisting','marketplacelisting','billing','apperance','productpage'];
 
 
   selectedContent: string = this.contents[0];
@@ -58,6 +59,8 @@ export class ConfigureSideBarComponent {
         return BillingComponent;
       case 'apperance' :
         return ApperanceComponent;
+      case 'productpage':
+        return ProductPageComponent
 
       default:
         return null;

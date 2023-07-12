@@ -71,7 +71,7 @@
                         <span>404 Error Page</span>
                     </a>
                 </li>
-                 <li class="custom-bullet">
+                 <li class="custom-bullet" (click)="changeContent('productpage')"  [ngClass]="{'active': selectedContent == 'productpage'}" >
                     <a>
                        <span>Product Page</span>
                     </a>
