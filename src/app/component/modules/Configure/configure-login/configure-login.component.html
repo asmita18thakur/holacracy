@@ -1,23 +1,60 @@
-<section class="configure_login">
-  <div class="configure_login-heading">
-    <h1>What's the first thing users should see when they come to your holacracy?</h1>
-  </div>
-  <div class="configure_login-login d-flex ">
-    <div class="configure_login-login-left" >
-      <div>
-        <p>aventiv</p>
-      </div>
-      <div>
-        <p>Invite expires in 3 hrs</p>
-      </div>
 
+<div class="error_page-heading">
+  <h1>What's the first thing users should see when they come to your holacracy?</h1>
+</div>
+
+
+<div class="configure_login-login d-flex">
+
+  <div class="left">
+    <div class="left_heading">
+      <p [style.Color]="changedColor">aventiv</p>
     </div>
-    <div class="configure_login-login-right" >
-      <img src="./assets/images/rate_card_config/Screenshot 2023-06-07 at 5.47 23.png"/>
+    <div class="invitation">
+      <p>Invite expires in 3 hrs</p>
+    </div>
+    <div class="login_details d-flex flex-column align-items-center">
+      <div class="username">
+        <p>Username</p>
+        <input type="text" placeholder="Enter you username" />
+      </div>
+      <div class="username">
+        <p>Password</p>
+        <input type="text" placeholder="Enter your password" />
+      </div>
+      <div class="d-flex" style="width: 100%;">
+        <div class="remember d-flex">
 
+            <input type="checkbox" name="Remember" value="numberofdays" />
+            <p>Remember for 30days</p>
+
+        </div>
+        <div class="forgot">
+          <p>Forgot Password</p>
+        </div>
+      </div>
+      <div class="signin">
+        <button type="button" [style.backgroundColor]="changedColor">Sign in</button>
+      </div>
+      <div class="register d-flex" style="padding-top: 20px;">
+
+          <p>Don't have an account?</p>
+          <button class="register_button">Register Now</button>
+
+      </div>
     </div>
 
-
+  </div>
+  <div class="right">
+    <img
+      src="./assets/images/rate_card_config/Screenshot 2023-06-07 at 5.47 23.png"
+    />
   </div>
 
-</section>
+</div>
+<div class="color_picker">
+  <app-colorpicker  (colorChange)="onColorChange($event)"></app-colorpicker>
+</div>
+
+
+

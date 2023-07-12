@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./configure-login.component.scss']
 })
 export class ConfigureLoginComponent {
+  changedColor: string= '#FF508E'
+
+  onColorChange(color: string ) {
+    this.changedColor = color;
+
+
+
+  }
 
 }

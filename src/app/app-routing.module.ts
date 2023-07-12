@@ -13,13 +13,17 @@ const routes: Routes = [
     component: LandingComponent,
     children:[
       {
+        path:'',
+        component:ApperanceSettingComponent
+      },
+      {
         path:'apperancesetting',
         component:ApperanceSettingComponent
       },
       {
         path:'messagecenter',
         component:RatecardMessagecenterComponent
-    
+
       },
       {
         path:'configure',

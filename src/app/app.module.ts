@@ -10,6 +10,7 @@ import { ConfigureSideBarComponent } from './component/shared/supportive_compone
 import { GeneralBussinessComponent } from './component/modules/Configure/general-bussiness/general-bussiness.component';
 import { FormsModule } from '@angular/forms';
 import { GenerealBussinessInfoComponent } from './component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
+import { ColorPickerModule } from 'ngx-color-picker';
 import { GovernanceComponent } from './component/modules/Configure/governance/governance.component';
 import { TenantBehaviourComponent } from './component/modules/Configure/tenant-behaviour/tenant-behaviour.component';
 import { AllianceBehaviourComponent } from './component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
@@ -18,6 +19,12 @@ import { UserBehaviourComponent } from './component/modules/Configure/user-behav
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './component/shared/sidebar/sidebar.component';
 import { LandingComponent } from './component/landing/landing.component';
+
+import { ErrorPageComponent } from './component/modules/Configure/error-page/error-page.component';
+import { ProductListingComponent } from './component/shared/supportive_component/product-listing/product-listing.component';
+import { ProductListingComponentComponent } from './component/shared/supportive_component/product-listing-component/product-listing-component.component';
+import { ColorpickerComponent } from './component/modules/Configure/colorpicker/colorpicker.component';
+
 
 @NgModule({
   declarations: [
@@ -35,13 +42,19 @@ import { LandingComponent } from './component/landing/landing.component';
     ConfigureLoginComponent,
     UserBehaviourComponent,
     SidebarComponent,
-    LandingComponent
+    LandingComponent,
+    ConfigureLoginComponent,
+    ErrorPageComponent,
+    ProductListingComponent,
+    ProductListingComponentComponent,
+    ColorpickerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ColorPickerModule
   ],
   providers: [
   ],

@@ -1,0 +1,173 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+.error_page-heading{
+  margin-bottom: 1rem;
+  h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+.configure_login-login{
+  margin:0 0 1.68rem 1rem;
+  width: 55%;
+  height: 30%;
+  border: 1px solid #CBCBCB;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+
+
+}
+.left{
+  width: 50%;
+  height: 30%;
+  padding: 40px;
+
+
+  .left_heading{
+    margin-top: 5%;
+    margin-bottom: 40px;
+    text-align: center;
+    p{
+      font-family: 'Roboto-Medium';/*500*/
+      color: #A9DF7B;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+}
+.right{
+  width: 50%;
+  height: 30%;
+  img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.invitation{
+  position: relative;
+  bottom: 20px;
+
+  p{
+    text-align: center;
+    color:rgb(51, 51, 228);
+    font-size:15px;
+
+    }
+}
+.username{
+  width: 100%;
+  margin-bottom: 10px;
+  p{
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  input{
+    background-color: rgb(180 190 199 / 14%);
+    border: 0px;
+    border-right: 2px solid grey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    color: grey;
+    font-size: 10px;
+    border-radius: 4px;
+    height: 30px;
+    padding: 10px;
+  }
+}
+.forgot{
+
+  width: 40%;
+
+  p{
+    font-size: small;
+    font-weight: 200;
+    color: blue;
+    width: 100%;
+    font-size: 10px;
+
+  }
+}
+.login_details{
+  width: 70%;
+  margin-left: 15%;
+}
+.remember{
+  width: 70%;
+  width: 70%;
+input{
+  margin-right: 5px;
+}
+ p{
+  font-size: small;
+  font-weight: bold;
+  color: grey;
+  font-size: 10px;
+ }
+}
+.signin{
+  width: 100%;
+  button{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #A9DF7B;
+    margin-top: 10px;
+    color: white;
+    font-weight: 700;
+    border: 0px;
+    font-size: 10px;
+  }
+
+
+}
+.register{
+  width: 100%;
+  margin-left: 10%;
+
+  p:first-child{
+    font-family: Roboto-Medium;
+    color: grey;
+    margin-left: 10%;
+    font-size: 10px;
+  }
+  .register_button{
+    color: blue;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 10px;
+    margin-left:5px;
+
+  }
+
+
+}
+
+.color_picker{
+  width: 85%;
+}
+
+
+.heading-text{
+  font-size: 12px;
+}
+.image-input{
+  top: 24px;
+  position: relative;
+  left: 18px;
+  height: 20px;
+}
+
+.input_color input{
+  border: none !important;
+  outline: none;
+}
