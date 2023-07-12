@@ -7,7 +7,8 @@ import { GenerealBussinessInfoComponent } from 'src/app/component/modules/Config
 import { AllianceBehaviourComponent } from 'src/app/component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
 import { UserBehaviourComponent } from 'src/app/component/modules/Configure/user-behaviour/user-behaviour.component';
 import { MyOrganisationComponent } from 'src/app/component/modules/Configure/my-organisation/my-organisation.component';
-
+import { ErrorPageComponent } from 'src/app/component/modules/Configure/error-page/error-page.component';
+import { ProductListingComponent } from '../product-listing/product-listing.component';
 @Component({
   selector: 'app-configure-side-bar',
   templateUrl: './configure-side-bar.component.html',
@@ -15,7 +16,7 @@ import { MyOrganisationComponent } from 'src/app/component/modules/Configure/my-
 })
 export class ConfigureSideBarComponent {
 
-  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','myOrganisation'];
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'error', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','myOrganisation','productlisting'];
  
   selectedContent: string = this.contents[0];
 
@@ -33,9 +34,9 @@ export class ConfigureSideBarComponent {
       case 'login':
         return ConfigureLoginComponent;
       case 'governance':
-        return GovernanceComponent; 
+        return GovernanceComponent;
       case 'general-bussiness-info':
-        return GenerealBussinessInfoComponent; 
+        return GenerealBussinessInfoComponent;
       case 'tenant-behaviour':
         return TenantBehaviourComponent;
       case 'alliance-behaviour':
@@ -43,7 +44,11 @@ export class ConfigureSideBarComponent {
       case 'user-behaviour':
         return UserBehaviourComponent; 
       case 'myOrganisation':
-        return MyOrganisationComponent     
+        return MyOrganisationComponent        
+      case 'error':
+        return ErrorPageComponent;
+      case 'productlisting':
+        return ProductListingComponent;
       default:
         return null;
     }

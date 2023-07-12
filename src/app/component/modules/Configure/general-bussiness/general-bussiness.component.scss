@@ -43,8 +43,8 @@ label{
         max-height: 200px;
         overflow-y: auto;
     }
-   
-     
+
+
 }
 .general_bussiness-input13{
     width: 6%;
@@ -53,6 +53,7 @@ label{
     width: 94%;
 }
 .general_bussiness-tags{
+    padding:5px;
     margin-right: 5px;
     display: flex;
     flex-direction: row;
@@ -73,5 +74,5 @@ label{
 }
 
 //........** general_bussiness_info-input00   class for 50% (2 input in same row)
-//........** general_bussiness_info-input01   class for 30% (3 input in same row) 
+//........** general_bussiness_info-input01   class for 30% (3 input in same row)
 //........** general_bussiness_info-input10-11 classes for 65% 35% (2 input in same row)

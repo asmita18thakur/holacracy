@@ -1,0 +1,99 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+.error_page{
+  width: 75%;
+}
+
+.error_page-heading{
+  h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+
+.error_page-screen{
+  margin: 0.85rem 0 0 0rem;
+  width: 66%;
+  height: 60vh;
+  border: 1px solid #CBCBCB;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+
+
+
+
+}
+.error{
+  p{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 1000;
+
+    }
+}
+.error_reason{
+  text-align: center;
+}
+.error_button{
+  text-align: center;
+  margin-top:4.375rem;
+  button{
+    background-color: transparent;
+    color: rgb(92, 92, 243);
+    border: 0px;
+    font-family: 'Roboto-Medium';/*500*/
+  }
+}
+
+.input_select{
+  width: 80%;
+  margin-top: 1.875rem;
+
+}
+::placeholder{
+  color: red;
+}
+
+.input-textarea-bgimg span{
+  float:  left;
+  display: flex;
+
+}
+
+.input-textarea-bgimg  input{
+  height: 0px;
+}
+.input-textarea-bgimg{
+  width: 60%;
+
+}
+.color_picker{
+  margin-left: 5px;
+  width: 23%;
+  border-radius: 12px;
+
+}
+.heading{
+  color: white;
+  font-family: 'Roboto-Regular';/*400*/
+  margin-top: 10px;
+  margin-left: 10px;
+
+
+}
+
+.heading-text{
+  font-size: 12px;
+}
+.image-input{
+  top: 24px;
+  position: relative;
+  left: 18px;
+  height: 20px;
+}
+
+
