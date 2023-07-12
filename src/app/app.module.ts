@@ -27,6 +27,7 @@ import { ColorpickerComponent } from './component/modules/Configure/colorpicker/
 import { MarketplaceListingPageComponent } from './component/modules/Configure/marketplace-listing-page/marketplace-listing-page.component';
 import { BillingComponent } from './component/modules/Configure/billing/billing.component';
 import { ApperanceComponent } from './component/modules/Configure/apperance/apperance.component';
+import { ProductPageComponent } from './component/modules/Configure/product-page/product-page.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { ApperanceComponent } from './component/modules/Configure/apperance/appe
     ColorpickerComponent,
     MarketplaceListingPageComponent,
     BillingComponent,
-    ApperanceComponent
+    ApperanceComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
