@@ -1,0 +1,342 @@
+<div class="Apperance_setting">
+  <div class="heading">
+    <h2>Better your brand presence with a custom theme</h2>
+  </div>
+  <div class="mt-2">
+    <div class="mb-2">
+      <p class="text_secondary">Theme-Color</p>
+    </div>
+    <div class="d-flex">
+      <div class="me-2">
+        <img src="../../../../../assets/images/configure/Mobius.png" />
+      </div>
+      <div class="color_choice choice_1"></div>
+      <div class="color_choice choice_2"></div>
+      <div class="color_choice choice_3"></div>
+      <div class="color_choice choice_4"></div>
+      <div class="color_choice choice_5"></div>
+    </div>
+
+    <div class="d-flex gap-2 mt-2">
+      <div class="input_color" [style.background]="selectedColor1">
+        <div class="d-flex gap-2">
+          <div class="d-flex flex-column">
+            <p>Primary Color</p>
+            <p>{{ selectedColor1 }}</p>
+          </div>
+
+          <div>
+            <input style="width: 20px; height: 20px; border: none;" type="color" [(ngModel)]="selectedColor1" />
+          </div>
+        </div>
+      </div>
+      <div class="input_color" [style.background]="selectedColor2">
+        <div class="d-flex">
+          <div class="d-flex flex-column">
+            <p>Secondary Color</p>
+            <p>{{ selectedColor2 }}</p>
+          </div>
+          <div>
+            <input style="width: 20px; height: 20px; border: none;"  type="color" [(ngModel)]="selectedColor2" />
+          </div>
+        </div>
+      </div>
+      <div class="input_color" [style.background]="selectedColor3">
+        <div class="d-flex">
+          <div class="d-flex flex-column">
+            <p style="color: black">Background Color</p>
+            <p style="color: black">{{ selectedColor3 }}</p>
+          </div>
+          <div>
+            <input style="width: 20px; height: 20px; border: none;" type="color" [(ngModel)]="selectedColor3" />
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+      <div class="input_color" [style.background]="selectedColor4">
+        <div class="d-flex ">
+          <div class="d-flex flex-column">
+            <p>Text Color</p>
+            <p>{{ selectedColor4 }}</p>
+          </div>
+          <div>
+            <input style="width: 20px; height: 20px; border:none;" type="color" [(ngModel)]="selectedColor4" />
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column Apperance_setting_icons">
+    <div class="icons_heading">
+      <p>Theme-Icons</p>
+    </div>
+    <div class="d-flex gap-4 icons_content">
+      <div class="d-flex flex-column align-items-center content_box">
+        <img
+          src="../../../../../assets/images/configure/Rectangle_11780.png"
+          [alt]="'Image 1'"
+          [class.selected]="
+            selectedImage ===
+            '../../../../../assets/images/configure/Rectangle_11780.png'
+          "
+          (click)="
+            selectImage(
+              '../../../../../assets/images/configure/Rectangle_11780.png'
+            )
+          "
+        />
+
+        <p
+          [style.color]="
+            '../../../../../assets/images/configure/Rectangle_11780.png' ==
+            selectedImage
+              ? 'Black'
+              : '#2C2C2CB3'
+          "
+        >
+          Flex Line
+        </p>
+      </div>
+      <div class="d-flex flex-column align-items-center content_box">
+        <img
+          src="../../../../../assets/images/configure/Rectangle_11778.png"
+          [alt]="'Image 2'"
+          [class.selected]="
+            selectedImage ===
+            '../../../../../assets/images/configure/Rectangle_11778.png'
+          "
+          (click)="
+            selectImage(
+              '../../../../../assets/images/configure/Rectangle_11778.png'
+            )
+          "
+        />
+        <p
+          [style.color]="
+            '../../../../../assets/images/configure/Rectangle_11778.png' ==
+            selectedImage
+              ? 'Black'
+              : '#2C2C2CB3'
+          "
+        >
+          Sharp Duo
+        </p>
+      </div>
+      <div class="d-flex flex-column align-items-center content_box">
+        <img
+          src="../../../../../assets/images/configure/Rectangle_11779.png"
+          [alt]="'Image 3'"
+          [class.selected]="
+            selectedImage ===
+            '../../../../../assets/images/configure/Rectangle_11779.png'
+          "
+          (click)="
+            selectImage(
+              '../../../../../assets/images/configure/Rectangle_11779.png'
+            )
+          "
+        />
+        <p
+          [style.color]="
+            '../../../../../assets/images/configure/Rectangle_11779.png' ==
+            selectedImage
+              ? 'Black'
+              : '#2C2C2CB3'
+          "
+        >
+          Plump Solid
+        </p>
+      </div>
+      <div class="d-flex flex-column align-items-center content_box">
+        <img
+          src="../../../../../assets/images/configure/Rectangle _1777.png"
+          [alt]="'Image 4'"
+          [class.selected]="
+            selectedImage ===
+            '../../../../../assets/images/configure/Rectangle _1777.png'
+          "
+          (click)="
+            selectImage(
+              '../../../../../assets/images/configure/Rectangle _1777.png'
+            )
+          "
+        />
+        <p
+          [style.color]="
+            '../../../../../assets/images/configure/Rectangle _1777.png' ==
+            selectedImage
+              ? 'Black'
+              : '#2C2C2CB3'
+          "
+        >
+          Core flat
+        </p>
+      </div>
+      <div class="d-flex flex-column align-items-center content_box">
+        <img
+          src="../../../../../assets/images/configure/Rectangle_11781.png"
+          [alt]="'Image 5'"
+          [class.selected]="
+            selectedImage ===
+            '../../../../../assets/images/configure/Rectangle_11781.png'
+          "
+          (click)="
+            selectImage(
+              '../../../../../assets/images/configure/Rectangle_11781.png'
+            )
+          "
+        />
+        <p
+          [style.color]="
+            '../../../../../assets/images/configure/Rectangle_11781.png' ==
+            selectedImage
+              ? 'Black'
+              : '#2C2C2CB3'
+          "
+        >
+          StreamLine Color
+        </p>
+      </div>
+      <div class="d-flex flex-column align-items-center content_box">
+        <img
+          src="../../../../../assets/images/configure/Group_1000002611.svg"
+          [alt]="'Image 6'"
+          [class.selected]="
+            selectedImage ===
+            '../../../../../assets/images/configure/Group_1000002611.svg'
+          "
+          (click)="
+            selectImage(
+              '../../../../../assets/images/configure/Group_1000002611.svg'
+            )
+          "
+        />
+        <p
+          [style.color]="
+            '../../../../../assets/images/configure/Group_1000002611.svg' ==
+            selectedImage
+              ? 'Black'
+              : '#2C2C2CB3'
+          "
+        >
+          More
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column Apperance_setting_fonts">
+    <div class="fonts_heading">
+      <p>Theme-Fonts</p>
+    </div>
+    <div class="d-flex fonts_maincontent">
+      <div class="mr-2rem">
+        <div class="fonts_input-heading">
+          <p>Headings</p>
+        </div>
+
+        <div>
+          <div class="d-flex mb-3">
+            <div
+              class="input_font input"
+              name="HeadingsValue"
+              [textContent]="multipleDevicesValue"
+              style="width: 16.5rem; justify-content: start; height: 2rem"
+            ></div>
+            <div
+              class="dropdown ms-2"
+              ngbDropdown
+              style="height: 32px; width: 32px; padding: 0px; min-height: 0px"
+            >
+              <img
+                class="dropdownButton"
+                src="assets/images/configure/expand-arrow.png"
+                alt=""
+                ngbDropdownToggle
+                style="margin: 15%"
+              />
+              <div
+                class="dropdown-menu"
+                aria-labelledby="dropdownButton"
+                ngbDropdownMenu
+              >
+                <button
+                  class="dropdown-item"
+                  *ngFor="let category of multipleDevicesList; let i = index"
+                  [value]="category.key"
+                  (click)="selectDevices(category.value)"
+                >
+                  {{ category.value }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-left: 16px">
+        <div class="fonts_input-heading">
+          <p>Body</p>
+        </div>
+        <div>
+          <div class="d-flex mb-3">
+            <div
+              class="input input_font"
+              name="BodyValue"
+              [textContent]="multipleFontFamilyValue"
+              style="width: 16.5rem; height: 2rem"
+            ></div>
+            <div
+              class="dropdown ms-2"
+              ngbDropdown
+              style="height: 32px; width: 32px; padding: 0px; min-height: 0px"
+            >
+              <img
+                class="dropdownButton"
+                src="assets/images/configure/expand-arrow.png"
+                alt=""
+                ngbDropdownToggle
+                style="margin: 15%"
+              />
+              <div
+                class="dropdown-menu"
+                aria-labelledby="dropdownButton"
+                ngbDropdownMenu
+              >
+                <button
+                  class="dropdown-item"
+                  *ngFor="let category of multipleFontFamily; let i = index"
+                  [value]="category.key"
+                  (click)="selectFontFamily(category.value)"
+                >
+                  {{ category.value }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex gap-2 Apperance_setting_presentation">
+    <div class="d-flex mb-3">
+      <label class="switch"
+        ><input
+          type="checkbox"
+          [(ngModel)]="enableOptions.checkbox2"
+          (change)="toggleOptions()" />
+        <span class="slider"></span
+      ></label>
+      <!-- <div class="opt_txt ms-3">Allow Login using OTP if password is forgotten</div> -->
+    </div>
+
+    <div class="presentation_button"><p>Allow Presentation</p></div>
+  </div>
+</div>

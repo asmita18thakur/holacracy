@@ -25,6 +25,9 @@ import { ErrorPageComponent } from './component/modules/Configure/error-page/err
 import { ProductListingComponent } from './component/shared/supportive_component/product-listing/product-listing.component';
 import { ProductListingComponentComponent } from './component/shared/supportive_component/product-listing-component/product-listing-component.component';
 import { ColorpickerComponent } from './component/modules/Configure/colorpicker/colorpicker.component';
+import { MarketplaceListingPageComponent } from './component/modules/Configure/marketplace-listing-page/marketplace-listing-page.component';
+import { BillingComponent } from './component/modules/Configure/billing/billing.component';
+import { ApperanceComponent } from './component/modules/Configure/apperance/apperance.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { ColorpickerComponent } from './component/modules/Configure/colorpicker/
     ErrorPageComponent,
     ProductListingComponent,
     ProductListingComponentComponent,
-    ColorpickerComponent
+    ColorpickerComponent,
+    MarketplaceListingPageComponent,
+    BillingComponent,
+    ApperanceComponent
   ],
   imports: [
     BrowserModule,

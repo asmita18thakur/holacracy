@@ -9,15 +9,19 @@ import { UserBehaviourComponent } from 'src/app/component/modules/Configure/user
 import { MyOrganisationComponent } from 'src/app/component/modules/Configure/my-organisation/my-organisation.component';
 import { ErrorPageComponent } from 'src/app/component/modules/Configure/error-page/error-page.component';
 import { ProductListingComponent } from '../product-listing/product-listing.component';
+import { MarketplaceListingPageComponent } from 'src/app/component/modules/Configure/marketplace-listing-page/marketplace-listing-page.component';
+import { BillingComponent } from 'src/app/component/modules/Configure/billing/billing.component';
+import { ApperanceComponent } from 'src/app/component/modules/Configure/apperance/apperance.component';
+
 @Component({
   selector: 'app-configure-side-bar',
   templateUrl: './configure-side-bar.component.html',
   styleUrls: ['./configure-side-bar.component.scss']
 })
 export class ConfigureSideBarComponent {
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about','error', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','productlisting','marketplacelisting','billing','apperance'];
 
-  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'error', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','myOrganisation','productlisting'];
- 
+
   selectedContent: string = this.contents[0];
 
   changeContent(content: string): void {
@@ -40,7 +44,7 @@ export class ConfigureSideBarComponent {
       case 'tenant-behaviour':
         return TenantBehaviourComponent;
       case 'alliance-behaviour':
-        return AllianceBehaviourComponent; 
+        return AllianceBehaviourComponent;
       case 'user-behaviour':
         return UserBehaviourComponent; 
       case 'myOrganisation':
@@ -49,6 +53,12 @@ export class ConfigureSideBarComponent {
         return ErrorPageComponent;
       case 'productlisting':
         return ProductListingComponent;
+      case 'marketplacelisting':
+        return MarketplaceListingPageComponent;
+      case 'billing' :
+        return BillingComponent;
+      case 'apperance' :
+        return ApperanceComponent;
       default:
         return null;
     }

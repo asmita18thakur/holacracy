@@ -1,0 +1,125 @@
+*{
+  margin: 0px;
+  padding:0px ;
+  box-sizing: border-box;
+}
+.Apperance_setting{
+  height: 54%;
+  width: 55%;
+  padding-left: 14px;
+}
+.color_choice{
+  width: 103.4px;
+  height: 32px;
+
+}
+.choice_1{
+  background-color: #9E1F9D;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius:10px ;
+}
+.choice_2{
+  background-color: #3477CA;
+}
+.choice_3{
+  background-color: #4CA7C7;
+}
+.choice_4{
+  background-color: #4293C8;
+}
+.choice_5{
+  background-color: #6038AE;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.input_color{
+  width: 9.2rem;
+  height: 3.5rem;
+  border-radius: 7px;
+  border:none;
+  div{
+    margin-left: 3px;
+    margin-top: 3px;
+    p{
+      color: white;
+    }
+    p:first-child{
+      font-family: 'Roboto-Regular';
+      font-size: small;
+      margin-bottom: 1px;
+    }
+  }
+
+
+
+}
+.input_font{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.text_secondary{
+  color: grey;
+  font-weight: 500;
+}
+
+.Apperance_setting_icons{
+  margin-top: 33px;
+  .icons_heading{
+    p{
+      color: #2C2C2C;
+      opacity: 0.7;
+      font-family: 'Roboto-Regular';
+    }
+  }
+  .icons_content{
+    p{
+      font-family:Roboto-Regular;
+      color: #2C2C2C;
+      opacity: 0.7;
+    }
+    .content_box{
+      img{
+        width: 5.625rem !important;
+        height: 5.625rem !important;
+      }
+    }
+  }
+
+}
+
+.Apperance_setting_fonts{
+  margin-top: 23px;
+  .fonts_heading{
+    p{
+      font-family:Roboto-Regular;
+      color: #2C2C2C;
+      opacity: 0.7;
+    }
+  }
+
+
+}
+.fonts_input-heading{
+  p{
+    font-family:Roboto-Regular;
+    color: #2C2C2C;
+    opacity: 0.7;
+  }
+}
+.presentation_button{
+  p{
+    color:#2C2C2C;
+    font-weight: 500;
+  }
+}
+
+.icons_content img {
+  border: 2px solid transparent; /* Set initial border properties */
+  cursor: pointer; /* Change the cursor to indicate interactivity */
+}
+
+.icons_content img.selected {
+  border: 2px solid;
+  border-color: rgb(18, 68, 233); /* Change the border color when the image is selected */
+}
