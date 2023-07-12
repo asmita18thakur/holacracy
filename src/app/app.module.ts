@@ -18,6 +18,9 @@ import { UserBehaviourComponent } from './component/modules/Configure/user-behav
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './component/shared/sidebar/sidebar.component';
 import { LandingComponent } from './component/landing/landing.component';
+import { MyOrganisationComponent } from './component/modules/Configure/my-organisation/my-organisation.component';
+import { TableSimpleRowComponent } from './component/shared/supportive_component/table-simple-row/table-simple-row.component';
+import { TableCategoryRowComponent } from './component/shared/supportive_component/table-category-row/table-category-row.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { LandingComponent } from './component/landing/landing.component';
     ConfigureLoginComponent,
     UserBehaviourComponent,
     SidebarComponent,
-    LandingComponent
+    LandingComponent,
+    MyOrganisationComponent,
+    TableSimpleRowComponent,
+    TableCategoryRowComponent
   ],
   imports: [
     BrowserModule,

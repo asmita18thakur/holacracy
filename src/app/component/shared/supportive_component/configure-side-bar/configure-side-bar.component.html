@@ -13,7 +13,7 @@
                     </a>
 
                 </li>
-                <li class="custom-bullet">
+                <li class="custom-bullet" (click)="changeContent('myOrganisation')" [ngClass]="{'active': selectedContent == 'myOrganisation'}">
                     <a>
                        <span>My Organisation</span>
                     </a>
@@ -40,11 +40,7 @@
                        <span>User Behaviour</span>
                     </a>
                 </li>
-                <li class="custom-bullet">
-                    <a>
-                        <span>My Organisation</span>
-                    </a>
-                </li>
+            
                 <li class="custom-bullet">
                     <a>
                         <span>Area of Operation</span>

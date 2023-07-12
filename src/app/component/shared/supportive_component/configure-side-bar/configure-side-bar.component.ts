@@ -6,6 +6,8 @@ import { TenantBehaviourComponent } from 'src/app/component/modules/Configure/te
 import { GenerealBussinessInfoComponent } from 'src/app/component/modules/Configure/genereal-bussiness-info/genereal-bussiness-info.component';
 import { AllianceBehaviourComponent } from 'src/app/component/modules/Configure/alliance-behaviour/alliance-behaviour.component';
 import { UserBehaviourComponent } from 'src/app/component/modules/Configure/user-behaviour/user-behaviour.component';
+import { MyOrganisationComponent } from 'src/app/component/modules/Configure/my-organisation/my-organisation.component';
+
 @Component({
   selector: 'app-configure-side-bar',
   templateUrl: './configure-side-bar.component.html',
@@ -13,7 +15,7 @@ import { UserBehaviourComponent } from 'src/app/component/modules/Configure/user
 })
 export class ConfigureSideBarComponent {
 
-  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour'];
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','myOrganisation'];
  
   selectedContent: string = this.contents[0];
 
@@ -39,7 +41,9 @@ export class ConfigureSideBarComponent {
       case 'alliance-behaviour':
         return AllianceBehaviourComponent; 
       case 'user-behaviour':
-        return UserBehaviourComponent;     
+        return UserBehaviourComponent; 
+      case 'myOrganisation':
+        return MyOrganisationComponent     
       default:
         return null;
     }

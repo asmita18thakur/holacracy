@@ -1,0 +1,61 @@
+<section id="myOrganisation">
+    <div class="myOrganisation-header mb-3">Create your team to manage Aventiv marketplace</div>
+    <div class="myOrganisation-body d-flex flex-column justify-content-start">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex justify-content-evenly align-items-center myOrganisation-export" >
+                <div ><img src="../../../../../assets/images/myOrganisation/export.svg" alt="export"></div>
+                <div>EXPORT</div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center" style="width: 35%;">
+                <div class="d-flex justify-content-evenly  myOrganisation-search">
+                    <div ><img src="../../../../../assets/images/myOrganisation/search.svg" alt="searchIcon"></div>
+                    <div>Search</div>
+                </div>
+                <div class="myOrganisation-AddUser"><button type="button" class="btn btn-primary">ADD USER</button></div>
+                <div><img src="../../../../../assets/images/myOrganisation/dots.svg" alt="options" srcset=""></div>
+            </div>
+        </div>
+        <div class="myOrganisation_tableHeader d-flex justify-content-start align-items-center">
+            <div class="d-flex justify-content-center"><input type="checkbox" name="selectAll" id="selectAll"></div>
+            <div >USER</div>
+            <div >LOGIN</div>
+            <div >ROLE</div>
+            <div class="d-flex  justify-content-evenly">
+                <div >READ</div>
+                <div >WRITE</div>
+                <div >EXECUTE</div>
+            </div>
+            
+        </div>
+        <!-- <div class="myOrganisation_tableSubTitle d-flex justify-content-between align-items-center ps-3">
+            <div>Rate Card</div>
+            <div class="pe-5"><img src="../../../../../assets/images/myOrganisation/ExpandMore.svg" alt="expand"></div>
+        </div>
+        <div class="myOrganisation_tableRow d-flex justify-content-start align-items-center">
+            <div ><input type="checkbox" name="selectAll" id="selectAll"></div>
+            <div class="d-flex justify-content-start align-items-center">
+                <div class="ms-2"><img src="../../../../../assets/images/myOrganisation/Avatar.png" alt="profilepic" ></div>
+                <div class="ms-3">Madhav</div>
+            </div>
+            <div >@Mad</div>
+            <div >SuperAdmin</div>
+            <div class="d-flex  justify-content-evenly">
+                <div >YES</div>
+                <div >YES</div>
+                <div >YES</div>
+            </div>
+            <div class="d-flex justify-content-end" ><img src="../../../../../assets/images/myOrganisation/dots.svg" alt="options" srcset=""></div>
+            
+        </div> -->
+
+        <!-- <div *ngFor="let item of items">
+            <app-table-simple-row  [item]="item.members" ></app-table-simple-row>
+        </div> -->
+        <app-table-simple-row  [item]=" getSuperAdminMember()"></app-table-simple-row>
+        
+        
+
+
+
+    </div>
+</section>

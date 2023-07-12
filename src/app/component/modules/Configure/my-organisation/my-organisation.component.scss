@@ -1,0 +1,99 @@
+.myOrganisation-header{
+    font-family: 'Roboto-Medium';
+    line-height: 2.25rem;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.myOrganisation-body{
+    // padding-top: 1rem;
+    width:90%;
+    border-radius: 6px;
+    border: 1px solid rgba(58, 53, 65, 0.23);
+    padding: 1.25rem;
+
+}
+
+.myOrganisation-opt_container{
+    margin-left: 2.54rem;
+    margin-top: 0.5rem;
+   
+}
+.myOrganisation-export{
+    width: 11%;
+    padding: 0.1rem 0rem;
+    border-radius: 6px;
+    border: 1px solid rgba(58, 53, 65, 0.23);
+    height: 2.5rem;
+ 
+}
+
+.myOrganisation-export div{
+    padding: 0.4rem 0rem ;
+}
+
+.myOrganisation-export div:nth-child(2) {
+    /* CSS styles for the second child */
+    font-family: 'Roboto-Medium';
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.4px;
+    color:var(--grey-5)
+  }
+
+ .myOrganisation-search{
+    width: 40%;
+    padding: 0.1rem 0rem;
+    border-radius: 6px;
+    border: 1px solid rgba(58, 53, 65, 0.23);
+    height: 2.5rem;
+ }
+
+.myOrganisation-search div{
+    padding: 0.4rem 0rem ;
+}
+
+.myOrganisation-search div:nth-child(2) {
+    /* CSS styles for the second child */
+    color: var(--grey-6);
+    line-height: 1.5rem;
+    letter-spacing: 0.15px;
+  }
+
+  .myOrganisation-AddUser{
+    padding: 0.2rem 1rem;
+    height: 2.5rem;
+
+  }
+
+  .myOrganisation_tableHeader{
+    background:var(--grey-7);
+    padding: 1rem 0rem;
+  }
+ 
+
+.myOrganisation_tableHeader div:nth-child(1){
+  flex-basis: 5%;
+ 
+}
+.myOrganisation_tableHeader div:nth-child(2),div:nth-child(3),div:nth-child(4){
+    flex-basis: 20%;
+    border-right-color: #3A35411F;
+    text-align: center;
+
+}
+
+.myOrganisation_tableHeader div:nth-child(5){
+    flex-basis: 20%;
+  }
+
+
+.myOrganisation_tableHeader div {
+    color: rgba(58, 53, 65, 0.87);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: 0.17px;
+  }
+ 
+  
