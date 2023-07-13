@@ -31,6 +31,15 @@ import { ApperanceComponent } from './component/modules/Configure/apperance/appe
 import { TableCategoryRowComponent } from './component/shared/supportive_component/table-category-row/table-category-row.component';
 import { MyOrganisationModalComponent } from './component/shared/supportive_component/my-organisation-modal/my-organisation-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductPageComponent } from './component/modules/Configure/product-page/product-page.component';
+import { WalletComponent } from './component/modules/rate-card/wallet/wallet.component';
+import { LeftcomponentComponent } from './component/modules/rate-card/wallet/card/leftcomponent/leftcomponent.component';
+import { RightComponentComponent } from './component/modules/rate-card/wallet/card/right-component/right-component.component';
+import { CardComponent } from './component/modules/rate-card/wallet/card/card.component';
+import { GraphcardComponent } from './component/modules/rate-card/wallet/graphcard/graphcard.component';
+import { SubscriptionComponent } from './component/modules/rate-card/subscription/subscription.component';
+import { NgbdProgressbarHeight } from './component/modules/rate-card/subscription/ProgressBar';
+import { RightSidebarComponent } from './component/modules/right-sidebar/right-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +70,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ApperanceComponent,
     TableCategoryRowComponent,
     MyOrganisationModalComponent,
+    ProductPageComponent,
+    WalletComponent,
+    LeftcomponentComponent,
+    RightComponentComponent,
+    CardComponent,
+    GraphcardComponent,
+    SubscriptionComponent,
+    RightSidebarComponent
+
 
 
   ],

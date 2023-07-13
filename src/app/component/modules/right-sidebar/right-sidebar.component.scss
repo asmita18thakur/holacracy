@@ -1,0 +1,24 @@
+.right-side-bar{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    display: flex;
+flex-direction: column;
+justify-content:space-between;
+align-items: stretch;
+background-color: white;
+
+
+margin: 0px;
+height: 100vh;
+gap: 0;
+}
+.right-text{
+    font-size: 10px;
+}
+
+.right-side-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

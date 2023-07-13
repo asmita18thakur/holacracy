@@ -12,6 +12,7 @@ import { ProductListingComponent } from '../product-listing/product-listing.comp
 import { MarketplaceListingPageComponent } from 'src/app/component/modules/Configure/marketplace-listing-page/marketplace-listing-page.component';
 import { BillingComponent } from 'src/app/component/modules/Configure/billing/billing.component';
 import { ApperanceComponent } from 'src/app/component/modules/Configure/apperance/apperance.component';
+import { DataService } from 'data.service';
 
 @Component({
   selector: 'app-configure-side-bar',
@@ -19,9 +20,11 @@ import { ApperanceComponent } from 'src/app/component/modules/Configure/apperanc
   styleUrls: ['./configure-side-bar.component.scss']
 })
 export class ConfigureSideBarComponent {
-  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about','error', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour','productlisting','marketplacelisting','billing','apperance'];
 
+  constructor(private dataService: DataService) { }
 
+  contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour'];
+ 
   selectedContent: string = this.contents[0];
 
   changeContent(content: string): void {
@@ -31,20 +34,25 @@ export class ConfigureSideBarComponent {
 
   getContentComponent(content: string): any {
     switch (content) {
-      case 'general-bussiness':
-        return GeneralBussinessComponent;
-      case 'general-bussiness-info':
-        return GenerealBussinessInfoComponent;
-      case 'login':
-        return ConfigureLoginComponent;
-      case 'governance':
-        return GovernanceComponent;
-      case 'general-bussiness-info':
-        return GenerealBussinessInfoComponent;
-      case 'tenant-behaviour':
-        return TenantBehaviourComponent;
-      case 'alliance-behaviour':
-        return AllianceBehaviourComponent;
+
+      case 'general-bussiness': {
+                                    this.dataService.changeData(["Next","Save","Filters","Overlays","Contexts","Groups","CMS","Wallet"])
+                                    console.log(this.dataService.getAllData() )
+                                    return GeneralBussinessComponent;}
+      case 'login':{
+                                    return ConfigureLoginComponent;}
+      case 'governance':{           
+                                    this.dataService.changeData(["Next","Save","Contexts"])
+                                    return GovernanceComponent; }
+      case 'general-bussiness-info':{
+                                    this.dataService.changeData(["Next","Save","Filters","Overlays","Contexts","Groups","CMS","Wallet"])
+                                    return GenerealBussinessInfoComponent;}
+      case 'tenant-behaviour':{
+                                    this.dataService.changeData(["Next","Save","Contexts","Groups"])
+                                    return TenantBehaviourComponent;}
+      case 'alliance-behaviour':{
+                                    this.dataService.changeData(["Next","Save","Contexts","Groups"])
+                                    return AllianceBehaviourComponent; }
       case 'user-behaviour':
         return UserBehaviourComponent; 
       case 'myOrganisation':

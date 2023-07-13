@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+}
+.credit-card{
+    position: relative;
+    height: 17rem !important;
+    width: 29rem !important;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+}
+.small{
+    font-size: 12px;
+}
+.details2{
+    font-size: 18px;
+}
+.details1{
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.heading{
+        
+        padding-left: 2rem;
+}
+.details{
+    padding-top:7.5rem;
+
+}
+.card-images{
+    top: 1.5rem;
+    left: 1.5rem;
+    position: absolute;
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.number{
+    width: 28rem;
+    // letter-spacing: 2rem;
+    word-spacing: 2rem;
+}
