@@ -1,0 +1,60 @@
+.heading{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.heading > p{
+    margin-bottom: 0px;
+}
+.name{
+    font-weight: 600;
+}
+.buttons{
+    display: flex;
+    gap: 0.7rem;
+    font-size: 14px;
+}
+
+.accept{
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    background-color: rgba(255, 68, 0, 0.69);
+    color: white;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+.accept-hidden{
+    visibility: hidden;
+}
+.Reject-hidden{
+    visibility: hidden;
+}
+.Reject{
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    background-color: white;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    
+}
+.bottom-heading{
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    align-items: center;
+}
+p{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.line{
+    width: 45rem;
+}
+
+.data{
+    margin-left: 3rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.265);
+}

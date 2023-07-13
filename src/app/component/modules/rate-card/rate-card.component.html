@@ -1,0 +1,24 @@
+<section class="whole">
+    <div class="left">
+        <ul class="ele">
+            <li (click) = "setComponent('Business')" [class.selected] ="1==isSelected">
+                Business Info
+            </li>
+            <li (click) = "setComponent('Users')"  [class.selected] ="2==isSelected">
+                Users and Accounts
+            </li>
+            <li (click) = "setComponent('Wallet')"  [class.selected] ="3==isSelected">
+                Wallet
+            </li>
+            <li (click) = "setComponent('Notification')" [class.selected] ="4==isSelected" >
+                Notifications
+            </li>
+            <li (click) = "setComponent('Subscriptions')"  [class.selected] ="5==isSelected">
+                Subscriptions
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <ng-container  *ngComponentOutlet="component"></ng-container>
+    </div>
+</section>

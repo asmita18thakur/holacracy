@@ -1,0 +1,16 @@
+.right-side-bar{
+    
+    position: fixed;
+    right: 3rem;
+    top: 5px;
+    // display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: stretch;
+    background-color: rgb(146, 52, 52);
+
+    width: 25rem;
+    margin: 0px;
+    height: 100vh;
+    gap: 0;
+}

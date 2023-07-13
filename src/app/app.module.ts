@@ -36,6 +36,10 @@ import { GraphcardComponent } from './component/modules/rate-card/wallet/graphca
 import { SubscriptionComponent } from './component/modules/rate-card/subscription/subscription.component';
 import { NgbdProgressbarHeight } from './component/modules/rate-card/subscription/ProgressBar';
 import { RightSidebarComponent } from './component/modules/right-sidebar/right-sidebar.component';
+import { RateCardComponent } from './component/modules/rate-card/rate-card.component';
+import { NotificationComponent } from './component/modules/rate-card/notification/notification.component';
+import { NotificationSnippetComponent } from './component/modules/rate-card/notification/notification-snippet/notification-snippet.component';
+import { WalletPopupComponent } from './component/modules/right-sidebar/wallet-popup/wallet-popup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +72,12 @@ import { RightSidebarComponent } from './component/modules/right-sidebar/right-s
     CardComponent,
     GraphcardComponent,
     SubscriptionComponent,
-    RightSidebarComponent
+    RightSidebarComponent,
+    RateCardComponent,
+    NotificationComponent,
+    NotificationSnippetComponent,
+    WalletPopupComponent,
+      
 
 
   ],

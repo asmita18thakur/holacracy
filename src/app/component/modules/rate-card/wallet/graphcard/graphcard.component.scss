@@ -55,5 +55,8 @@ line-height: normal;
 
 .All-wallets{
     display: flex;
-    gap: 1.8rem;
+    // gap: 3.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 1;
 }

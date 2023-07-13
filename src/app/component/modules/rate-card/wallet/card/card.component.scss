@@ -1,5 +1,6 @@
 .card-component{
 display: flex;
+margin-top: 1rem;
 }
 .card-bottom{
     display: flex;
@@ -42,6 +43,8 @@ font-weight: 500;
 line-height: 19px;
 letter-spacing: 0em;
 text-align: left;
+width: 20rem;
+// border: 2px solid black;
 
 }
 
@@ -52,6 +55,18 @@ font-weight: 500;
 line-height: 17px;
 letter-spacing: 0em;
 text-align: left;
+// border: 2px solid black;
+margin-left: 10rem;
+
+}
+.montly1{
+    font-family: Lato;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: left;
+// border: 2px solid black;
 
 }
 .today{
@@ -89,7 +104,7 @@ line-height: 19px;
 letter-spacing: 0em;
 text-align: left;
 
-    width: 15rem;
+    width: 25rem;
     padding-left: 2rem;
 }
 .time{

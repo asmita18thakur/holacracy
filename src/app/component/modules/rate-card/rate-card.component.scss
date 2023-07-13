@@ -1,0 +1,54 @@
+.left{
+    width: 25rem;
+    // background-color: red;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.ele{
+    color: #525252;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+
+}
+li{
+    padding: 1rem;
+}
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #525252;
+    /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+  .whole{
+    display: flex;
+  }
+  .right{
+    margin-top: 2rem !important;
+    width: 90%;
+  }
+
+  li:hover{
+    cursor: pointer;
+    // background-color: #52525231;
+    // border-radius: 0.5rem;
+  }
+  .selected {
+    // background-color: #52525231;
+    font-weight: bold;
+    // border-radius: 0.5rem;
+    border-right:4px solid #2C60F5;;
+
+  }
+  ul{
+    border-right: 1px solid grey;
+  }

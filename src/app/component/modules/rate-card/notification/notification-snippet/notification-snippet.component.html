@@ -1,0 +1,99 @@
+<section *ngIf="state=='request'">
+    <div>
+        <div class="heading">
+            <img src="../../../../../../assets/images/rate-card/Notifications/Avatar.png" alt="">
+            <p> 
+                <span class="name">
+                    {{Username}} &nbsp;
+                </span>
+                <span>
+                    requested access to &nbsp;
+                </span>
+                <span class="name">
+                    {{Product}}
+                </span>
+            </p>
+        </div>
+        <div class="bottom-heading">
+            <div class="buttons">
+                <button class="accept"> Accept</button>
+                <button class="Reject">Reject</button>
+            </div>
+            <div>
+                <p>{{Time_info}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="line">
+
+        <hr>
+    </div>
+</section>
+
+<section *ngIf="state=='comment'">
+    <div>
+        <div class="heading">
+            <img src="../../../../../../assets/images/rate-card/Notifications/Avatar.png" alt="">
+            <p> 
+                <span class="name">
+                    {{Username}} &nbsp;
+                </span>
+                <span>
+                    left {{number || 0}} comments on  &nbsp;
+                </span>
+                <span class="name">
+                    {{Product}}
+                </span>
+            </p>
+        </div>
+        <div class="bottom-heading">
+            <div class="buttons">
+                <button class="accept-hidden"> Accept</button>
+                <button class="Reject-hidden">Reject</button>
+            </div>
+            <div>
+                <p>{{Time_info}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="line">
+
+        <hr>
+    </div>
+</section>
+
+
+<section *ngIf="state=='specific'">
+    <div>
+        <div class="heading">
+            <img src="../../../../../../assets/images/rate-card/Notifications/Avatar.png" alt="">
+            <p> 
+                <span class="name">
+                    {{Username}} &nbsp;
+                </span>
+                <span>
+                    commented on   &nbsp;
+                </span>
+                <span class="name">
+                    {{Product}}
+                </span>
+            </p>
+        </div>
+        <div class="data">
+            <p> {{data}}</p>
+        </div>
+        <div class="bottom-heading">
+            <div class="buttons">
+                <button class="accept-hidden"> Accept</button>
+                <button class="Reject-hidden">Reject</button>
+            </div>
+            <div>
+                <p>{{Time_info}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="line">
+
+        <hr>
+    </div>
+</section>

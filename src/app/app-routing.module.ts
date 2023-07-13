@@ -6,7 +6,7 @@ import { PlanCardComponent } from './component/shared/supportive_component/plan-
 import { ConfigureSideBarComponent } from './component/shared/supportive_component/configure-side-bar/configure-side-bar.component';
 import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
 import { LandingComponent } from './component/landing/landing.component';
-
+import { RateCardComponent } from './component/modules/rate-card/rate-card.component';
 const routes: Routes = [
   {
     path: '',
@@ -28,6 +28,10 @@ const routes: Routes = [
       {
         path:'configure',
         component:ConfigureSideBarComponent
+      },
+      {
+        path:'ratecard',
+        component:RateCardComponent
       }
     ]
   }
