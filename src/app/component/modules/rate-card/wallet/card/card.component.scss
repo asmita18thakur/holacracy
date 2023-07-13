@@ -1,0 +1,133 @@
+.card-component{
+display: flex;
+}
+.card-bottom{
+    display: flex;
+    width: 70rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.card-right{
+    display: flex;
+    // justify-content: space-between;
+    gap: 3rem;
+    width: 50%;
+    align-items: center   ;
+
+}
+
+.card-left{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    gap: 3rem;
+
+}
+.recent{
+    font-family: Lato;
+font-size: 20px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.view{
+    font-family: Lato;
+font-size: 16px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.montly{
+    font-family: Lato;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.today{
+    width: 96.34745025634766px;
+height: 49.19869613647461px;
+background: hsla(247, 34%, 29%, 1);
+border-radius: 10px;
+color: white;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Lato;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: left;
+}
+.table{
+    width: 70rem;
+    // border: 3px solid black;
+}
+.table > tr > td{
+    // border:3px solid black;
+}
+.fImg{
+    width: 4rem;
+}
+.withdraw{
+    font-family: Lato;
+font-size: 16px;
+font-weight: 600;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+    width: 15rem;
+    padding-left: 2rem;
+}
+.time{
+    text-align: right;
+    padding-right: 2rem;
+    width: 20rem;
+    font-family: Lato;
+font-size: 16px;
+font-weight: 400;
+
+
+}
+.amount{
+    padding-left: 2rem;
+    width: 8rem;
+    font-family: Lato;
+font-size: 16px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.stat{
+    font-family: Lato;
+font-size: 16px;
+font-weight: 500;
+
+
+    color: grey;
+    padding-left: 1rem;
+}
+.stat1{
+    font-family: Lato;
+font-size: 16px;
+font-weight: 500;
+
+
+    color: lightgreen;
+    padding-left: 1rem; 
+}

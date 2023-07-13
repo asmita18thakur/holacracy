@@ -28,8 +28,14 @@ import { MarketplaceListingPageComponent } from './component/modules/Configure/m
 import { BillingComponent } from './component/modules/Configure/billing/billing.component';
 import { ApperanceComponent } from './component/modules/Configure/apperance/apperance.component';
 import { ProductPageComponent } from './component/modules/Configure/product-page/product-page.component';
-
-
+import { WalletComponent } from './component/modules/rate-card/wallet/wallet.component';
+import { LeftcomponentComponent } from './component/modules/rate-card/wallet/card/leftcomponent/leftcomponent.component';
+import { RightComponentComponent } from './component/modules/rate-card/wallet/card/right-component/right-component.component';
+import { CardComponent } from './component/modules/rate-card/wallet/card/card.component';
+import { GraphcardComponent } from './component/modules/rate-card/wallet/graphcard/graphcard.component';
+import { SubscriptionComponent } from './component/modules/rate-card/subscription/subscription.component';
+import { NgbdProgressbarHeight } from './component/modules/rate-card/subscription/ProgressBar';
+import { RightSidebarComponent } from './component/modules/right-sidebar/right-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +61,16 @@ import { ProductPageComponent } from './component/modules/Configure/product-page
     MarketplaceListingPageComponent,
     BillingComponent,
     ApperanceComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    WalletComponent,
+    LeftcomponentComponent,
+    RightComponentComponent,
+    CardComponent,
+    GraphcardComponent,
+    SubscriptionComponent,
+    RightSidebarComponent
+
+
   ],
   imports: [
     BrowserModule,

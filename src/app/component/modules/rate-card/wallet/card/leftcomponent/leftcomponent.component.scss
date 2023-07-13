@@ -1,0 +1,42 @@
+.details{
+    display: flex;
+    gap: 4rem;
+    // justify-content: space-between;
+    align-items: flex-start;
+}
+
+.heading{
+color: #7C7C7C;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.name{
+    color: #000;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.card-left{
+    margin-left: 1rem;
+    width: 25rem;
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.details-inside{
+    width: 12rem;
+}
+.card-heading{
+    color: #000;
+font-family: Lato;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}

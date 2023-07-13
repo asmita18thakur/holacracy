@@ -1,0 +1,30 @@
+<section class="right-side-bar">
+    
+    <div >
+       
+        <div class="right-side-top" *ngFor="let i  of  data.getAllData()">
+            <img [src]="'../../../assets/images/right-sidebar/'+sidebarData[i]"  alt=""/>
+            <p class="right-text">{{i}}</p>
+        </div>
+  
+        
+    </div>
+
+    <div>
+        <div class="right-side-top">
+            <img src="../../../assets/images/right-sidebar/Interface User Collaborate.svg" alt="">
+            <p class="right-text">Collaborate</p>
+        </div>
+        <div class="right-side-top">
+            <img src="../../../assets/images/right-sidebar/Alarm Bell.svg" alt="">
+            <p class="right-text">Notification</p>
+        </div>
+        <div class="right-side-top">
+            <img src="../../../assets/images/right-sidebar/Interface Download Square.png" alt="">
+            <p class="right-text">Cancel</p>
+        </div>
+        
+
+    </div>
+
+</section>

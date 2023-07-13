@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Interface Download Square" clip-path="url(#clip0_188_19701)">
+<g id="Group">
+<path id="Vector" d="M1.14258 7.99979L1.14258 23.9998C1.14258 27.7869 4.21263 30.8569 7.99972 30.8569H23.9997C27.7868 30.8569 30.8569 27.7869 30.8569 23.9998V7.99979C30.8569 4.21269 27.7868 1.14265 23.9997 1.14265H7.99972C4.21263 1.14265 1.14258 4.21269 1.14258 7.99979Z" fill="#3F75FF" stroke="#3F75FF" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M16 22.8569L24 15.9998L16 9.14265" stroke="white" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M24 16H8" stroke="white" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_188_19701">
+<rect width="32" height="32" fill="white" transform="matrix(0 -1 1 0 0 32)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,59 @@
+.graph{
+    background-image: url("../../../../../assets/images/rate-card/wallet/backgroundCard3.png");
+    width: 200px;
+    height: 123px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.graph1{
+    background-image: url("../../../../../assets/images/rate-card/wallet/backgroundCard(1).png");
+    width: 200px;
+    height: 123px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.graph2{
+    background-image: url("../../../../../assets/images/rate-card/wallet/backgroundCard(2).png");
+    width: 200px;
+    height: 123px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.graph3{
+    background-image: url("../../../../../assets/images/rate-card/wallet/backgroundCard.png");
+    width: 200px;
+    height: 123px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.graph-name{
+padding-top: 20px;
+padding-left: 20px;
+color: rgba(255, 255, 255, 0.60);
+font-family: Lato;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 0.5rem;
+}
+.graph-amount{
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 20px;
+    color: #FFF;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.All-wallets{
+    display: flex;
+    gap: 1.8rem;
+}
