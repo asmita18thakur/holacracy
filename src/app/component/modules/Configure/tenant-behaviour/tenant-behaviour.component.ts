@@ -17,8 +17,6 @@ export class TenantBehaviourComponent {
     AllowTenantsToCommunicateWithEachOtherOutsideOfAlliance:false,
     AllowTenantsToAddNewParticipantsToOrganisation:'',
     KindsOfTenantsAllowedToMarketplace:'',
-    
-
   }
 
   toggleOptions(): void {

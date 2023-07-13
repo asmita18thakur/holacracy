@@ -19,7 +19,8 @@ import { UserBehaviourComponent } from './component/modules/Configure/user-behav
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './component/shared/sidebar/sidebar.component';
 import { LandingComponent } from './component/landing/landing.component';
-
+import { MyOrganisationComponent } from './component/modules/Configure/my-organisation/my-organisation.component';
+import { TableSimpleRowComponent } from './component/shared/supportive_component/table-simple-row/table-simple-row.component';
 import { ErrorPageComponent } from './component/modules/Configure/error-page/error-page.component';
 import { ProductListingComponent } from './component/shared/supportive_component/product-listing/product-listing.component';
 import { ProductListingComponentComponent } from './component/shared/supportive_component/product-listing-component/product-listing-component.component';
@@ -27,6 +28,9 @@ import { ColorpickerComponent } from './component/modules/Configure/colorpicker/
 import { MarketplaceListingPageComponent } from './component/modules/Configure/marketplace-listing-page/marketplace-listing-page.component';
 import { BillingComponent } from './component/modules/Configure/billing/billing.component';
 import { ApperanceComponent } from './component/modules/Configure/apperance/apperance.component';
+import { TableCategoryRowComponent } from './component/shared/supportive_component/table-category-row/table-category-row.component';
+import { MyOrganisationModalComponent } from './component/shared/supportive_component/my-organisation-modal/my-organisation-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductPageComponent } from './component/modules/Configure/product-page/product-page.component';
 import { WalletComponent } from './component/modules/rate-card/wallet/wallet.component';
 import { LeftcomponentComponent } from './component/modules/rate-card/wallet/card/leftcomponent/leftcomponent.component';
@@ -57,6 +61,8 @@ import { WalletPopupComponent } from './component/modules/right-sidebar/wallet-p
     UserBehaviourComponent,
     SidebarComponent,
     LandingComponent,
+    MyOrganisationComponent,
+    TableSimpleRowComponent,
     ConfigureLoginComponent,
     ErrorPageComponent,
     ProductListingComponent,
@@ -65,6 +71,8 @@ import { WalletPopupComponent } from './component/modules/right-sidebar/wallet-p
     MarketplaceListingPageComponent,
     BillingComponent,
     ApperanceComponent,
+    TableCategoryRowComponent,
+    MyOrganisationModalComponent,
     ProductPageComponent,
     WalletComponent,
     LeftcomponentComponent,
@@ -80,13 +88,15 @@ import { WalletPopupComponent } from './component/modules/right-sidebar/wallet-p
       
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ColorPickerModule
+    ColorPickerModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],
