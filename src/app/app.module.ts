@@ -28,7 +28,9 @@ import { ColorpickerComponent } from './component/modules/Configure/colorpicker/
 import { MarketplaceListingPageComponent } from './component/modules/Configure/marketplace-listing-page/marketplace-listing-page.component';
 import { BillingComponent } from './component/modules/Configure/billing/billing.component';
 import { ApperanceComponent } from './component/modules/Configure/apperance/apperance.component';
-
+import { TableCategoryRowComponent } from './component/shared/supportive_component/table-category-row/table-category-row.component';
+import { MyOrganisationModalComponent } from './component/shared/supportive_component/my-organisation-modal/my-organisation-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -56,14 +58,19 @@ import { ApperanceComponent } from './component/modules/Configure/apperance/appe
     ColorpickerComponent,
     MarketplaceListingPageComponent,
     BillingComponent,
-    ApperanceComponent
+    ApperanceComponent,
+    TableCategoryRowComponent,
+    MyOrganisationModalComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ColorPickerModule
+    ColorPickerModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],

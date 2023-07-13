@@ -11,7 +11,7 @@
                     <div ><img src="../../../../../assets/images/myOrganisation/search.svg" alt="searchIcon"></div>
                     <div>Search</div>
                 </div>
-                <div class="myOrganisation-AddUser"><button type="button" class="btn btn-primary">ADD USER</button></div>
+                <div class="myOrganisation-AddUser"><button type="button" class="btn btn-primary" (click)="openModal()">ADD USER</button></div>
                 <div><img src="../../../../../assets/images/myOrganisation/dots.svg" alt="options" srcset=""></div>
             </div>
         </div>
@@ -27,35 +27,34 @@
             </div>
             
         </div>
-        <!-- <div class="myOrganisation_tableSubTitle d-flex justify-content-between align-items-center ps-3">
-            <div>Rate Card</div>
-            <div class="pe-5"><img src="../../../../../assets/images/myOrganisation/ExpandMore.svg" alt="expand"></div>
-        </div>
-        <div class="myOrganisation_tableRow d-flex justify-content-start align-items-center">
-            <div ><input type="checkbox" name="selectAll" id="selectAll"></div>
-            <div class="d-flex justify-content-start align-items-center">
-                <div class="ms-2"><img src="../../../../../assets/images/myOrganisation/Avatar.png" alt="profilepic" ></div>
-                <div class="ms-3">Madhav</div>
-            </div>
-            <div >@Mad</div>
-            <div >SuperAdmin</div>
-            <div class="d-flex  justify-content-evenly">
-                <div >YES</div>
-                <div >YES</div>
-                <div >YES</div>
-            </div>
-            <div class="d-flex justify-content-end" ><img src="../../../../../assets/images/myOrganisation/dots.svg" alt="options" srcset=""></div>
-            
-        </div> -->
+     
 
-        <!-- <div *ngFor="let item of items">
-            <app-table-simple-row  [item]="item.members" ></app-table-simple-row>
-        </div> -->
         <app-table-simple-row  [item]=" getSuperAdminMember()"></app-table-simple-row>
-        
-        
 
+        <ng-container *ngFor="let obj of getUserMember()">
+            <app-table-category-row [item]="obj"></app-table-category-row>
+            <app-table-simple-row *ngFor="let member of obj.members" [item]="member"  ></app-table-simple-row>
+        </ng-container>
+
+        <div class="myOrganisation-footer d-flex justify-content-end align-items-center gap-3">
+            <div class="d-flex justify-content-end align-items-center gap-1">
+                <p style="margin-bottom: 0px;">Rows per page:</p>
+                <select name="rows" id="rows" style="border-style:none ; background-color: var(--white);">
+                    <option value="10">10</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+            </div>
+            <div>1 of 4</div>
+            <div class="d-flex justify-content-end align-items-center gap-3">
+                <div><img src="../../../../../assets/images/myOrganisation/next.svg" alt="previous" style=" transform: rotate(180deg);"></div>
+                <div><img src="../../../../../assets/images/myOrganisation/next.svg" alt="next"></div>
+            </div>
+        </div>
 
 
     </div>
 </section>
+
+

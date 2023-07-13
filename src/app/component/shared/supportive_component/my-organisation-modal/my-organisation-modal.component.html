@@ -1,0 +1,66 @@
+
+
+<div class="myOrg-Modal modal-body d-flex flex-column justify-content-start gap-3">
+  <div class="title">User</div>
+<!-- <button (click)="submitAnswer()">Submit</button> -->
+  <div class="d-flex justify-content-start gap-3">
+   
+      <select class="grey-bg-borderless" name="tool" id="tool" [(ngModel)]="myOrganisationInvite.tool">
+      <option value="">Tool</option>
+      <option value="volvo">p1</option>
+      <option value="saab">p2</option>
+      <option value="opel">p3</option>
+      <option value="audi">p4</option>
+    </select>
+      <select class="grey-bg-borderless" name="role" id="role" [(ngModel)]="myOrganisationInvite.role">
+        <option value="">Role</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+      </select>
+    
+
+  </div>
+
+  <div class="d-flex flex-column justify-content-start gap-3">
+    <div class="txt-12px">User can</div>
+    <div class=" d-flex justify-content-start gap-3">
+      <div class="form-check d-flex  justify-content-start gap-2 align-items-end">
+        <input class="check form-check-input grey-bg-borderless-checkBox " type="checkbox" id="read" value="true" [(ngModel)]="myOrganisationInvite.access.read"  checked>
+        <label class="form-check-label txt-12px" for="read">
+          Read
+        </label>
+      </div>
+      <div class="form-check d-flex  justify-content-start gap-2 align-items-end">
+        <input class="check form-check-input grey-bg-borderless-checkBox" type="checkbox"  id="write" value="true" [(ngModel)]="myOrganisationInvite.access.write"  checked>
+        <label class="form-check-label txt-12px" for="write">
+          Write
+        </label>
+      </div>
+      
+      <div class="form-check d-flex  justify-content-start gap-2 align-items-end">
+        <input class="check form-check-input grey-bg-borderless-checkBox" type="checkbox" id="execute" value="true" [(ngModel)]="myOrganisationInvite.access.execute"  checked>
+        <label class="form-check-label txt-12px" for="execute">
+          Execute
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div ><input class="grey-bg-borderless" type="email" name="userEmailID" id="userEmailID" placeholder="User email ID" [(ngModel)]="myOrganisationInvite.email" ></div>
+
+  <div class="d-flex flex-column justify-content-start gap-3">
+    <div txt-12px>Invite using link</div>
+    <div class="invite d-flex justify-content-start align-items-center gap-3">
+      <input class="grey-bg-borderless" type="url" name="inviteUrl" id="inviteUrl" [(ngModel)]="myOrganisationInvite.inviteLink" disabled="true">
+      <div class="copyLink txt-12px" (click)="copyLink()">Copy link</div>
+    </div>
+   
+  </div>
+
+    
+</div>
+
+<div class="myOrg-ModalFooter d-flex justify-content-start gap-0">
+  <button type="button" class="close txt-12px" aria-label="Close" (click)="api()">Add</button>
+  <button type="button" class="close txt-12px" aria-label="Close" (click)="modal.close()">Discard</button>
+</div>

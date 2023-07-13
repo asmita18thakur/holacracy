@@ -17,10 +17,6 @@ export class AllianceBehaviourComponent {
     coolDownPeriodAfterAlliance:'',
     AllianceFormationRequiresOperatorApproval:'',
     RequireApprovalToExitAlliance:'',
-    currency:'',
-    inviteOneTimeUseOnly:{
-      inviteAlreadyUsed:'',
-      inviteMisuseAlert:'' },
     allianceDissolver:""
 
   }

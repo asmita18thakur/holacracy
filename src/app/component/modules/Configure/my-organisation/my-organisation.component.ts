@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { TableSimpleRowComponent } from 'src/app/component/shared/supportive_component/table-simple-row/table-simple-row.component';
-
+import { Component} from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MyOrganisationModalComponent } from 'src/app/component/shared/supportive_component/my-organisation-modal/my-organisation-modal.component';
 @Component({
   selector: 'app-my-organisation',
   templateUrl: './my-organisation.component.html',
   styleUrls: ['./my-organisation.component.scss']
 })
 export class MyOrganisationComponent {
+
 
   items:any[]=[
     {
@@ -65,7 +66,7 @@ export class MyOrganisationComponent {
     ]
   }
   ]
-
+ 
   getSuperAdminMember() {
     const superAdminItem = this.items.find(obj => obj.category === 'SuperAdmin');
     if (superAdminItem && superAdminItem.members.length > 0) {
@@ -74,7 +75,19 @@ export class MyOrganisationComponent {
     return null; // or any other default value you prefer
   }
   
+  getUserMember() {
+    const userItem = this.items.filter(obj => obj.category !== 'SuperAdmin');
+    if (userItem.length) {
+      // console.log(userItem)
+      return userItem
+    }
+    return null; // or any other default value you prefer
+  }
+  constructor(private modalService: NgbModal) {}
 
+  openModal() {
+    const modalRef = this.modalService.open(MyOrganisationModalComponent);
+  }
 
 
 }
