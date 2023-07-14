@@ -1,0 +1,53 @@
+.contextText{
+    color: var(--black);
+    font-family: 'Roboto-Medium';
+}
+
+.contextText-small{
+color: #000;
+font-size: 0.75rem;
+line-height: 1.125rem;
+opacity: 0.44999998807907104;
+}
+
+.contextDefinition-expand{
+    color: #000;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+.blue-text-small{
+    color: #1575E1;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    cursor: pointer;
+}
+
+.btmBorder{
+    border-bottom: 1px solid #EAEAEA;
+}
+
+//===============================
+.contextCard-main{
+    cursor: pointer;
+}
+.contextCard-expand {
+    height: 0;
+    overflow: hidden;
+    transition: height 5s ease-in-out;
+  }
+  
+ 
+.contextCard-expand.expanded {
+    height: auto;
+    
+  }
+
+  .contextDefinition-expand{
+    height: 0;
+    overflow: hidden;
+    transition: height 5s ease-in-out;
+  }
+  .contextDefinition-expand.expanded{
+    height: auto;
+  }

@@ -40,6 +40,9 @@ import { GraphcardComponent } from './component/modules/rate-card/wallet/graphca
 import { SubscriptionComponent } from './component/modules/rate-card/subscription/subscription.component';
 import { NgbdProgressbarHeight } from './component/modules/rate-card/subscription/ProgressBar';
 import { RightSidebarComponent } from './component/modules/right-sidebar/right-sidebar.component';
+import { ContextSideBarComponent } from './component/shared/supportive_component/context-side-bar/context-side-bar.component';
+import { ContextCardComponent } from './component/shared/supportive_component/context-card/context-card.component';
+import { CustomDropDownComponent } from './component/shared/supportive_component/custom-drop-down/custom-drop-down.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +80,10 @@ import { RightSidebarComponent } from './component/modules/right-sidebar/right-s
     CardComponent,
     GraphcardComponent,
     SubscriptionComponent,
-    RightSidebarComponent
+    RightSidebarComponent,
+    ContextSideBarComponent,
+    ContextCardComponent,
+    CustomDropDownComponent
 
 
 

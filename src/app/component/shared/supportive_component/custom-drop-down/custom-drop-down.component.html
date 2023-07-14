@@ -1,0 +1,12 @@
+<div class="custom-select d-flex justify-content-between align-items-center " [class.open]="isOpen" (click)="toggleOpen()">
+    <div class="selected-option">
+      {{ item.selectedOption }}
+    </div>
+    <div class="options" *ngIf="isOpen">
+      <div class="option" *ngFor="let option of item.options" (click)="selectOption(option)">
+        {{ item.option }}
+      </div>
+    </div>
+    <span><img src="../../../../../assets/images/customDropdown/downArrow.svg" alt="downArrow"></span>
+</div>
+  

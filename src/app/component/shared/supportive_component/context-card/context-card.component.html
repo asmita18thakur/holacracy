@@ -1,0 +1,16 @@
+<div  class="p-3  btmBorder d-flex flex-column justify-content-start gap-2">
+    <div class="  d-flex flex-column justify-content-start ">
+        <div  class="contextCard-main d-flex justify-content-between" (click)="toggleExpandDescription()"> 
+        <div class="d-flex">
+        <input type="checkbox" name="" id="test">
+        <label for="test" class="ps-2 contextText" >{{item.contextName}}</label>
+        </div>
+        <img src="../../../../../assets/images/contextSideBar/downArrow.svg" alt="down-Arrow">
+        </div >
+        <div class="contextCard-expand d-flex gap-2 flex-column justify-content-start" [ngClass]="{'expanded': isDescriptionExpanded}">
+            <div class="contextText-small">{{item.contextDescription}} </div>
+            <div class="blue-text-small" (click)="toggleExpandDefinition()">Show context definition</div>
+            <div class="contextDefinition-expand" [ngClass]="{'expanded': isDefinitionExpanded}" >{{item.showContextDefinition}} </div>
+        </div>
+    </div>
+</div>
