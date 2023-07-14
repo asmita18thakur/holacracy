@@ -12,7 +12,7 @@ import { ContextSideBarComponent } from './component/shared/supportive_component
 const routes: Routes = [
   {
     path: '',
-    component: ContextSideBarComponent,
+    component: LandingComponent,
     children:[
       {
         path:'',

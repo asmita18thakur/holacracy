@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from 'data.service';
 import { WalletPopupComponent } from './wallet-popup/wallet-popup.component';
+import { ContextSideBarComponent } from '../../shared/supportive_component/context-side-bar/context-side-bar.component';
 
 @Component({
   selector: 'app-right-sidebar',
@@ -35,7 +36,20 @@ export class RightSidebarComponent {
 
                           this.component = WalletPopupComponent
                         }
+                        break;
                       }
+      case "Contexts":{
+                      if(this.component == ContextSideBarComponent){
+                        this.component = null
+                      }
+                      else{
+
+                        this.component = ContextSideBarComponent
+                      }
+                      break;
+
+                      }
+
     }
   }
                 
