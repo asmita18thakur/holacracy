@@ -1,0 +1,173 @@
+<div class=" mt-4 ratecard ">
+
+  <div class="ratecard_main">
+    <div class="ratecard_main_heading">
+
+      <div class="ratecardconfiguration_content d-flex gap-4">
+
+        <div class="content_image">
+          <img src="../../../../assets/images/configure/Ellipse_1127.png">
+        </div>
+
+
+
+
+        <div class="d-flex flex-column content_heading_content mb-2 ">
+
+          <div class="mb-1">
+            <div class="content_right">
+              <p [style.color]="paragraphColor">SUHAaaS</p>
+            </div>
+            <div class="content_right_row2">
+              <p [style.color]="paragraphColor">by Mobius DTaas</p>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex gap-4">
+              <div class="d-flex gap-2">
+                <div>
+                  <div class="star-rating d-flex">
+
+                    <div class="star-container ms-2">
+                      <input type="radio" id="star11" name="rating1" value="1" checked />
+                      <label [style.color]="selectedWord" for="star11"></label>
+                      <input #inputElement type="radio" id="star12" name="rating1" value="2" />
+                      <label [style.color]="selectedWord" for="star12"></label>
+                      <input #inputElement type="radio" id="star13" name="rating1" value="3" />
+                      <label for="star13" class="star-label" [style.color]="selectedWord"></label>
+                      <input #inputElement type="radio" id="star14" name="rating1" value="4" />
+                      <label for="star14"></label>
+                      <input #inputElement type="radio" id="star15" name="rating1" value="5" />
+                      <label for="star15"></label>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p>4.7</p>
+                </div>
+              </div>
+              <div class="d-flex gap-2">
+                <div>
+                  <img src="../../../../assets/images/configure/Mail_Chat_Bubble_Oval_Check.svg">
+
+                </div>
+                <div>
+                  <p>311</p>
+
+                </div>
+
+
+              </div>
+              <div class="d-flex gap-2">
+                <div>
+                  <img src="../../../../assets/images/configure/Workflow_Teamwork_Handshake.svg">
+                </div>
+
+                <div>
+                  <p>02</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="d-flex gap-2">
+              <div class="FreeTier">
+                <p> FreeTier</p>
+              </div>
+              <div class="OpenSource">
+                <p>Open Source</p>
+
+              </div>
+              <div class="Number">
+                <p>+2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ratecard_subheading d-flex flex-column">
+      <div >
+        <div class="d-flex gap-5 subheading_content">
+          <div class="first" class = "{{ selected == 'first' ? 'show':'none' }} " (click)="changer('first')">
+            <p class="heading" [style.color]="paragraphColor" >Overview</p>
+          </div>
+          <div class="sec" class = "{{ selected == 'sec' ? 'show':'none' }} "    (click)="changer('sec')">
+            <p class="heading" >Pricing</p>
+          </div>
+          <div class="third" class = "{{ selected == 'tir' ? 'show':'none' }} "   ngClass="selected == tir ? show:none" (click)="changer('tir')">
+            <p class="heading">Reviews</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+
+
+
+      <div class="main_subheading">
+        <p>Limited but free version of SUHAaaS</p>
+      </div>
+
+    </div>
+
+    <div class=" d-flex flex-column  main_page">
+      <div class="d-flex p-1">
+        <div class="main_page_img">
+          <img src="../../../../assets/images/configure/image 16.png">
+        </div>
+        <div class="d-flex flex-column main_page_content">
+          <div>
+            <p class="text-intial">Address the Smart Home Challenge</p>
+          </div>
+          <div>
+            <p class="content_para">SUHAaaS is a pioneering software-as-a-service (SaaS) application that addresses the
+              challenges faced by consumer electronics (CE) manufacturers and broadcasters in delivering software
+              updates and home automation services to the rapidly growing number of IoT devices in homes.</p>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="d-flex p-1 gap-2">
+
+        <div class="d-flex flex-column main_page_content">
+          <div>
+            <p class="text-intial">Built without code</p>
+          </div>
+          <div>
+            <p class="content_para">The application is built on the Mobius DTaaS Low Code Platform, which utilizes five
+              tools: PI-Pascal Intelligence, BoB-BoltzmannBot, Monet-The Experience Builder, Vinci - The Omnichannel
+              Engagement tool, and HolaVerse - The Marketplace.</p>
+          </div>
+
+        </div>
+        <div class="main_page_img">
+          <img src="../../../../assets/images/configure/image 302.png">
+        </div>
+      </div>
+      <div class="d-flex p-1">
+        <div class="main_page_img">
+          <img src="../../../../assets/images/configure/image 303.png">
+        </div>
+        <div class="d-flex flex-column main_page_content">
+          <div>
+            <p class="text-intial">Address the Smart Home Challenge</p>
+          </div>
+          <div>
+            <p class="content_para">SUHAaaS is a pioneering software-as-a-service (SaaS) application that addresses the
+              challenges faced by consumer electronics (CE) manufacturers and broadcasters in delivering software
+              updates and home automation services to the rapidly growing number of IoT devices in homes.</p>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+</div>

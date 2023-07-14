@@ -1,0 +1,58 @@
+.sidebar{
+
+  width:3%;
+  height: 55%;
+   position: absolute;
+   border-right: 1px solid #CBCBCB;
+   background: #FFF;
+
+
+}
+
+.bar_firstdiv{
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+
+.seconddiv_image{
+  gap: 16px;
+  img{
+    width: 40%;
+    height: 3%;margin-left: 25%;
+
+  }
+}
+.secondiv_image2{
+  gap: 16px;
+  img{
+    width: 40%;
+    height: 3%;
+    margin-left: 25%;
+  }
+}
+
+.bar_secondiv{
+  gap: 20px;
+
+}
+.secondiv_image3{
+  gap: 16px;
+  div{
+    img{
+      width: 40%;
+      margin-left: 25%;
+    }
+  }
+  position: absolute;
+  bottom: 0px;
+
+}
+.secondiv_image3_para{
+  p{
+    font-family: 'Roboto-light';
+    font-size: xx-small;
+
+
+  }
+}

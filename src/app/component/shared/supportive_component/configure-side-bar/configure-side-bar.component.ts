@@ -13,6 +13,7 @@ import { MarketplaceListingPageComponent } from 'src/app/component/modules/Confi
 import { BillingComponent } from 'src/app/component/modules/Configure/billing/billing.component';
 import { ApperanceComponent } from 'src/app/component/modules/Configure/apperance/apperance.component';
 import { DataService } from 'data.service';
+import { ProductPageComponent } from 'src/app/component/modules/Configure/product-page/product-page.component';
 
 @Component({
   selector: 'app-configure-side-bar',
@@ -23,8 +24,16 @@ export class ConfigureSideBarComponent {
 
   constructor(private dataService: DataService) { }
 
+
+
+
+  ngOnInit(){
+   const page= localStorage.getItem('page')||'';
+   this.changeContent(page);
+  }
+
   contents: string[] = ['general-bussiness','general-bussiness-info', 'login','about', 'contact','governance','tenant-behaviour','alliance-behaviour','user-behaviour'];
- 
+
   selectedContent: string = this.contents[0];
 
   changeContent(content: string): void {
@@ -33,6 +42,7 @@ export class ConfigureSideBarComponent {
   }
 
   getContentComponent(content: string): any {
+    localStorage.setItem('page',content)
     switch (content) {
 
       case 'general-bussiness': {
@@ -41,7 +51,7 @@ export class ConfigureSideBarComponent {
                                     return GeneralBussinessComponent;}
       case 'login':{
                                     return ConfigureLoginComponent;}
-      case 'governance':{           
+      case 'governance':{
                                     this.dataService.changeData(["Next","Save","Contexts"])
                                     return GovernanceComponent; }
       case 'general-bussiness-info':{
@@ -54,19 +64,22 @@ export class ConfigureSideBarComponent {
                                     this.dataService.changeData(["Next","Save","Contexts","Groups"])
                                     return AllianceBehaviourComponent; }
       case 'user-behaviour':
-        return UserBehaviourComponent; 
+        return UserBehaviourComponent;
       case 'myOrganisation':
-        return MyOrganisationComponent        
+        return MyOrganisationComponent
       case 'error':
         return ErrorPageComponent;
       case 'productlisting':
         return ProductListingComponent;
       case 'marketplacelisting':
         return MarketplaceListingPageComponent;
-      case 'billing' :
-        return BillingComponent;
       case 'apperance' :
         return ApperanceComponent;
+      case 'productpage':
+        return ProductPageComponent;
+      case 'billing' :
+        localStorage.removeItem('page')
+        return BillingComponent;
       default:
         return null;
     }

@@ -9,6 +9,7 @@ import { LandingComponent } from './component/landing/landing.component';
 import { RateCardComponent } from './component/modules/rate-card/rate-card.component';
 import { ContextSideBarComponent } from './component/shared/supportive_component/context-side-bar/context-side-bar.component';
 
+import { RateCardConfigurationComponent } from './component/modules/rate-card-configuration/rate-card-configuration.component';
 const routes: Routes = [
   {
     path: '',
@@ -34,6 +35,10 @@ const routes: Routes = [
       {
         path:'ratecard',
         component:RateCardComponent
+      },
+      {
+        path :'products',
+        component:RateCardConfigurationComponent
       }
     ]
   }

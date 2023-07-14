@@ -1,27 +1,43 @@
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+
+.Product_page{
+
+  height: 100%;
+  width: 100%;
+
+}
+.Product_page-main_page{
+  // margin-left: 2rem;
+  height: 30%;
 }
 
 .Product_page_heading{
 
-  height: 2.25rem;
+  height: 3rem;
   margin-bottom: 1rem;
 }
 .Product_page_main{
-  width: 39rem;
-  height: 28rem;
-  margin-bottom: 1.5rem;
+  width: 80%;
+  height: 50%;
+
+  border: 1px solid red;
+  overflow: scroll;
+  overflow-x: hidden;
+
 }
+
 .Product_page_colorpicker{
-
-
+  width:100%;
 }
 
-app-colorpicker{
-  width: 39rem;
-  height: 3rem;
+.rate_card{
+  // margin-left: -5rem;
+
+  transform: translateX(-25%) translateY(-20%) scale(0.6);
+}
+.color_picker{
+  transform: translateX(-15%) translateY(-400%) scale(0.6);
 }
 
+.product_sidebar{
 
+}

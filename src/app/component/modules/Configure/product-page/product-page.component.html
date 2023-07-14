@@ -1,18 +1,16 @@
-<div class="Product_page">
-  <div class="Product_page_heading">
-    <h2>How is a Product presented to a potential buyer ?</h2>
-  </div>
-  <div class="Product_page_main">
 
-    <div>
+<div class="Product_page_heading">
+  <h2>How is a Product presented to a potential buyer ?</h2>
+</div>
+<!-- <div class="product_sidebar">
+  <app-side-bar></app-side-bar>
+  </div> -->
 
-    </div>
-    <div>
-      <img src="../../../../../assets/images/configure/SuhaasScreenshot.png">
-    </div>
 
-  </div>
-  <div class="Product_page_colorpicker">
-    <app-colorpicker></app-colorpicker>
-  </div>
+
+<div class="rate_card">
+  <app-rate-card-configuration [paragraphColor]="paragraphColor"></app-rate-card-configuration>
+</div>
+<div class="color_picker">
+  <app-colorpicker (colorChange)="changeParagraphColor($event)"></app-colorpicker>
 </div>

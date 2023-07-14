@@ -47,6 +47,10 @@ import { WalletPopupComponent } from './component/modules/right-sidebar/wallet-p
 import { ContextSideBarComponent } from './component/shared/supportive_component/context-side-bar/context-side-bar.component';
 import { ContextCardComponent } from './component/shared/supportive_component/context-card/context-card.component';
 import { CustomDropDownComponent } from './component/shared/supportive_component/custom-drop-down/custom-drop-down.component';
+import { RateCardConfigurationComponent } from './component/modules/rate-card-configuration/rate-card-configuration.component';
+import { SideBarComponent } from './component/modules/side-bar/side-bar.component';
+import { Frame1Component } from './component/shared/supportive_component/frame1/frame1.component';
+
 
 @NgModule({
   declarations: [
@@ -89,13 +93,13 @@ import { CustomDropDownComponent } from './component/shared/supportive_component
     NotificationComponent,
     NotificationSnippetComponent,
     WalletPopupComponent,
-      
     ContextSideBarComponent,
     ContextCardComponent,
-    CustomDropDownComponent
-
-
-
+    CustomDropDownComponent,
+    ProductPageComponent,
+    RateCardConfigurationComponent,
+    SideBarComponent,
+    Frame1Component
   ],
   imports: [
     BrowserModule,

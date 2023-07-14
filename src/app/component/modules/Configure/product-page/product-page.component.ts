@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-page',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-page.component.scss']
 })
 export class ProductPageComponent {
+   paragraphColor: string = '#1D3159';
+
+
+  changeParagraphColor(color: string) {
+    this.paragraphColor = color;
+  }
+
 
 }
