@@ -1,15 +1,17 @@
-<section class="right-side-bar">
-    
+<section class="main">
+
+    <section class="right-side-bar">
+        
     <div >
-       
-        <div class="right-side-top" *ngFor="let i  of  data.getAllData()">
+        
+        <div class="right-side-top" *ngFor="let i  of  data.getAllData()" (click)="popper(i)">
             <img [src]="'../../../assets/images/right-sidebar/'+sidebarData[i]"  alt=""/>
             <p class="right-text">{{i}}</p>
         </div>
   
         
     </div>
-
+    
     <div>
         <div class="right-side-top">
             <img src="../../../assets/images/right-sidebar/Interface User Collaborate.svg" alt="">
@@ -27,5 +29,9 @@
 
     </div>
 
+    </section>
+    <ng-container class="popup"  *ngComponentOutlet="component"></ng-container>
+
+
+
 </section>
-<app-wallet-popup></app-wallet-popup>

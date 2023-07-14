@@ -36,3 +36,11 @@
 // .expand2{
 //     width: calc(100% - 448px);
 // }
+
+.show{
+    visibility: initial !important;
+}
+
+.hide{
+    visibility: hidden !important;
+}

@@ -7,6 +7,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { ToastService } from "../toast-service/toast-service.service";
 import { ActivatedRoute, Router } from "@angular/router";
 // import { PubsubService } from "../services/pubSub";
+import { DataService } from 'data.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -40,6 +41,7 @@ export class SidebarComponent {
     // private pubSub: PubsubService,
     private activeRoute: ActivatedRoute,
     private cdr: ChangeDetectorRef,
+    private Data:DataService
   ) {
 
     let sideTabClicked = this.activeRoute.snapshot.params['type'] ? this.activeRoute.snapshot.params['type'] : 'apperancesetting';
@@ -66,6 +68,8 @@ export class SidebarComponent {
 
   navigateTo(page:any):void{
     this.show=page
+    console.log(this.show)
+    this.Data.changeSideBarVisibility(this.show)
     this.activePage=page
     this.router.navigate([page])
   }

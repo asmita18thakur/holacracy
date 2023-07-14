@@ -5,8 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   private dataArray: string[] = ["Next","Save"];
+  public rightVisibility:boolean = false
 
   constructor() { }
+
 
   // Add data to the array
   changeData(data: any[]): void {
@@ -22,4 +24,25 @@ export class DataService {
   clearData(): void {
     this.dataArray = [];
   }
+
+  
+
+  changeSideBarVisibility(data:string){
+    console.log(data)
+    switch(data){
+      case "ratecard": {this.rightVisibility=false;
+                          break;
+                        }
+      case "configure": {this.rightVisibility=true;
+                          break;
+                        }
+    
+    
+      default: break;
+    }
+    console.log(this.rightVisibility)
+  }
+
+
+
 }

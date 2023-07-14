@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from 'data.service';
-
+import { WalletPopupComponent } from './wallet-popup/wallet-popup.component';
 
 @Component({
   selector: 'app-right-sidebar',
@@ -9,6 +9,7 @@ import { DataService } from 'data.service';
 })
 export class RightSidebarComponent {
   constructor(public data: DataService){}
+  component:any
 
   sidebarData:{[name:string]:string} = {
                  Next:"Interface Download Square.svg",
@@ -24,6 +25,18 @@ export class RightSidebarComponent {
   //  data = this.data.getAllData();
     
 
+  popper(data:any){
+    switch(data){
+      case "Wallet" : {
+                        if(this.component == WalletPopupComponent){
+                          this.component = null
+                        }
+                        else{
 
+                          this.component = WalletPopupComponent
+                        }
+                      }
+    }
+  }
                 
 }

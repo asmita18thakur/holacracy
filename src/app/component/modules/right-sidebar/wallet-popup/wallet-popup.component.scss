@@ -1,16 +1,56 @@
 .right-side-bar{
     
-    position: fixed;
-    right: 3rem;
-    top: 5px;
+    // position: absolute;
+    // right: 3rem;
+    // top: 5px;
     // display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items: stretch;
-    background-color: rgb(146, 52, 52);
-
-    width: 25rem;
+    // background-color: rgb(146, 52, 52);
+background-color: white ;
+    width: 20vw;
     margin: 0px;
     height: 100vh;
     gap: 0;
+    transition: 3s ease-in;
+
 }
+.card{
+    border:0px;
+    background-color: none;
+    transform: scale(0.75);
+    margin-right: 9rem;
+    // left: -3rem;
+}
+.main-heading{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.main-heading > h1{
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.main{
+    animation: slideIn 1s ease-out forwards; /* Animation properties */
+
+}
+
+@keyframes slideIn {
+    0% {
+      right: -20vw; /* Start position outside the viewport */
+    }
+    100% {
+      right: 20vw; /* Final position at the right side */
+    }
+  }
