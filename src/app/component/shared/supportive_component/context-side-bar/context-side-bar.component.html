@@ -1,0 +1,33 @@
+<section class="contextSideBar d-flex flex-column justify-content-start">
+    <div class="p-3 btmBorder d-flex justify-content-between">
+        <div>Contexts</div>
+        <div><img src="../../../../../assets/images/contextSideBar/arrowRight.svg" alt="arrow"></div>
+    </div>
+    <div class=" p-3 btmBorder d-flex justify-content-between">
+
+        <!-- selection of universe  -->
+       
+        <!-- <select class="input selectInput" name="cars" id="cars" [hidden]="isSearchVisible">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select> -->
+          
+        <app-custom-drop-down [item]="items"></app-custom-drop-down>
+
+        <!-- expanded search bar -->
+        <input type="text" name="searchContext" id="searchContext" class="input contextSearch search-bar" [hidden]="!isSearchVisible">
+        <div (click)="toggleSearch()" class="search-icon"><img src="../../../../../assets/images/contextSideBar/search.svg" alt="search" ></div>
+        
+    </div>
+    <div class="p-3 btmBorder d-flex justify-content-between align-items-center">
+        <div class="blue-text-large">Create a New Context</div>
+        <div>
+            <!-- <img src="" alt=""> -->
+            + 
+        </div>
+    </div>
+    <!-- ========== -->
+   <app-context-card *ngFor="let context of contextList" [item]="context" >scnkado</app-context-card>
+</section>

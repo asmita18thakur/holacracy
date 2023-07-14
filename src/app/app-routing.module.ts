@@ -7,10 +7,12 @@ import { ConfigureSideBarComponent } from './component/shared/supportive_compone
 import { ConfigureLoginComponent } from './component/modules/Configure/configure-login/configure-login.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { RateCardComponent } from './component/modules/rate-card/rate-card.component';
+import { ContextSideBarComponent } from './component/shared/supportive_component/context-side-bar/context-side-bar.component';
+
 const routes: Routes = [
   {
     path: '',
-    component: LandingComponent,
+    component: ContextSideBarComponent,
     children:[
       {
         path:'',

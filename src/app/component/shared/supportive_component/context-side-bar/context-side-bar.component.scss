@@ -1,0 +1,37 @@
+.contextSideBar{
+    width: 23.5vw;
+    border:1px solid black;
+    
+}
+.contextSideBar .btmBorder{
+border-bottom: 1px solid #EAEAEA;
+}
+
+.contextSearch, .selectInput{
+    width: 90%;
+}
+
+.blue-text-large{
+    color: #1575E1;
+    font-family: 'Roboto-Medium';
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+
+// =================
+.search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    cursor: pointer;
+  }
+  
+  .search-icon img {
+    width: inherit;
+    height: inherit;
+    
+  }
+// ==================

@@ -44,6 +44,10 @@ import { RateCardComponent } from './component/modules/rate-card/rate-card.compo
 import { NotificationComponent } from './component/modules/rate-card/notification/notification.component';
 import { NotificationSnippetComponent } from './component/modules/rate-card/notification/notification-snippet/notification-snippet.component';
 import { WalletPopupComponent } from './component/modules/right-sidebar/wallet-popup/wallet-popup.component';
+import { ContextSideBarComponent } from './component/shared/supportive_component/context-side-bar/context-side-bar.component';
+import { ContextCardComponent } from './component/shared/supportive_component/context-card/context-card.component';
+import { CustomDropDownComponent } from './component/shared/supportive_component/custom-drop-down/custom-drop-down.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +90,9 @@ import { WalletPopupComponent } from './component/modules/right-sidebar/wallet-p
     NotificationSnippetComponent,
     WalletPopupComponent,
       
+    ContextSideBarComponent,
+    ContextCardComponent,
+    CustomDropDownComponent
 
 
 
